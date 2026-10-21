@@ -1,0 +1,73 @@
+@font-face{font-family:StarwaysDisplay;src:url('assets/edge-v17/Kanit-BlackItalic.ttf') format('truetype');font-weight:900;font-style:italic;font-display:swap}
+/* A real display face, separated from the calm text used for reading. */
+.hero h1,.showcase-heading h2,.discover-heading h2,.express-heading h2,.express-life-heading h2,.questions h2,.closing h2,.parent-hero h1,.parent-layout h2,.facts-grid h2,.parent-notes h2,.curriculum-page h1,.credits h1{font-family:StarwaysDisplay,Anuphan,sans-serif;font-style:italic;font-weight:900;letter-spacing:0;line-height:1.32;text-wrap:balance}
+.hero h1{font-size:clamp(44px,4.25vw,68px);text-shadow:2px 3px 0 #111115}
+.hero h1 .headline-cut{font-size:.94em;letter-spacing:0;line-height:1.5;padding-inline:16px 24px;filter:none}
+.display-intro{font-family:Anuphan,sans-serif;font-weight:600;font-style:normal;font-size:.57em;letter-spacing:0;line-height:1.7;margin-bottom:11px;text-shadow:none}
+.showcase-heading h2,.discover-heading h2,.express-heading h2{font-size:clamp(38px,3.7vw,59px)}
+.showcase-heading h2>span:last-child{color:var(--paper);text-shadow:2px 3px 0 var(--red)}
+.discover-heading .ink-highlight{color:var(--red);text-shadow:none}
+.express-heading h2{max-width:850px;text-shadow:2px 3px 0 #111115}
+.express-life-heading h2{font-size:clamp(35px,3.35vw,54px)}
+.closing h2{font-size:clamp(37px,3.5vw,56px)}
+.closing h2 .headline-cut{padding-inline:12px 24px;filter:none;line-height:1.5}
+.hero-desc,.discover-heading>p,.showcase-heading>p,.express-heading>p{font-style:normal;line-height:1.9}
+.hero .hero-word{opacity:.4}.hero .speed-lines{display:none}
+.hero-ink:after{display:none}
+/* These rejected additions are removed from the markup; keep old cached pages quiet too. */
+.hero-gesture,.story-tape,.passage-streak{display:none!important}
+/* Real illustrated backdrops have empty centers. Each section gets its own plate. */
+.scene-backdrop{position:absolute;inset:0;z-index:-1;pointer-events:none;background-repeat:no-repeat;background-size:min(1500px,100%) auto;background-position:center;opacity:.16;mix-blend-mode:multiply}
+.hero .scene-backdrop{background-image:url('assets/edge-v17/hero-backdrop.webp');background-position:right center;background-size:auto 100%;opacity:.23;mix-blend-mode:normal;z-index:0}
+.showcase .scene-backdrop{background-image:url('assets/edge-v17/showcase-backdrop.webp');opacity:.19;mix-blend-mode:screen;background-position:center bottom}
+.discover .scene-backdrop{background-image:url('assets/edge-v17/creation-backdrop.webp');opacity:.34;background-position:center 65%}
+.express-course .scene-backdrop{background-image:url('assets/edge-v17/journey-backdrop.webp');background-size:100% auto;background-position:center 30%;opacity:.2;mix-blend-mode:normal}
+.closing .scene-backdrop{background-image:url('assets/edge-v17/closing-backdrop.webp');background-size:auto 100%;background-position:right center;opacity:.19;mix-blend-mode:multiply}
+.questions{background-image:radial-gradient(ellipse at 0 100%,#df203212,transparent 52%)}
+.parent-body{background-image:radial-gradient(ellipse at 100% 30%,#df20320b,transparent 52%)}
+/* A whole object crosses the join. There is no short masked divider to cut it. */
+.showcase,.discover,.express-course,.closing{overflow:visible}
+.showcase{padding-bottom:100px}
+.discover{padding-top:100px;padding-bottom:80px;--edge-travel:0px}
+.express-course{padding-top:100px;--edge-travel:0px}
+.section-edge-layer{position:absolute;inset:0;z-index:1;pointer-events:none;overflow:visible;isolation:auto}
+.section-edge{position:absolute;display:block;height:auto;max-width:none;opacity:1;mask-image:none;clip-path:none;filter:drop-shadow(7px 10px 0 #11111524);transition:none;animation:none;will-change:transform}
+.section-edge--rail{width:clamp(330px,30vw,530px);left:clamp(-215px,-12vw,-100px);top:clamp(-350px,-19vw,-215px);transform:translate3d(0,var(--edge-travel,0px),0) rotate(-12deg)}
+.section-edge--rock{width:clamp(240px,23vw,380px);right:clamp(-170px,-10vw,-80px);top:clamp(-450px,-26vw,-325px);transform:translate3d(0,calc(var(--edge-travel,0px)*.55),0) rotate(12deg)}
+.express-course .section-edge--rail{left:auto;right:clamp(-190px,-11vw,-90px);top:-205px;transform:translate3d(0,var(--edge-travel,0px),0) rotate(12deg)}
+.express-course .section-edge--rock{right:auto;left:clamp(-175px,-11vw,-80px);top:-285px;transform:translate3d(0,calc(var(--edge-travel,0px)*.55),0) rotate(-10deg)}
+.discover>.wrap,.express-course>.wrap,.showcase>.wrap,.closing>.wrap{position:relative;z-index:2}
+.section-edge-layer,.section-edge{pointer-events:none}
+.discover:before{inset:-1px 0;background:radial-gradient(ellipse at 5% 50%,#df20320b,transparent 45%);clip-path:none;animation:none;transform:none}
+.creation-art:before{inset:0;clip-path:none;background:radial-gradient(ellipse at 64% 65%,#1111150a,transparent 62%);animation:none;transform:none}
+.creation-art:after{background:#1111150c;filter:blur(22px)}
+.creation-art{overflow:visible;clip-path:none;isolation:isolate}
+.creation-art .creation-world{width:79%;height:104%;right:-1%;top:-3%;transform:translate3d(calc(var(--depth-x,0)*-8px),calc(var(--depth-y,0)*-5px),0) rotate(-2deg);transition:filter .2s;filter:drop-shadow(8px 17px 3px #11111524)}
+.creation-art .creation-sketch{width:39%;height:70%;left:0;bottom:0;transform:translate3d(calc(var(--depth-x,0)*10px),calc(var(--depth-y,0)*7px),0) rotate(4deg);transition:filter .2s;filter:drop-shadow(8px 14px 2px #11111530)}
+.creation-story[data-focus="2"] .creation-world{transform:translate3d(calc(var(--depth-x,0)*-8px),calc(var(--depth-y,0)*-5px),0) rotate(-2deg)}
+.creation-art .scene-cliff{transition:none;transform:translate3d(0,calc(var(--edge-travel,0px)*.4),0);opacity:1;clip-path:none;mask-image:none}
+.creation-art .scene-cliff--left{left:-16%;bottom:5%;width:clamp(160px,18vw,265px);rotate:-8deg}
+.creation-art .scene-cliff--right{right:-18%;bottom:-4%;width:clamp(180px,20vw,290px);rotate:8deg}
+.showcase-heading,.discover-heading{translate:none;transition:none}
+.flag-fabric{left:51.4%;top:2.6%;width:27%;height:24%;filter:saturate(.65) brightness(.8) contrast(.98)}
+.closing:before{inset:0;background:none;animation:none}
+html.motion-ready .comic-scene[data-scene-enter]:after{animation:none!important;opacity:0;content:none}
+/* Artwork is visible on first paint, rather than waiting for an arrival observer. */
+.motion-ready .milestone-art img,.motion-ready .express-feature>img{opacity:1;translate:none;rotate:none;transition:transform .2s}
+@media(min-width:1600px){.section-edge--rail{left:-95px}.section-edge--rock{right:-90px}.express-course .section-edge--rail{right:-90px}.express-course .section-edge--rock{left:-90px}}
+@media(max-height:760px)and(min-width:901px){.hero h1{font-size:clamp(43px,3.55vw,58px)}.discover-heading h2{font-size:44px}.showcase{padding-bottom:75px}.discover{padding-top:80px}.section-edge--rail{width:350px;top:-190px}.section-edge--rock{width:270px;top:-295px}}
+@media(max-width:1100px)and(min-width:761px){.hero h1{font-size:49px}.section-edge--rail{width:350px;left:-190px}.section-edge--rock{width:270px;right:-155px}.express-course .section-edge--rail{right:-190px;left:auto}.express-course .section-edge--rock{left:-155px;right:auto}}
+@media(max-width:760px){
+ .hero h1{font-size:clamp(32px,8.25vw,48px);line-height:1.38}.hero h1 .headline-cut{padding-inline:7px 16px;line-height:1.6}
+ .showcase-heading h2,.discover-heading h2,.express-heading h2{font-size:clamp(32px,8.4vw,43px)}.display-intro{font-size:.63em;line-height:1.7}
+ .express-life-heading h2{font-size:32px}.closing h2{font-size:32px}.closing h2 .headline-cut{font-size:.86em;padding-right:16px}
+ .scene-backdrop{opacity:.11}.hero .scene-backdrop{opacity:.17}.express-course .scene-backdrop{background-size:auto 800px;opacity:.12}
+ .showcase{padding-bottom:75px}.discover{padding-top:80px;padding-bottom:70px}.express-course{padding-top:85px}
+ .section-edge--rail{width:250px;left:-145px;top:-145px;rotate:0deg}.section-edge--rock{width:170px;right:-100px;top:-195px}
+ .express-course .section-edge--rail{width:250px;right:-145px;top:-145px}.express-course .section-edge--rock{width:170px;left:-100px;top:-195px}
+ .creation-art .creation-world{width:98%;height:87%;right:-6%;top:-2%}.creation-art .creation-sketch{width:57%;height:55%;left:-3%;bottom:0}
+ .creation-art .scene-cliff--left{width:110px;left:-22%;bottom:0}.creation-art .scene-cliff--right{width:125px;right:-26%;bottom:-4%}
+ .parent-hero h1,.curriculum-page h1{font-size:33px}
+}
+@media(prefers-reduced-motion:reduce){.section-edge,.creation-art img{transform:none!important;transition:none!important;will-change:auto}}
+.motion-paused .section-edge,.motion-paused .creation-art img{transform:none!important;transition:none!important;will-change:auto}

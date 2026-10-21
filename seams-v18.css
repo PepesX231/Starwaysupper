@@ -1,0 +1,13 @@
+/* Decorative plates must cover their entire painting area. A contained bitmap
+   exposed its left/bottom canvas bounds in the closing and curriculum scenes. */
+.comic-scene .scene-backdrop{
+ background-size:cover!important;
+ -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 8%,#000 87%,transparent 100%);
+ mask-image:linear-gradient(to bottom,transparent 0%,#000 8%,#000 87%,transparent 100%);
+ -webkit-mask-size:100% 100%;mask-size:100% 100%;
+ -webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;
+}
+/* Only background ink dissolves into the next black scene. Whole foreground
+   rail/cliff cutouts retain their unmasked overlap from v17. */
+.hero{background-color:var(--red);background-image:linear-gradient(to bottom,transparent calc(100% - 120px),var(--ink) 100%)}
+.scroll-invite{border-top:0}

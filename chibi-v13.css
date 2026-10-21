@@ -1,0 +1,27 @@
+/* New drawn chibi frames; the character itself is not animated by CSS scaling. */
+.hero-art{right:-2%;width:59%;height:min(700px,77svh);top:50%;transform:translateY(-50%);overflow:visible}
+.hero-props{position:absolute;inset:0;width:100%;height:100%;object-fit:contain!important;mask-image:none!important;transform:rotate(-4deg)!important;animation:none!important;translate:none!important;filter:drop-shadow(8px 12px 0 #11111535)}
+.chibi-animation{position:absolute;right:10%;bottom:13%;width:65%;aspect-ratio:1;isolation:isolate;filter:drop-shadow(7px 10px 0 #11111540)}
+.hero-art .chibi-fallback{position:absolute;width:100%;height:100%;object-fit:contain;mask-image:none;transform:none;animation:none;translate:none;filter:none}
+.chibi-frames{position:absolute;inset:0;display:block;background-image:url('assets/chibi-v13/hero-frames.webp');background-repeat:no-repeat;background-size:300% 200%;background-position:var(--frame-x,0%) var(--frame-y,0%);opacity:0}
+.frames-ready .chibi-frames{opacity:1}.frames-ready .chibi-fallback{opacity:0}
+.hero-art .art-scribble{right:7%;bottom:2%;font-size:34px}
+.hero-copy{max-width:780px}.hero h1{font-size:clamp(42px,4.2vw,66px)}
+.hero-art{translate:var(--tilt-x,0px) var(--tilt-y,0px)}
+.gallery-stage .gallery-item{translate:none;transform:translate3d(var(--orbit-x,0px),0,var(--orbit-z,0px)) rotateY(var(--orbit-yaw,0deg)) rotateZ(var(--orbit-roll,0deg)) scale(var(--orbit-scale,1));opacity:var(--orbit-opacity,1);filter:brightness(var(--orbit-light,1));transition:transform .7s cubic-bezier(.18,.75,.2,1),opacity .5s,filter .5s}
+.gallery-stage.is-auto-spinning .gallery-item,.gallery-stage.is-dragging .gallery-item{transition:none}
+.gallery-auto{display:block;margin:10px auto 0;border:0;border-bottom:1px solid #fff8e855;background:none;color:var(--paper);padding:6px 4px;font-size:11px;line-height:1.5}
+.gallery-auto:hover{color:#f9ce52}.gallery-help{margin-top:10px}
+.showcase{padding-top:34px}.gallery-stage{height:clamp(255px,40svh,355px)}
+.creation-art{clip-path:polygon(1% 0,100% 2%,99% 100%,0 98%)}
+.creation-art img{transform:none;object-fit:contain;object-position:center;background:var(--paper)}
+.closing-art{rotate:-4deg;max-height:460px;object-fit:contain}
+@media(min-width:1500px){.hero-art{right:0;width:58%;height:min(760px,77svh)}.hero h1{font-size:68px}}
+@media(max-height:760px)and(min-width:901px){.hero-art{height:560px}.hero h1{font-size:54px}.gallery-stage{height:275px}.gallery-auto{margin-top:4px;font-size:10px}.gallery-help{margin-top:6px}}
+@media(max-width:1100px)and(min-width:761px){.hero-art{width:64%;right:-12%;height:590px}.hero h1{font-size:50px}.hero-copy{width:66%}}
+@media(max-width:760px){.hero-art{width:112%;right:-6%;height:360px;top:auto;bottom:12px;transform:none}.hero-props{width:100%;height:100%;max-height:none!important}.chibi-animation{width:67%;right:12%;bottom:9%}.hero-art .chibi-fallback{max-height:none}.hero-art .art-scribble{font-size:27px;right:12%;bottom:0}.hero h1{font-size:clamp(31px,8vw,48px)}.gallery-stage{height:285px}.gallery-auto{font-size:10px}.creation-art img{object-fit:cover;object-position:calc(15% + var(--creation-focus)*35%) center;transform:none}.closing-art{width:260px;max-height:300px;margin-top:25px}}
+@media(prefers-reduced-motion:reduce){.gallery-stage .gallery-item{transition:none}.hero-art .chibi-fallback{animation:none}.hero-props{animation:none}}
+
+.chibi-animation{height:84%;width:auto;aspect-ratio:1;right:14%;bottom:8%}
+@media(max-width:760px){.chibi-animation{height:84%;width:auto;right:14%;bottom:8%}}
+@media(prefers-reduced-motion:reduce){.gallery-auto{display:none}}
