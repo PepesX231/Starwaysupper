@@ -8,7 +8,8 @@
 @keyframes map-drift{0%,100%{translate:0 0;rotate:-2deg}50%{translate:0 -10px;rotate:1deg}}
 @keyframes evidence-breathe{0%,100%{translate:0 0}50%{translate:0 -5px}}
 @media(max-width:760px){.express-heading h2>span:last-child{font-size:.75em}.express-course .milestone-stop h3{font-size:21px}.express-feature{padding-top:16px}}
-@media(prefers-reduced-motion:reduce){}
+@media(prefers-reduced-motion:reduce){.hero-map-prop{animation:none}}
+.motion-paused .hero-map-prop{animation-play-state:paused}
 html{overflow-x:clip}section[id],#opportunities{scroll-margin-top:100px}
 
 /* Retired blocks must never reserve space, including in older cached markup. */
