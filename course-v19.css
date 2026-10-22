@@ -1,0 +1,126 @@
+/* Three outcomes, seven dated work periods. Preserve the established comic art. */
+html{scroll-padding-top:0}
+section{scroll-margin-top:86px}
+.hero h1{font-size:clamp(38px,4.1vw,66px)}
+.hero-copy{max-width:850px}
+.hero-desc{max-width:650px}
+.hero-facts{font-size:13px;letter-spacing:0}
+.express-course .milestone-route{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(25px,5vw,80px)}
+.express-course .milestone-route li:nth-child(even){padding-top:36px}
+.express-course .milestone-art{height:clamp(190px,20vw,290px)}
+.express-course .milestone-art{position:relative;flex-shrink:0}
+.express-course .milestone-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;min-width:0;min-height:0}
+.express-course .milestone-stop h3{font-size:clamp(23px,2.1vw,33px);margin-top:6px}
+.express-course .milestone-stop>p{max-width:340px;font-size:15px;line-height:1.8}
+.express-course .milestone-stop>.milestone-date{font-size:14px;font-weight:700;margin-top:12px}
+.express-course .milestone-en{font-size:clamp(18px,1.9vw,26px);line-height:1.35;letter-spacing:.02em}
+.express-course .milestone-open{font-size:13px;margin-top:22px}
+.express-course .milestone-note{font-size:12px;text-align:left;margin-top:35px;max-width:850px}
+.express-course .route-progress{top:34%;left:8%;right:8%}
+.curriculum-all{font-size:15px}
+.express-features{gap:clamp(28px,5vw,75px)}
+.express-feature{border-top:1px solid #fff8e860;padding-top:10px}
+.express-feature div>.opportunity-number{display:block;font:italic 900 50px/1.1 Barlow,sans-serif;color:var(--ink);border:0;margin:0 0 14px}
+.express-feature h3{font-size:clamp(26px,2.5vw,37px);margin-top:0}
+.express-feature p{font-size:16px;max-width:370px}
+.opportunity-note{font-size:13px;line-height:1.8;margin-top:30px;max-width:1000px}
+.illustration-caption{position:absolute;bottom:-24px;left:0;right:0;font-size:11px;text-align:right;color:#655c53;line-height:1.6}
+.creation-steps{margin-top:42px}
+.showcase-heading>p{max-width:460px}
+.course-eyebrow{font-size:12px;font-weight:650;letter-spacing:.04em;margin:35px 0 15px}
+.curriculum-page{max-width:1180px;background:var(--paper);color:var(--ink)}
+body:has(.curriculum-page){background:var(--paper)}
+.curriculum-page h1{font-size:clamp(38px,5.5vw,72px)}
+.curriculum-intro{max-width:900px;font-size:19px}
+.schedule-note{font-size:13px;line-height:1.85;margin:22px 0 25px;max-width:850px}
+.course-schedule{padding:0;margin:35px 0 5px;list-style:none;border-top:2px solid var(--ink)}
+.course-schedule li{border-bottom:1px solid #11111535}
+.course-schedule a{display:grid;grid-template-columns:150px 1fr 35px;align-items:center;gap:24px;padding:20px 5px;transition:color .2s}
+.course-schedule a:hover{color:var(--red)}
+.course-schedule time{font-size:15px;font-weight:650}
+.course-schedule strong{display:block;font-size:20px;line-height:1.5}
+.course-schedule small{display:block;font-size:13px;letter-spacing:.015em;line-height:1.6;margin-top:3px;color:#5e5752}
+.course-schedule a>span:last-child{font-size:25px}
+.curriculum-chapter{scroll-margin-top:105px}
+.curriculum-chapter h2{font-family:StarwaysDisplay,Anuphan,sans-serif;font-size:clamp(30px,3vw,44px)}
+.chapter-result{font-size:19px;max-width:850px}
+.chapter-position{font-size:17px;letter-spacing:0}
+.learning-period{border-top:1px solid currentColor;padding-top:23px;margin-top:35px;scroll-margin-top:100px}
+.period-date{font-size:13px;font-weight:650;line-height:1.8;color:var(--red)}
+.course-dialog .period-date{color:#ff8f98}
+.course-dialog .learning-period h3,.curriculum-chapter .learning-period h3{margin:10px 0 20px;font-size:24px;line-height:1.5}
+.learning-outcomes{margin:0}
+.learning-outcomes>div{display:grid;grid-template-columns:155px 1fr;gap:24px;margin-top:14px;align-items:baseline}
+.learning-outcomes dt{font-size:14px;font-weight:650}
+.learning-outcomes dd{margin:0;font-size:16px;line-height:1.85;max-width:750px}
+.course-dialog .learning-outcomes>div{grid-template-columns:140px 1fr;gap:20px}
+.course-dialog .learning-outcomes dd{font-size:15px}
+.course-dialog .detail-intro{font-size:19px}
+.curriculum-chapter>.button{margin-top:28px}
+.parent-hero .lead{max-width:620px}
+.parent-copy{max-width:610px}
+.parent-copy+.button{margin-top:25px}
+.parent-notes .opportunity-note{padding-top:0;padding-bottom:15px}
+.closing .lead{font-size:clamp(17px,1.7vw,23px);line-height:1.9}
+@media(min-width:761px){
+ .express-course{padding-top:50px}
+ .express-course .express-heading{margin-bottom:20px}
+ .express-course .express-heading h2{font-size:clamp(33px,3.3vw,51px)}
+ .express-course .milestone-art{height:200px}
+ .express-course .milestone-route li:nth-child(even){padding-top:18px}
+ .express-course .milestone-stop>p{font-size:14px}
+ .express-course .milestone-stop h3{font-size:27px}
+ .express-course .express-heading>p{max-width:450px}
+ .discover .creation-story{max-width:1120px}
+}
+@media(max-width:1100px)and(min-width:761px){
+ .hero h1{font-size:45px}.hero-facts{font-size:11px}
+ .express-course .milestone-route{gap:28px}
+ .express-course .milestone-stop h3{font-size:24px}
+ .express-course .milestone-stop>p{font-size:13px}
+ .course-schedule a{grid-template-columns:130px 1fr 25px}
+}
+@media(max-width:760px){
+ .hero h1{font-size:clamp(30px,7.7vw,48px)}
+ .hero-facts{font-size:11px;max-width:310px;line-height:1.9}
+ .hero-facts i{margin-inline:6px}
+ .hero-desc{font-size:15px;line-height:1.9}
+ .express-course .milestone-route{display:block}
+ .express-course .milestone-route li:nth-child(even){padding-top:0}
+ .express-course .milestone-stop{grid-template-columns:104px minmax(0,1fr);gap:3px 17px;padding:25px 0}
+ .express-course .milestone-art{width:104px;height:150px;grid-row:1/7}
+ .express-course .milestone-fraction{font-size:30px;top:15px}
+ .express-course .milestone-stop h3{font-size:23px;grid-column:2}
+ .express-course .milestone-stop>.milestone-date{grid-column:2;font-size:12px;margin-top:0}
+ .express-course .milestone-stop>p{font-size:13px;grid-column:2;margin-top:10px}
+ .express-course .milestone-en{font-size:18px;overflow-wrap:anywhere}
+ .express-course .milestone-open{font-size:11px;margin-top:14px}
+ .express-course .milestone-note{font-size:11px;margin-top:22px}
+ .express-course .route-progress{top:35px;bottom:60px;left:50px;right:auto}
+ .express-feature{display:block;padding:25px 0}
+ .express-feature div>.opportunity-number{font-size:39px;margin:0 0 14px}
+ .express-feature h3{font-size:29px}
+ .express-feature p{font-size:15px;max-width:100%}
+ .opportunity-note{font-size:12px}
+ .illustration-caption{font-size:10px;text-align:left;bottom:-34px}
+ .creation-steps{margin-top:48px}
+ .creation-step strong{font-size:13px}
+ .curriculum-page h1{font-size:37px}
+ .course-eyebrow{font-size:10px;line-height:1.9;margin-top:24px}
+ .curriculum-intro{font-size:16px}
+ .curriculum-intro br{display:none}
+ .course-schedule a{grid-template-columns:90px minmax(0,1fr) 18px;gap:10px;padding:18px 0}
+ .course-schedule strong{font-size:16px}
+ .course-schedule small{font-size:11px}
+ .course-schedule time{font-size:12px}
+ .chapter-position{font-size:14px;line-height:1.8}
+ .chapter-result{font-size:17px!important}
+ .learning-outcomes>div,.course-dialog .learning-outcomes>div{display:block;margin-top:19px}
+ .learning-outcomes dt{font-size:12px;margin-bottom:5px}
+ .learning-outcomes dd,.course-dialog .learning-outcomes dd{font-size:15px;line-height:1.9}
+ .learning-period{margin-top:28px}
+ .course-dialog .learning-period h3,.curriculum-chapter .learning-period h3{font-size:21px;margin-bottom:15px}
+ .period-date{font-size:12px}
+ .parent-hero h1{font-size:clamp(30px,8vw,40px)}
+ .parent-hero .lead{font-size:18px}
+}

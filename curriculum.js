@@ -3,7 +3,7 @@
   const dialog=document.getElementById('course-dialog');
   if(!dialog||typeof dialog.showModal!=='function')return;
   const title=document.getElementById('course-detail-title'),position=document.getElementById('course-detail-position'),body=document.getElementById('course-detail-body'),full=document.getElementById('course-detail-link');
-  const sequence=['monsta','timeline','map','player','game'];
+  const sequence=['build','develop','launch'];
   const previous=dialog.querySelector('[data-prev-course]'),next=dialog.querySelector('[data-next-course]');
   let opener,current;
   function show(key){
