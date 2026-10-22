@@ -16,7 +16,7 @@
    const link=item.querySelector('[data-video]'),mount=document.createElement('div');mount.className='inline-project-video';link.append(mount);
    players[i]=new YT.Player(mount,{
     host:'https://www.youtube.com',width:'100%',height:'100%',videoId:link.dataset.video,
-    playerVars:{autoplay:0,mute:1,controls:0,playsinline:1,loop:1,playlist:link.dataset.video,rel:0,origin:location.origin},
+    playerVars:{autoplay:1,mute:1,controls:0,playsinline:1,loop:1,playlist:link.dataset.video,rel:0,origin:location.origin},
     events:{
      onReady:e=>{e.target.mute();e.target.getIframe().setAttribute('tabindex','-1');e.target.getIframe().setAttribute('title',item.dataset.name+' — ตัวอย่างแบบปิดเสียง');sync();},
      onStateChange:e=>{item.dataset.playbackState=String(e.data);if(e.data===1){e.target.mute();item.classList.add('video-playing');item.classList.remove('video-blocked');}if(e.data===0&&canPlay()){e.target.seekTo(0);e.target.playVideo();}},
