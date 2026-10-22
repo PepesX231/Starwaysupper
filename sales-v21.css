@@ -39,3 +39,51 @@ html{overflow-x:clip}section[id],#opportunities{scroll-margin-top:100px}
  .showcase>.edge-atmosphere .edge-cutout--steel{width:210px;left:8px;top:78%;opacity:.65}
  .showcase>.edge-atmosphere .edge-cutout--stone{width:180px;right:10px;top:22%;opacity:.62}
 }
+
+/* Clearer milestone hierarchy and stronger scene depth */
+.express-course .milestone-stop h3{font-size:clamp(26px,2.5vw,38px);line-height:1.35;color:#fff5d8;text-shadow:0 1px 0 rgba(125,25,38,.48),0 5px 13px rgba(90,10,25,.18);max-width:390px}
+.express-course .milestone-stop .milestone-en{display:inline-block;padding:7px 12px;background:#f5c84c;color:#251125;border:2px solid #251125;box-shadow:4px 4px 0 #251125;transform:rotate(-2deg);font-size:clamp(16px,1.7vw,23px)}
+.express-course .milestone-stop>p:not(.milestone-date){display:none}
+.express-heading h2>span:last-child{font-size:clamp(30px,4vw,58px);line-height:1.2;text-shadow:0 1px 0 rgba(125,25,38,.44),0 5px 13px rgba(90,10,25,.16)}
+.questions-grid>h2{font-size:clamp(38px,6vw,72px);color:#ffe278;text-shadow:0 1px 0 rgba(125,25,38,.42),0 5px 13px rgba(90,10,25,.16)}
+.faq details{font-size:clamp(16px,1.35vw,19px)}
+.faq details p{font-size:16px;line-height:1.9}
+.closing .lead{font-size:clamp(19px,1.8vw,24px);line-height:1.8}
+@media(max-width:760px){.express-course .milestone-stop h3{font-size:25px;line-height:1.35}.express-heading h2>span:last-child{font-size:30px}}
+/* Persona 5 inspired display type: condensed Latin + Thai-capable heavy face. */
+@font-face{font-family:StarwaysP5Latin;src:url('assets/rebellion/BarlowCondensed-BlackItalic.ttf') format('truetype');font-weight:900;font-style:italic;font-display:swap}
+@font-face{font-family:StarwaysP5Thai;src:url('assets/edge-v17/Kanit-BlackItalic.ttf') format('truetype');font-weight:900;font-style:italic;font-display:swap}
+.express-heading h2,.milestone-stop h3,.showcase-heading h2,.questions-grid>h2,.closing h2{font-family:StarwaysP5Latin,StarwaysP5Thai,Anuphan,sans-serif;font-weight:900;font-style:italic;letter-spacing:-.045em}
+.closing h2 .headline-cut{font-family:StarwaysP5Latin,StarwaysP5Thai,Anuphan,sans-serif;font-style:italic;font-weight:900;letter-spacing:-.05em}
+.express-course .milestone-stop h3{font-family:StarwaysP5Latin,StarwaysP5Thai,Anuphan,sans-serif;font-weight:900;font-style:italic;letter-spacing:-.045em}
+.express-course .milestone-en,.express-course .milestone-fraction,.express-course .milestone-date{font-family:StarwaysP5Latin,StarwaysP5Thai,Anuphan,sans-serif;font-weight:900;font-style:italic}
+.showcase-heading>p,.express-heading>p,.questions-grid .faq,.closing .lead{font-family:Anuphan,sans-serif;font-style:normal}
+/* Soft red-tinted depth: keep the letter faces bright and readable. */
+.express-heading h2,.milestone-stop h3,.showcase-heading h2,.questions-grid>h2,.closing h2{-webkit-text-stroke:0;text-shadow:0 1px 0 rgba(126,20,38,.4),0 4px 10px rgba(94,7,22,.16)}
+.express-heading h2>span:last-child,.closing h2 .headline-cut{-webkit-text-stroke:0;text-shadow:0 1px 0 rgba(126,20,38,.32),0 4px 10px rgba(94,7,22,.13)}
+.express-course .milestone-en,.express-course .milestone-fraction,.express-course .milestone-date{text-shadow:0 1px 0 rgba(126,20,38,.28),0 3px 7px rgba(94,7,22,.12)}
+/* Focused headline reset: white Thai display type with clean weight and scale. */
+.express-course .express-heading h2{font-family:Barlow,StarwaysThaiDisplay,Anuphan,sans-serif;font-weight:900;font-style:normal;letter-spacing:-.035em;color:#fff;line-height:1.35;text-shadow:none}
+@font-face{font-family:StarwaysThaiDisplay;src:url('assets/NotoSansThai-variable.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
+.express-course .express-heading h2{max-width:100%;margin:0}
+.express-course .express-heading h2>span:last-child{display:block;max-width:1080px;font-family:Barlow,StarwaysThaiDisplay,Anuphan,sans-serif;font-size:clamp(36px,4.5vw,64px);font-weight:900;font-style:normal;line-height:1.22;letter-spacing:-.04em;color:#fff;text-shadow:none}
+.express-course .express-heading .display-intro{display:block;color:#fff;font-size:clamp(20px,2vw,28px);font-style:italic;margin-bottom:10px;opacity:.92}
+@media(max-width:760px){.express-course .express-heading h2>span:last-child{font-size:clamp(30px,8vw,40px);line-height:1.3}}
+/* Join hero and milestone on the same red field; fade only the ink edge locally. */
+.hero{background-color:var(--red);background-image:none}
+.hero-ink{-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 calc(100% - 42px),transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 calc(100% - 42px),transparent 100%)}
+.hero .scene-backdrop{-webkit-mask-image:none;mask-image:none}
+.express-course{margin-top:-1px;background-color:var(--red)}
+
+/* Persona-like headline plates use shape and contrast rather than heavy text glow. */
+.express-course .express-heading .display-intro{display:inline-block;width:max-content;max-width:100%;padding:4px 12px 6px;background:#171319;color:#fff;clip-path:polygon(2% 0,100% 5%,97% 100%,0 94%);transform:rotate(-2deg);opacity:1}
+.express-course .express-heading h2>span:last-child{display:block;width:max-content;max-width:100%;padding:.08em .2em .14em;background:#171319;color:#fff;clip-path:polygon(1% 2%,100% 0,98% 100%,0 95%);filter:drop-shadow(6px 7px 0 rgba(133,18,37,.8));}
+.express-course .milestone-stop h3{width:max-content;max-width:100%;padding:7px 11px 10px;background:#171319;color:#fff;clip-path:polygon(1% 1%,100% 0,98% 100%,0 94%);filter:drop-shadow(5px 6px 0 rgba(133,18,37,.72));}
+.express-course .milestone-stop .milestone-en{background:#fff;color:#171319;border-color:#171319;box-shadow:4px 4px 0 #171319}
+
+/* The closing title stays dark on a light panel, with a restrained red lift. */
+.closing h2 .headline-cut{display:inline-block;background:#fff8e8;color:#171319;padding:.08em .28em .13em;clip-path:polygon(1% 2%,100% 0,98% 100%,0 95%);filter:drop-shadow(7px 7px 0 rgba(187,24,42,.82));text-shadow:none}
+@media(max-width:760px){.express-course .express-heading h2>span:last-child{padding:.1em .18em .15em;filter:drop-shadow(4px 5px 0 rgba(133,18,37,.8))}.express-course .milestone-stop h3{padding:6px 8px 8px;filter:drop-shadow(3px 4px 0 rgba(133,18,37,.72))}.closing h2 .headline-cut{filter:drop-shadow(4px 4px 0 rgba(187,24,42,.82))}}
+/* Compact 2D extrusion for the headline faces, with white lettering on their existing plates. */
+.express-course .express-heading .display-intro,.express-course .express-heading h2>span:last-child,.express-course .milestone-stop h3{-webkit-text-stroke:.35px #171319;text-shadow:1px 1px 0 #f34253,2px 2px 0 #c81731,3px 3px 0 #171319;}
+@media(max-width:760px){.express-course .express-heading .display-intro,.express-course .express-heading h2>span:last-child,.express-course .milestone-stop h3{text-shadow:1px 1px 0 #f34253,2px 2px 0 #c81731;}}
