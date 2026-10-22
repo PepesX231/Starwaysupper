@@ -1,0 +1,107 @@
+@font-face{font-family:StarwaysPoster;src:url('assets/poster-v20/ChakraPetch-BoldItalic.ttf') format('truetype');font-weight:700;font-style:italic;font-display:swap}
+/* Thai headline letterforms change too, rather than only slanting the old face. */
+.hero h1,.showcase-heading h2,.discover-heading h2,.express-heading h2,.express-life-heading h2,.questions h2,.closing h2,.parent-hero h1,.parent-layout h2,.facts-grid h2,.parent-notes h2,.curriculum-page h1,.credits h1{
+ font-family:StarwaysPoster,Anuphan,sans-serif;font-weight:700;font-style:italic;letter-spacing:-.035em;line-height:1.55;transform:skewX(-3deg);transform-origin:left center;
+}
+.hero h1{font-size:clamp(37px,3.9vw,63px);text-shadow:2px 3px 0 var(--ink),4px 5px 0 #fff8e845}
+.hero h1 .headline-cut{line-height:1.6;padding:4px 20px 9px 12px;transform:rotate(-2deg);text-shadow:none}
+.display-intro{font-family:StarwaysPoster,Anuphan,sans-serif;font-weight:700;font-style:italic;font-size:.53em;letter-spacing:0;margin-bottom:8px;line-height:1.8}
+.poster-kicker{display:inline-flex;gap:9px;align-items:center;transform:rotate(-2deg)}
+.poster-kicker>span{display:inline-block;transform:rotate(1deg)}
+.poster-kicker>b{font:inherit;display:inline-block;background:var(--ink);color:var(--paper);padding:0 13px;clip-path:polygon(5% 0,100% 7%,95% 100%,0 93%);transform:rotate(3deg)}
+.showcase-heading h2,.discover-heading h2,.express-heading h2{font-size:clamp(34px,3.2vw,54px)}
+.express-heading h2{max-width:890px}
+.express-life-heading h2{font-size:clamp(35px,3.1vw,52px)}
+.closing h2{font-size:clamp(34px,3.3vw,54px)}
+.express-feature h3,.milestone-stop h3{font-family:StarwaysPoster,Anuphan,sans-serif;font-weight:700;font-style:italic;line-height:1.65;letter-spacing:-.03em}
+.hero{background:var(--red);padding-bottom:0}
+.hero-ink{-webkit-mask-image:linear-gradient(#000 0%,#000 calc(100% - 170px),transparent 100%);mask-image:linear-gradient(#000 0%,#000 calc(100% - 170px),transparent 100%)}
+.hero .scene-backdrop{mask-image:linear-gradient(transparent,#000 15%,#000 76%,transparent 100%)}
+.scroll-invite{border:0;padding-bottom:28px}
+.hero .art-scribble{bottom:6%}
+.express-course{margin-top:-1px;background-color:var(--red)}
+.express-course .scene-backdrop{opacity:.10}
+.express-course .express-life{position:relative;margin-top:60px;padding-top:55px}
+.express-life-heading>p{max-width:460px}
+.express-feature p{max-width:360px}
+/* Whole exterior objects have their own gutters. No negative-height spill into the previous copy. */
+[data-edge-scene]{--content-rail:max(var(--gutter),calc((100vw - 1480px)/2 + var(--gutter)));isolation:isolate}
+.section-edge-layer{z-index:0;inset:0;overflow:visible}
+.discover>.wrap,.express-course>.wrap{position:relative;z-index:2}
+.section-edge{width:320px!important;max-width:none;opacity:.8;top:54%!important;bottom:auto!important;filter:drop-shadow(5px 8px 0 #11111514)}
+.section-edge--rail,.express-course .section-edge--rail{left:calc(var(--content-rail) - 410px)!important;right:auto!important;transform:translate3d(calc((1 - var(--edge-in,1))*-110px),var(--edge-rise,0px),0) rotate(-12deg)!important}
+.section-edge--rock,.express-course .section-edge--rock{left:auto!important;right:calc(var(--content-rail) - 410px)!important;top:76%!important;transform:translate3d(calc((1 - var(--edge-in,1))*110px),var(--edge-rise,0px),0) rotate(10deg)!important}
+.express-course .section-edge--rail{top:40%!important}
+.express-course .section-edge--rock{top:70%!important}
+.discover .scene-backdrop{opacity:.09}
+.discover{padding-top:65px;padding-bottom:75px;min-height:0}
+.discover-heading{align-items:center;margin-bottom:32px}
+.discover-heading>p{max-width:430px}
+.creation-story{max-width:1320px!important;position:relative!important;top:auto!important}
+.creation-art.product-story{position:relative;display:block;width:100%;height:auto;min-height:0;aspect-ratio:3/1;margin:0;clip-path:none;overflow:visible;background:none;box-shadow:none}
+.creation-art.product-story:before,.creation-art.product-story:after{display:none}
+.creation-art.product-story .product-story-art{position:static;width:100%;height:auto;max-height:none;object-fit:contain;object-position:center;transform:none!important;background:none;filter:none;mask-image:none}
+.illustration-caption{bottom:-24px;font-size:11px}
+.creation-steps{gap:30px;margin-top:48px}
+.creation-step{grid-template-columns:35px 1fr;gap:8px 15px}
+.creation-step strong{font-family:StarwaysPoster,Anuphan,sans-serif;font-weight:700;font-style:italic;font-size:21px;line-height:1.7}
+.creation-step small{font-size:14px;line-height:1.85}
+.creation-status{font-size:13px}
+/* Give the work the largest stage. Space reserves include captions and perspective. */
+.showcase{padding-top:55px;padding-bottom:65px}
+.showcase-heading{margin-bottom:24px;align-items:center}
+.showcase-heading>p{font-size:15px;max-width:390px}
+.gallery-stage{margin-inline:0;height:var(--orbit-stage-height,580px);margin-bottom:16px;perspective:1700px;overflow:visible}
+.gallery-stage .gallery-item{width:min(600px,47vw);margin-left:calc(min(600px,47vw)/-2);top:25px}
+.project-media{aspect-ratio:16/10;clip-path:polygon(0 3%,98% 0,100% 96%,2% 100%)}
+.project-caption{min-height:95px;padding-top:17px}
+.project-caption h3{font-size:clamp(28px,3vw,43px)}
+.project-credit{font-size:11px}
+.inline-project-video{position:absolute;inset:0;width:100%;height:100%;border:0;pointer-events:none;opacity:0}
+.gallery-item.video-playing .inline-project-video{opacity:1}
+.gallery-item.video-playing .project-media>img{opacity:0}
+.gallery-item.video-playing .play{opacity:0}
+.gallery-item.video-blocked .inline-project-video{opacity:0}
+.gallery-item.video-blocked .project-media>img{opacity:1}
+.gallery-item.video-blocked .play{opacity:1}
+.gallery-help{font-size:12px;line-height:1.8}
+.gallery-auto{font-size:12px}
+.closing h2 .headline-cut{font-size:1em;line-height:1.7;padding-inline:12px 22px}
+.hero-action-canvas{inset:0;width:100%;height:100%}
+.hero-art .chibi-animation{height:87%;right:8%;bottom:5%}
+.hero-art .chibi-fallback{object-fit:contain}
+@media(min-width:1500px){.hero h1{font-size:64px}.gallery-stage .gallery-item{width:640px;margin-left:-320px}.hero-art .chibi-animation{right:9%;height:90%}}
+@media(max-width:1100px)and(min-width:761px){.hero h1{font-size:43px}.hero h1 .headline-cut{padding-inline:10px}.express-heading h2{font-size:37px}.creation-step strong{font-size:17px}.creation-step small{font-size:12px}}
+@media(max-height:760px)and(min-width:901px){.hero h1{font-size:clamp(35px,3.65vw,49px)}.hero-content{min-height:555px}.express-heading h2{font-size:36px}.discover-heading h2{font-size:39px}}
+@media(max-width:760px){
+ .hero h1{font-size:clamp(27px,7.4vw,42px);line-height:1.6}
+ .hero h1 .headline-cut{font-size:.95em;padding-inline:8px 13px}
+ .hero-content{padding-bottom:380px;min-height:900px}
+ .hero .art-scribble{font-size:24px;bottom:0}
+ .showcase-heading h2,.discover-heading h2,.express-heading h2,.express-life-heading h2,.closing h2{font-size:clamp(29px,7.7vw,39px)}
+ .display-intro{font-size:.56em}
+ .express-course .milestone-stop h3{font-size:21px}
+ .express-course .express-life{margin-top:30px;padding-top:35px}
+ .express-feature h3{font-size:27px}
+ .section-edge{width:180px!important;opacity:.28}
+ .section-edge--rail,.express-course .section-edge--rail{left:-205px!important;top:52%!important}
+ .section-edge--rock,.express-course .section-edge--rock{right:-205px!important;top:80%!important}
+ .discover{padding-top:45px;padding-bottom:45px}
+ .creation-art.product-story{aspect-ratio:auto;margin-top:25px}
+ .creation-art.product-story .product-story-art{width:100%;height:auto}
+ .creation-steps{gap:12px;margin-top:45px}
+ .creation-step strong{font-size:13px;line-height:1.85}
+ .creation-step small{display:none}
+ .illustration-caption{font-size:9px;line-height:1.6;bottom:-29px}
+ .creation-status{font-size:12px}
+ .showcase{padding-top:40px}
+ .gallery-stage{overflow:hidden;margin-inline:-22px;perspective:1200px}
+ .gallery-stage .gallery-item{width:calc(100vw - 60px);margin-left:calc((100vw - 60px)/-2);top:20px}
+ .project-media{aspect-ratio:4/3;min-height:200px}
+ .project-caption h3{font-size:29px}
+ .gallery-controls{margin-top:0}
+ .gallery-help{font-size:10px}
+ .hero-art .chibi-animation{height:87%;right:8%;bottom:5%}
+ .parent-hero h1,.curriculum-page h1{font-size:clamp(28px,8vw,38px)}
+}
+@media(prefers-reduced-motion:reduce){.section-edge{transform:none!important}.hero h1,.showcase-heading h2,.discover-heading h2{transition:none}.inline-project-video{display:none}}

@@ -10,7 +10,8 @@
   if(height>0)stage.style.setProperty('--orbit-stage-height',Math.ceil(height*1.17+54)+'px');
  }
  function render(announce=false){
-  const radius=Math.max(175,Math.min(360,stage.clientWidth*.30)),depth=stage.clientWidth<760?65:120;
+  const previousActive=active;
+  const radius=Math.max(175,Math.min(480,stage.clientWidth*.35)),depth=stage.clientWidth<760?65:120;
   active=wrap(Math.round(-phase/120));
   items.forEach((item,i)=>{
    const angle=(phase+i*120)*Math.PI/180,sine=Math.sin(angle),cosine=Math.cos(angle),front=(cosine+1)/2;
@@ -18,10 +19,11 @@
    item.querySelector('a').setAttribute('aria-label',(i===active?'ดูเทรลเลอร์ ':'เลือกผลงาน ')+item.dataset.name);
   });
   picks.forEach((pick,i)=>pick.setAttribute('aria-pressed',String(i===active)));
+  if((previousActive!==active||!stage.dataset.activeProject)&&typeof CustomEvent==='function'){stage.dataset.activeProject=String(active);document.dispatchEvent(new CustomEvent('starways:project-change',{detail:{index:active}}));}
   if(announce)status.textContent=items[active].dataset.name+' · '+(active+1)+' จาก '+items.length;
  }
  function allowed(){return visible&&enabled&&!reduced.matches&&!document.hidden&&!document.documentElement.classList.contains('motion-paused')&&!hover&&!drag&&!stage.contains(document.activeElement)&&!document.querySelector('dialog[open]')&&performance.now()>=holdUntil;}
- function tick(now){frame=0;if(!allowed()){last=0;stage.classList.remove('is-auto-spinning');return;}const dt=last?Math.min(now-last,70):0;last=now;phase=(phase+dt*.016)%360;stage.classList.add('is-auto-spinning');render();frame=requestAnimationFrame(tick);}
+ function tick(now){frame=0;if(!allowed()){last=0;stage.classList.remove('is-auto-spinning');return;}const dt=last?Math.min(now-last,70):0;last=now;phase=(phase+dt*.008)%360;stage.classList.add('is-auto-spinning');render();frame=requestAnimationFrame(tick);}
  function sync(){if(auto){auto.setAttribute('aria-pressed',String(enabled));auto.textContent=enabled?'Ⅱ หยุดหมุน':'▶ หมุนผลงาน';}if(allowed()&&!frame){last=0;frame=requestAnimationFrame(tick);}else if(!allowed()&&frame){cancelAnimationFrame(frame);frame=0;last=0;stage.classList.remove('is-auto-spinning');}}
  function hold(){holdUntil=performance.now()+4000;clearTimeout(holdTimer);holdTimer=setTimeout(sync,4050);sync();}
  function select(index){hold();stage.classList.remove('is-auto-spinning');const target=-wrap(index)*120;let delta=((target-phase)%360+540)%360-180;phase+=delta;render(true);}
