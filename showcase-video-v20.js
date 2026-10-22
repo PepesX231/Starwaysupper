@@ -1,4 +1,4 @@
-/* Only the front project plays. Every automatic and modal playback starts muted. */
+/* All three projects play together while the gallery is visible. Every automatic and modal playback starts muted. */
 (() => {
  'use strict';
  const gallery=document.querySelector('.work-gallery');if(!gallery)return;
@@ -8,7 +8,7 @@
  const canPlay=()=>visible&&!document.hidden&&!reduced.matches&&!document.documentElement.classList.contains('motion-paused')&&!document.querySelector('dialog[open]');
  function sync(){
   const index=items.findIndex(e=>e.dataset.active==='true');active=index;
-  players.forEach((player,i)=>{if(!player?.getPlayerState)return;player.mute();if(canPlay()&&i===index)player.playVideo();else player.pauseVideo();});
+  players.forEach((player,i)=>{if(!player?.getPlayerState)return;player.mute();if(canPlay())player.playVideo();else player.pauseVideo();});
  }
  function createPlayers(){
   if(ready||!window.YT?.Player)return;ready=true;
@@ -19,7 +19,7 @@
     playerVars:{autoplay:0,mute:1,controls:0,playsinline:1,loop:1,playlist:link.dataset.video,rel:0,origin:location.origin},
     events:{
      onReady:e=>{e.target.mute();e.target.getIframe().setAttribute('tabindex','-1');e.target.getIframe().setAttribute('title',item.dataset.name+' — ตัวอย่างแบบปิดเสียง');sync();},
-     onStateChange:e=>{item.dataset.playbackState=String(e.data);if(e.data===1){e.target.mute();item.classList.add('video-playing');item.classList.remove('video-blocked');}if(e.data===0&&canPlay()&&i===active){e.target.seekTo(0);e.target.playVideo();}},
+     onStateChange:e=>{item.dataset.playbackState=String(e.data);if(e.data===1){e.target.mute();item.classList.add('video-playing');item.classList.remove('video-blocked');}if(e.data===0&&canPlay()){e.target.seekTo(0);e.target.playVideo();}},
      onAutoplayBlocked:()=>item.classList.add('video-blocked'),
      onError:()=>{item.classList.add('video-blocked');item.classList.remove('video-playing');}
     }

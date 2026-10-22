@@ -22,7 +22,7 @@
   if((previousActive!==active||!stage.dataset.activeProject)&&typeof CustomEvent==='function'){stage.dataset.activeProject=String(active);document.dispatchEvent(new CustomEvent('starways:project-change',{detail:{index:active}}));}
   if(announce)status.textContent=items[active].dataset.name+' · '+(active+1)+' จาก '+items.length;
  }
- function allowed(){return visible&&enabled&&!reduced.matches&&!document.hidden&&!document.documentElement.classList.contains('motion-paused')&&!hover&&!drag&&!stage.contains(document.activeElement)&&!document.querySelector('dialog[open]')&&performance.now()>=holdUntil;}
+ function allowed(){return visible&&enabled&&!reduced.matches&&!document.hidden&&!document.documentElement.classList.contains('motion-paused')&&!drag&&!document.querySelector('dialog[open]')&&performance.now()>=holdUntil;}
  function tick(now){frame=0;if(!allowed()){last=0;stage.classList.remove('is-auto-spinning');return;}const dt=last?Math.min(now-last,70):0;last=now;phase=(phase+dt*.008)%360;stage.classList.add('is-auto-spinning');render();frame=requestAnimationFrame(tick);}
  function sync(){if(auto){auto.setAttribute('aria-pressed',String(enabled));auto.textContent=enabled?'Ⅱ หยุดหมุน':'▶ หมุนผลงาน';}if(allowed()&&!frame){last=0;frame=requestAnimationFrame(tick);}else if(!allowed()&&frame){cancelAnimationFrame(frame);frame=0;last=0;stage.classList.remove('is-auto-spinning');}}
  function hold(){holdUntil=performance.now()+4000;clearTimeout(holdTimer);holdTimer=setTimeout(sync,4050);sync();}
