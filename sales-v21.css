@@ -2,25 +2,14 @@
 .express-heading h2>span:last-child{font-size:.74em;max-width:960px;line-height:1.55}
 .express-course .milestone-stop h3{font-size:clamp(22px,2vw,31px);line-height:1.55;max-width:390px}
 .express-course .section-edge-layer,.discover>.section-edge-layer{display:none}
-.art-passage{height:260px;position:relative;isolation:isolate;margin:25px calc(-1 * var(--gutter)) 0;pointer-events:none;overflow:clip}
-.art-passage img{position:absolute;object-fit:contain;filter:drop-shadow(10px 15px 0 #760e2860);will-change:transform}
-.passage-rail{width:440px;height:330px;left:0;bottom:-15px;transform:translate(calc((1 - var(--edge-in,0)) * -170px),var(--edge-rise,80px)) rotate(-8deg)}
-.passage-rock{width:330px;height:310px;right:-5px;bottom:-25px;transform:translate(calc((1 - var(--edge-in,0)) * 170px),var(--edge-rise,80px)) rotate(12deg)}
-.passage-word{position:absolute;left:35%;top:36%;font:italic 900 clamp(30px,5vw,76px)/1 Barlow Condensed,sans-serif;color:#111116;opacity:.18;transform:rotate(-6deg);white-space:nowrap}
-.portfolio-evidence{position:relative;width:min(100%,1100px);margin:30px auto 40px;isolation:isolate}
-.portfolio-evidence:before{content:"";position:absolute;inset:20% -3% 12%;background:#111116;clip-path:polygon(2% 8%,100% 0,96% 100%,0 90%);z-index:-1}
-.portfolio-evidence img{display:block;width:100%;height:auto;filter:drop-shadow(0 12px 5px #11111635);animation:evidence-breathe 9s ease-in-out infinite}
-.portfolio-evidence>span{display:block;font:italic 900 20px/1.5 Barlow Condensed,sans-serif;letter-spacing:.12em;color:#fff4dc;transform:rotate(-2deg);background:#111116;padding:8px 20px;width:fit-content}
 .express-feature{position:relative;border-top:2px solid #fff4dc66;padding-top:22px}
 .express-feature h3{line-height:1.55!important}
 .hero-map-prop{animation:map-drift 11s ease-in-out infinite;transform-origin:50% 70%}
 @keyframes map-drift{0%,100%{translate:0 0;rotate:-2deg}50%{translate:0 -10px;rotate:1deg}}
 @keyframes evidence-breathe{0%,100%{translate:0 0}50%{translate:0 -5px}}
-@media(max-width:760px){.express-heading h2>span:last-child{font-size:.75em}.express-course .milestone-stop h3{font-size:21px}.art-passage{height:190px;margin-top:10px}.passage-rail{width:230px;height:210px;left:-25px}.passage-rock{width:180px;height:200px;right:-20px}.passage-word{left:27%;top:20%;font-size:32px}.portfolio-evidence{margin:25px 0}.portfolio-evidence>span{font-size:13px}.express-feature{padding-top:16px}}
-@media(prefers-reduced-motion:reduce){.art-passage img{transform:none}.portfolio-evidence img,.hero-map-prop{animation:none}}
-.motion-paused .portfolio-evidence img,.motion-paused .hero-map-prop{animation-play-state:paused}
-
-.portfolio-evidence b{display:block;color:#fff4dc;font:italic 700 clamp(18px,2.8vw,35px)/1.8 StarwaysPoster,sans-serif;padding:28px 20px;transform:rotate(-2deg)}.portfolio-evidence i{color:#ffc871;padding-inline:12px}.portfolio-evidence:before{inset:25% -1% 0}.portfolio-evidence{margin-bottom:50px}
-
-.art-passage img{mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 78%,transparent 100%)}
+@media(max-width:760px){.express-heading h2>span:last-child{font-size:.75em}.express-course .milestone-stop h3{font-size:21px}.express-feature{padding-top:16px}}
+@media(prefers-reduced-motion:reduce){}
 html{overflow-x:clip}section[id],#opportunities{scroll-margin-top:100px}
+
+/* Retired blocks must never reserve space, including in older cached markup. */
+.art-passage,.portfolio-evidence{display:none!important;height:0!important;margin:0!important;padding:0!important}
