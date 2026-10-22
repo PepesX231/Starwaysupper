@@ -1,0 +1,25 @@
+/* One type system for every Starways page. Local headings keep their sizes, while
+   family, posture, weight, color treatment, and depth stay consistent. */
+body, body * {
+  font-family: Anuphan, Arial, sans-serif !important;
+  font-style: normal !important;
+}
+body :is(h1,h2,h3,h4,h5,h6) {
+  color: inherit !important;
+  font-weight: 700 !important;
+  letter-spacing: normal !important;
+  line-height: 1.4;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+  transform: none !important;
+}
+body :is(h1,h2,h3,h4,h5,h6) * {
+  color: inherit !important;
+  font-weight: inherit !important;
+  font-style: inherit !important;
+  letter-spacing: inherit !important;
+  text-shadow: none !important;
+  -webkit-text-stroke: 0 !important;
+  transform: none !important;
+}
+
