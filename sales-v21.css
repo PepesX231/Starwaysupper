@@ -122,3 +122,32 @@ html{overflow-x:clip}section[id],#opportunities{scroll-margin-top:100px}
 .hero-art .hero-action-canvas{opacity:0}.hero-art.action-ready .hero-action-canvas{opacity:1}.hero-art.action-ready .chibi-fallback{opacity:0}
 
 .hero-art .chibi-animation.action-ready .hero-action-canvas{opacity:1}.hero-art .chibi-animation.action-ready .chibi-fallback{opacity:0}
+/* Bring the milestone headline back into the same display family as every page. */
+.express-course .express-heading h2{
+ max-width:1080px;margin-inline:auto;color:#fff8e8;
+ font-family:StarwaysPoster,Anuphan,sans-serif;font-size:clamp(34px,3.6vw,52px);
+ font-weight:700;font-style:italic;letter-spacing:-.025em;line-height:1.38;
+ text-shadow:none;-webkit-text-stroke:0;filter:none;
+}
+.express-course .express-heading .display-intro{
+ display:block;width:auto;max-width:100%;margin:0 0 8px;padding:0;
+ background:none;color:#fff8e8;font-family:inherit;font-size:.58em;
+ font-weight:700;font-style:italic;letter-spacing:inherit;line-height:1.45;
+ clip-path:none;transform:none;opacity:.95;text-shadow:none;-webkit-text-stroke:0;filter:none;
+}
+.express-course .express-heading h2>span:last-child{
+ display:block;width:fit-content;max-width:100%;padding:.08em .2em .13em;
+ background:#171319;color:#fff8e8;font-family:inherit;font-size:1em;
+ font-weight:inherit;font-style:inherit;letter-spacing:inherit;line-height:inherit;
+ clip-path:none;filter:none;text-shadow:none;-webkit-text-stroke:0;
+}
+/* Both sections share one solid red field; keep the join crisp without a glow. */
+.hero{background:var(--red)!important;background-image:none!important}
+.hero-ink{-webkit-mask-image:none!important;mask-image:none!important;filter:none!important;box-shadow:none!important}
+.hero-ink::after{display:none!important;animation:none!important;filter:none!important;box-shadow:none!important}
+.hero::after{display:none!important;animation:none!important;filter:none!important;box-shadow:none!important}
+@media(max-width:760px){
+ .express-course .express-heading h2{font-size:clamp(30px,8vw,40px);line-height:1.35}
+ .express-course .express-heading .display-intro{font-size:.58em}
+ .express-course .express-heading h2>span:last-child{width:auto;max-width:100%;padding:.08em .16em .13em}
+}
