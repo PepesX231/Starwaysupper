@@ -87,3 +87,17 @@ html{overflow-x:clip}section[id],#opportunities{scroll-margin-top:100px}
 /* Compact 2D extrusion for the headline faces, with white lettering on their existing plates. */
 .express-course .express-heading .display-intro,.express-course .express-heading h2>span:last-child,.express-course .milestone-stop h3{-webkit-text-stroke:.35px #171319;text-shadow:1px 1px 0 #f34253,2px 2px 0 #c81731,3px 3px 0 #171319;}
 @media(max-width:760px){.express-course .express-heading .display-intro,.express-course .express-heading h2>span:last-child,.express-course .milestone-stop h3{text-shadow:1px 1px 0 #f34253,2px 2px 0 #c81731;}}
+/* A compact course mark replaces the repeated name line and opens up the hero. */
+.hero-course-mark{display:flex;align-items:center;gap:12px;width:max-content;margin:0 0 25px;color:#fff8e8}
+.hero-course-mark svg{width:48px;height:48px;flex:none;filter:drop-shadow(2px 3px 0 #171319)}
+.hero-course-wordmark{display:flex;flex-direction:column;line-height:.9;transform:skewX(-7deg)}
+.hero-course-wordmark strong{font:italic 900 30px/.9 Barlow,Arial,sans-serif;letter-spacing:.035em;text-shadow:2px 2px 0 #171319}
+.hero-course-wordmark small{font:800 10px/1.4 Anuphan,sans-serif;letter-spacing:.22em;margin-top:5px}
+.hero-copy{width:100%;max-width:960px}
+.hero-content{min-height:560px}
+.hero-facts{font-size:14px;letter-spacing:.01em}
+.express-course .milestone-fraction{font-size:40px;top:6px;left:4px;line-height:1}
+.express-course .milestone-fraction small{display:none}
+.express-course .milestone-stop>.milestone-date,.express-course .milestone-open,.express-course .milestone-note{display:none!important}
+@media(max-width:1100px){.hero-copy{width:100%}.hero-content{min-height:500px}}
+@media(max-width:760px){.hero-content{min-height:0;padding:45px 0 58px}.hero-course-mark{margin-bottom:22px}.hero-course-mark svg{width:40px;height:40px}.hero-course-wordmark strong{font-size:26px}.hero-facts{max-width:none}}
