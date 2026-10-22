@@ -201,3 +201,19 @@ html{overflow-x:clip}section[id],#opportunities{scroll-margin-top:100px}
  .express-life-heading .display-intro{font-size:.58em;margin-bottom:9px}
  .express-life-heading h2>span:last-child{width:fit-content;max-width:100%;padding:.04em .16em .12em;filter:drop-shadow(4px 5px 0 rgba(133,18,37,.8))}
 }
+/* Softer 2D lift: fewer shadow steps and a lighter plate shadow. */
+.express-course .express-heading .display-intro,
+.express-course .express-heading h2>span:last-child,
+.express-life-heading .display-intro,
+.express-life-heading h2>span:last-child{
+ -webkit-text-stroke:.18px rgba(23,19,25,.7);
+ text-shadow:1px 1px 1px rgba(243,66,83,.72),2px 3px 2px rgba(23,19,25,.42);
+}
+.express-course .express-heading h2>span:last-child,
+.express-life-heading h2>span:last-child{
+ filter:drop-shadow(3px 4px 0 rgba(133,18,37,.56));
+}
+@media(max-width:760px){
+ .express-course .express-heading h2>span:last-child,
+ .express-life-heading h2>span:last-child{filter:drop-shadow(2px 3px 0 rgba(133,18,37,.52))}
+}
