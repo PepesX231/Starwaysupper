@@ -1,219 +1,971 @@
-/* Dedicated artwork bands preserve the entire reading area. */
-.express-heading h2>span:last-child{font-size:.74em;max-width:960px;line-height:1.55}
-.express-course .milestone-stop h3{font-size:clamp(22px,2vw,31px);line-height:1.55;max-width:390px}
-.express-course .section-edge-layer,.discover>.section-edge-layer{display:none}
-.express-feature{position:relative;border-top:2px solid #fff4dc66;padding-top:22px}
-.express-feature h3{line-height:1.55!important}
-.hero-map-prop{animation:map-drift 11s ease-in-out infinite;transform-origin:50% 70%}
-@keyframes map-drift{0%,100%{translate:0 0;rotate:-2deg}50%{translate:0 -10px;rotate:1deg}}
-@keyframes evidence-breathe{0%,100%{translate:0 0}50%{translate:0 -5px}}
-@media(max-width:760px){.express-heading h2>span:last-child{font-size:.75em}.express-course .milestone-stop h3{font-size:21px}.express-feature{padding-top:16px}}
-@media(prefers-reduced-motion:reduce){.hero-map-prop{animation:none}}
-.motion-paused .hero-map-prop{animation-play-state:paused}
-html{overflow-x:clip}section[id],#opportunities{scroll-margin-top:100px}
+/* Starways Super Express — Authentic Persona 5 & Concept-Art Visual System */
+@font-face{
+ font-family:StarwaysDisplay;
+ src:url('assets/edge-v17/Kanit-BlackItalic.ttf') format('truetype');
+ font-weight:900;
+ font-style:italic;
+ font-display:swap;
+}
+@font-face{
+ font-family:Barlow;
+ src:url('assets/rebellion/BarlowCondensed-BlackItalic.ttf') format('truetype');
+ font-weight:900;
+ font-style:italic;
+ font-display:swap;
+}
 
-/* Retired blocks must never reserve space, including in older cached markup. */
+html{overflow-x:clip}
+section[id],#opportunities{scroll-margin-top:100px}
+
+/* Retired blocks stay hidden */
 .art-passage,.portfolio-evidence{display:none!important;height:0!important;margin:0!important;padding:0!important}
 
+/* ==========================================================================
+   1. DISPLAY TYPOGRAPHY (Bold Kanit Black Italic + Barlow Condensed Black Italic)
+   ========================================================================== */
+.hero h1,
+.express-heading h2,
+.express-life-heading h2,
+.showcase-heading h2,
+.questions-grid>h2,
+.closing h2,
+.parent-hero h1,
+.parent-layout h2,
+.facts-grid h2,
+.parent-notes h2,
+.curriculum-page h1,
+.credits h1{
+ font-family:Barlow,StarwaysDisplay,Anuphan,sans-serif!important;
+ font-weight:900!important;
+ font-style:italic!important;
+ letter-spacing:-.02em!important;
+ line-height:1.28!important;
+ transform:none!important;
+ -webkit-text-stroke:0!important;
+}
 
-/* Real transparent 2D cutouts, kept outside the content rail. No bitmap box or section seam crosses the artwork. */
-.edge-atmosphere{position:absolute;inset:0;z-index:0;pointer-events:none;background:none;mask-image:none;overflow:visible}
-.edge-cutout{position:absolute;display:block;max-width:none;height:auto;object-fit:contain;opacity:.84;filter:drop-shadow(6px 12px 5px #11111638);animation:edge-cutout-drift 15s ease-in-out infinite;mask-image:linear-gradient(transparent 0%,#000 2%,#000 98%,transparent 100%)}
-.edge-cutout--steel{width:310px;left:calc(var(--gutter) - 325px);top:31%;transform:rotate(-9deg);animation-delay:-3s}
-.edge-cutout--stone{width:255px;right:calc(var(--gutter) - 270px);top:65%;transform:rotate(6deg);animation-delay:-8s}
-.discover>.edge-atmosphere .edge-cutout--steel{top:56%;transform:rotate(-15deg)}
-.discover>.edge-atmosphere .edge-cutout--stone{top:30%;transform:rotate(8deg)}
-.showcase>.edge-atmosphere .edge-cutout--steel{top:59%;opacity:.65}
-.showcase>.edge-atmosphere .edge-cutout--stone{top:18%;opacity:.7}
+.express-course .milestone-stop h3,
+.express-feature h3{
+ font-family:Barlow,StarwaysDisplay,Anuphan,sans-serif!important;
+ font-weight:900!important;
+ font-style:italic!important;
+ letter-spacing:-.015em!important;
+ line-height:1.35!important;
+ -webkit-text-stroke:0!important;
+}
+
+/* ==========================================================================
+   2. UNIFIED RED HALFTONE FIELD & SEAMLESS HERO -> MILESTONE JOIN
+   ========================================================================== */
+/* Hero and Express-Course share the exact same fixed red halftone pattern
+   so there is zero color or dot-density seam between them! */
+.hero,
+.express-course,
+.closing{
+ position:relative;
+ background-color:var(--red)!important;
+ background-image:radial-gradient(#11111530 1.1px,transparent 1.1px)!important;
+ background-size:6px 6px!important;
+ background-attachment:fixed!important;
+}
+
+.hero{
+ padding-bottom:44px!important;
+ overflow:hidden!important;
+}
+
+/* Remove the duplicate dot pattern on .hero-ink that darkened .hero relative to .express-course */
+.hero-ink{
+ position:absolute;
+ inset:0;
+ z-index:0;
+ overflow:hidden;
+ background:transparent!important;
+ background-image:none!important;
+ -webkit-mask-image:none!important;
+ mask-image:none!important;
+}
+
+/* Self-contained diagonal Persona wedge on the right side of Hero:
+   angles in from (58%,0) to (35%,86%) and closes cleanly at (100%,100%)
+   so it never gets chopped horizontally at the section boundary! */
+.hero-ink:before{
+ content:'';
+ position:absolute;
+ inset:0;
+ background:
+  radial-gradient(#fff8e816 1px,transparent 1px) 0 0/7px 7px,
+  var(--ink)!important;
+ clip-path:polygon(58% 0,100% 0,100% 100%,35% 86%)!important;
+ animation:none!important;
+ transform:none!important;
+}
+
+/* Continuous two-segment cream comic border along the diagonal wedge */
+.hero-ink:after{
+ content:'';
+ position:absolute;
+ inset:0;
+ display:block!important;
+ background:var(--paper)!important;
+ clip-path:polygon(57.3% 0,58.1% 0,35.4% 85.6%,100% 99.3%,100% 100%,34.4% 86.2%)!important;
+ opacity:.92!important;
+ mix-blend-mode:normal!important;
+ animation:none!important;
+ pointer-events:none;
+}
+
+/* Concept-art elevated train & cliff pagoda backdrop inside Hero:
+   clipped to the same diagonal wedge + feathered before the bottom edge! */
+.hero .scene-backdrop{
+ z-index:1!important;
+ background-image:url('assets/edge-v17/hero-backdrop.webp')!important;
+ background-size:cover!important;
+ background-position:right top!important;
+ opacity:.5!important;
+ mix-blend-mode:normal!important;
+ clip-path:polygon(58% 0,100% 0,100% 100%,35% 86%)!important;
+ -webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 58%,transparent 86%)!important;
+ mask-image:linear-gradient(to bottom,#000 0%,#000 58%,transparent 86%)!important;
+}
+
+.hero .hero-word{
+ z-index:1;
+ opacity:.13!important;
+ right:2%;
+ top:18px;
+ font:italic 900 clamp(110px,13vw,210px)/.82 Barlow,sans-serif!important;
+ color:var(--paper);
+ text-shadow:6px 6px 0 #000;
+}
+
+.hero-content{
+ position:relative;
+ z-index:3;
+ min-height:590px;
+ isolation:isolate;
+}
+
+.hero-copy{
+ position:relative;
+ z-index:4;
+ width:58%;
+ max-width:760px;
+}
+
+/* Course Star Mark */
+.hero-course-mark{
+ display:inline-flex;
+ align-items:center;
+ gap:12px;
+ width:max-content;
+ margin:0 0 22px;
+ padding:6px 16px 6px 10px;
+ background:#111115;
+ color:#fff8e8;
+ clip-path:polygon(2% 0,100% 6%,97% 100%,0 94%);
+ filter:drop-shadow(4px 5px 0 rgba(17,17,21,.45));
+ transform:rotate(-1.5deg);
+}
+.hero-course-mark svg{width:38px;height:38px;flex:none;filter:none}
+.hero-course-wordmark{display:flex;flex-direction:column;line-height:.92;transform:skewX(-6deg)}
+.hero-course-wordmark strong{font:italic 900 26px/.92 Barlow,Arial,sans-serif;letter-spacing:.04em;color:#fff8e8;text-shadow:2px 2px 0 var(--red)}
+.hero-course-wordmark small{font:800 9.5px/1.35 Anuphan,sans-serif;letter-spacing:.2em;margin-top:3px;color:#f9ce52}
+
+/* Hero Headline: Kicker + Form-Fitting Cut-Paper Strips (Zero Wide Empty Box!) */
+.hero h1{
+ font-size:clamp(38px,4.1vw,62px)!important;
+ color:#fff8e8!important;
+ text-shadow:none!important;
+ text-wrap:initial!important;
+}
+
+.poster-kicker{
+ display:inline-flex;
+ gap:12px;
+ align-items:center;
+ margin-bottom:10px;
+ transform:rotate(-2deg);
+}
+.poster-kicker>span{
+ display:inline-block;
+ color:#fff8e8;
+ text-shadow:4px 5px 0 #111115!important;
+ transform:rotate(1deg);
+}
+.poster-kicker>b{
+ font:inherit;
+ display:inline-block;
+ background:#111115;
+ color:#fff8e8;
+ padding:2px 18px 6px;
+ border:2px solid #fff8e8;
+ clip-path:polygon(5% 0,100% 7%,95% 100%,0 93%);
+ transform:rotate(3deg);
+ filter:drop-shadow(5px 6px 0 #111115);
+ text-shadow:none!important;
+}
+
+.headline-stack{
+ display:flex;
+ flex-direction:column;
+ align-items:flex-start;
+ gap:8px;
+ margin-top:4px;
+}
+
+/* Strip 1: Cream paper strip with sharp ink-black text & hard black offset shadow */
+.hero h1 .headline-cut{
+ display:block!important;
+ width:fit-content!important;
+ max-width:100%!important;
+ margin:0!important;
+ padding:5px 24px 9px 18px!important;
+ background:var(--paper)!important;
+ color:var(--ink)!important;
+ line-height:1.25!important;
+ clip-path:polygon(1.2% 5%,100% 0,98.2% 95%,0 100%)!important;
+ transform:rotate(-1.8deg)!important;
+ filter:drop-shadow(7px 8px 0 #111115)!important;
+ text-shadow:none!important;
+ -webkit-text-stroke:0!important;
+}
+
+/* Strip 2: Ink-black strip with cream text & crisp cream offset shadow */
+.hero h1 .headline-cut.headline-cut--ink{
+ background:var(--ink)!important;
+ color:var(--paper)!important;
+ padding:6px 26px 10px 20px!important;
+ margin-left:10px!important;
+ border-left:6px solid var(--paper)!important;
+ clip-path:polygon(0 4%,99% 0,100% 96%,1.4% 100%)!important;
+ transform:rotate(-.7deg)!important;
+ filter:drop-shadow(7px 8px 0 var(--paper))!important;
+ text-shadow:none!important;
+}
+
+.hero-desc{
+ font-size:clamp(17px,1.25vw,20px)!important;
+ font-weight:600;
+ line-height:1.75;
+ margin-top:24px;
+ color:#fff8e8;
+ max-width:540px;
+ text-shadow:0 2px 0 #111115;
+}
+
+.hero-actions{
+ display:flex;
+ gap:24px;
+ align-items:center;
+ margin-top:26px;
+ flex-wrap:wrap;
+}
+.hero .button{
+ background:var(--paper);
+ color:var(--ink);
+ border:2px solid var(--ink);
+ filter:drop-shadow(6px 6px 0 var(--ink));
+}
+.hero .button:hover{
+ background:#f9ce52;
+ transform:translate(-3px,-3px);
+}
+.hero .text-link{
+ color:#fff8e8;
+ font-weight:700;
+ text-shadow:0 2px 0 #111115;
+}
+
+.hero-facts{
+ display:inline-block;
+ margin-top:22px;
+ padding:5px 14px;
+ background:rgba(17,17,21,.82);
+ color:#fff8e8;
+ font-size:13.5px;
+ font-weight:600;
+ letter-spacing:.02em;
+ clip-path:polygon(2% 0,100% 4%,98% 100%,0 96%);
+ border-left:3px solid #f9ce52;
+}
+
+/* Hero Right Artwork Composition */
+.hero-art{
+ position:absolute;
+ z-index:3;
+ right:0;
+ top:50%;
+ width:min(50%,700px);
+ height:min(90%,690px);
+ margin:0;
+ transform:translateY(-50%);
+ pointer-events:none;
+ isolation:isolate;
+}
+.hero-art .hero-map-prop{
+ position:absolute;
+ right:-2%;
+ top:0;
+ width:82%;
+ height:96%;
+ z-index:0;
+ animation:map-drift 11s ease-in-out infinite;
+ transform-origin:50% 70%;
+}
+.hero-art .hero-map-prop img{
+ display:block;
+ width:100%;
+ height:100%;
+ object-fit:contain;
+ filter:drop-shadow(10px 14px 0 rgba(17,17,21,.55));
+ animation:none;
+}
+.hero-art .chibi-animation{
+ position:absolute;
+ right:14%;
+ bottom:5%;
+ z-index:2;
+ width:min(76%,450px);
+ height:auto;
+ aspect-ratio:1;
+ filter:drop-shadow(9px 13px 0 rgba(17,17,21,.6));
+}
+.hero-art .chibi-fallback,
+.hero-art .hero-action-canvas{
+ position:absolute;
+ inset:0;
+ width:100%;
+ height:100%;
+ object-fit:contain;
+ filter:none;
+ animation:none;
+}
+.hero-art .hero-action-canvas{opacity:0}
+.hero-art .chibi-animation.action-ready .hero-action-canvas{opacity:1}
+.hero-art .chibi-animation.action-ready .chibi-fallback{opacity:0}
+
+.hero-art .art-scribble{
+ position:absolute;
+ right:5%;
+ bottom:5%;
+ z-index:3;
+ font:italic 900 clamp(24px,2.2vw,34px)/.92 Barlow,sans-serif;
+ color:#fff8e8;
+ background:#111115;
+ padding:6px 14px 8px;
+ clip-path:polygon(3% 0,100% 6%,97% 100%,0 94%);
+ border-left:4px solid var(--red);
+ filter:drop-shadow(5px 5px 0 var(--red));
+ transform:rotate(-8deg);
+ text-shadow:none;
+}
+
+@keyframes map-drift{0%,100%{translate:0 0;rotate:-2deg}50%{translate:0 -10px;rotate:1deg}}
+
+/* ==========================================================================
+   3. MILESTONE SECTION (.express-course) — SEAMLESS BACKDROP & CTA BUTTONS
+   ========================================================================== */
+.express-course{
+ margin-top:-1px;
+ padding-top:75px!important;
+ padding-bottom:95px!important;
+ overflow:hidden!important;
+ isolation:isolate;
+}
+
+/* Remove any extra pseudo-element wedges so the red halftone is 100% continuous */
+.express-course:before,
+.express-course:after{
+ display:none!important;
+ content:none!important;
+}
+
+/* Concept-Art Canyon Cliffs & Railway Bridge Backdrop (journey-backdrop.webp):
+   Uses cover + smooth top/bottom alpha fade so no internal bitmap edge can ever appear! */
+.express-course .scene-backdrop{
+ position:absolute;
+ inset:0;
+ z-index:0!important;
+ background-image:url('assets/edge-v17/journey-backdrop.webp')!important;
+ background-size:cover!important;
+ background-position:center center!important;
+ background-repeat:no-repeat!important;
+ opacity:.38!important;
+ mix-blend-mode:normal!important;
+ -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 80%,transparent 100%)!important;
+ mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 80%,transparent 100%)!important;
+}
+
+/* Hide duplicate section-edge-layer that flipped left/right rock cutouts */
+.express-course .section-edge-layer,
+.discover>.section-edge-layer{
+ display:none!important;
+}
+
+/* Outer gutter cutouts: feathered with radial masks so canvas edges never show */
+.edge-atmosphere{
+ position:absolute;
+ inset:0;
+ z-index:1;
+ pointer-events:none;
+ overflow:hidden;
+}
+.edge-cutout{
+ position:absolute;
+ display:block;
+ max-width:none;
+ height:auto;
+ object-fit:contain;
+ opacity:.85;
+ filter:drop-shadow(8px 14px 0 rgba(17,17,21,.4));
+ animation:edge-cutout-drift 15s ease-in-out infinite;
+ -webkit-mask-image:radial-gradient(ellipse 78% 78% at 50% 50%,#000 52%,transparent 96%)!important;
+ mask-image:radial-gradient(ellipse 78% 78% at 50% 50%,#000 52%,transparent 96%)!important;
+}
+.express-course .edge-cutout--steel{
+ width:clamp(240px,20vw,330px);
+ left:-45px;
+ top:38%;
+ transform:rotate(-6deg);
+}
+.express-course .edge-cutout--stone{
+ width:clamp(210px,18vw,290px);
+ right:-35px;
+ top:12%;
+ transform:none;
+}
 @keyframes edge-cutout-drift{0%,100%{translate:0 0}50%{translate:0 -9px}}
-.motion-paused .edge-cutout{animation-play-state:paused}
-@media(prefers-reduced-motion:reduce){.edge-cutout{animation:none}}
-@media(max-width:1100px){.edge-cutout--steel{left:-270px}.edge-cutout--stone{right:-220px}}
-@media(max-width:760px){.edge-atmosphere{display:none}}
 
-@media(min-width:1101px){
- .edge-cutout--steel{width:235px;left:-100px;top:36%;opacity:.65}
- .edge-cutout--stone{width:205px;right:-90px;top:65%;opacity:.72}
- .discover>.edge-atmosphere .edge-cutout--steel{width:170px;left:8px;top:55%;transform:rotate(-8deg);opacity:.78}
- .discover>.edge-atmosphere .edge-cutout--stone{width:190px;right:12px;top:40%;transform:rotate(3deg);opacity:.84}
- .showcase>.edge-atmosphere .edge-cutout--steel{width:210px;left:8px;top:78%;opacity:.65}
- .showcase>.edge-atmosphere .edge-cutout--stone{width:180px;right:10px;top:22%;opacity:.62}
+/* Milestone Heading: Compact Kicker + Clean Bold Cream Typography (NO Black Slab!) */
+.express-course .express-heading{
+ position:relative;
+ z-index:2;
+ display:block!important;
+ margin-bottom:44px!important;
+}
+.express-course .express-heading h2{
+ display:block!important;
+ width:100%!important;
+ max-width:980px!important;
+ margin:0!important;
+ color:#fff8e8!important;
+ font-size:clamp(36px,4.2vw,60px)!important;
+ line-height:1.3!important;
+ background:none!important;
+ clip-path:none!important;
+ filter:none!important;
+ text-shadow:none!important;
+}
+.express-course .express-heading .display-intro{
+ display:block!important;
+ width:fit-content!important;
+ max-width:100%!important;
+ margin:0 0 14px!important;
+ padding:5px 20px 7px!important;
+ background:#111115!important;
+ color:#fff8e8!important;
+ font-family:Barlow,StarwaysDisplay,sans-serif!important;
+ font-size:clamp(22px,2.1vw,30px)!important;
+ font-weight:900!important;
+ font-style:italic!important;
+ letter-spacing:.04em!important;
+ line-height:1.2!important;
+ border:2px solid #fff8e8!important;
+ clip-path:polygon(3% 0,100% 6%,97% 100%,0 94%)!important;
+ transform:rotate(-2deg)!important;
+ filter:drop-shadow(5px 6px 0 #111115)!important;
+ text-shadow:none!important;
+ -webkit-text-stroke:0!important;
+}
+.express-course .express-heading h2>span:last-child{
+ display:block!important;
+ width:auto!important;
+ max-width:940px!important;
+ padding:0!important;
+ background:transparent!important;
+ color:#fff8e8!important;
+ clip-path:none!important;
+ box-shadow:none!important;
+ filter:none!important;
+ -webkit-text-stroke:0!important;
+ text-shadow:4px 5px 0 #111115!important;
+ text-wrap:balance;
+}
+.express-course .express-heading .headline-cut--inline{
+ display:inline-block!important;
+ width:fit-content!important;
+ padding:2px 20px 6px 15px!important;
+ margin-left:6px;
+ background:var(--paper)!important;
+ color:var(--ink)!important;
+ font-style:italic!important;
+ line-height:1.22!important;
+ clip-path:polygon(1.5% 4%,100% 0,98% 96%,0 100%)!important;
+ transform:rotate(-1.5deg)!important;
+ filter:drop-shadow(6px 7px 0 #111115)!important;
+ text-shadow:none!important;
+ -webkit-text-stroke:0!important;
 }
 
-/* Clearer milestone hierarchy and stronger scene depth */
-.express-course .milestone-stop h3{font-size:clamp(26px,2.5vw,38px);line-height:1.35;color:#fff5d8;text-shadow:0 1px 0 rgba(125,25,38,.48),0 5px 13px rgba(90,10,25,.18);max-width:390px}
-.express-course .milestone-stop .milestone-en{display:inline-block;padding:7px 12px;background:#f5c84c;color:#251125;border:2px solid #251125;box-shadow:4px 4px 0 #251125;transform:rotate(-2deg);font-size:clamp(16px,1.7vw,23px)}
-.express-course .milestone-stop>p:not(.milestone-date){display:none}
-.express-heading h2>span:last-child{font-size:clamp(30px,4vw,58px);line-height:1.2;text-shadow:0 1px 0 rgba(125,25,38,.44),0 5px 13px rgba(90,10,25,.16)}
-.questions-grid>h2{font-size:clamp(38px,6vw,72px);color:#ffe278;text-shadow:0 1px 0 rgba(125,25,38,.42),0 5px 13px rgba(90,10,25,.16)}
-.faq details{font-size:clamp(16px,1.35vw,19px)}
-.faq details p{font-size:16px;line-height:1.9}
-.closing .lead{font-size:clamp(19px,1.8vw,24px);line-height:1.8}
-@media(max-width:760px){.express-course .milestone-stop h3{font-size:25px;line-height:1.35}.express-heading h2>span:last-child{font-size:30px}}
-/* Persona 5 inspired display type: condensed Latin + Thai-capable heavy face. */
-@font-face{font-family:StarwaysP5Latin;src:url('assets/rebellion/BarlowCondensed-BlackItalic.ttf') format('truetype');font-weight:900;font-style:italic;font-display:swap}
-@font-face{font-family:StarwaysP5Thai;src:url('assets/edge-v17/Kanit-BlackItalic.ttf') format('truetype');font-weight:900;font-style:italic;font-display:swap}
-.express-heading h2,.milestone-stop h3,.showcase-heading h2,.questions-grid>h2,.closing h2{font-family:StarwaysP5Latin,StarwaysP5Thai,Anuphan,sans-serif;font-weight:900;font-style:italic;letter-spacing:-.045em}
-.closing h2 .headline-cut{font-family:StarwaysP5Latin,StarwaysP5Thai,Anuphan,sans-serif;font-style:italic;font-weight:900;letter-spacing:-.05em}
-.express-course .milestone-stop h3{font-family:StarwaysP5Latin,StarwaysP5Thai,Anuphan,sans-serif;font-weight:900;font-style:italic;letter-spacing:-.045em}
-.express-course .milestone-en,.express-course .milestone-fraction,.express-course .milestone-date{font-family:StarwaysP5Latin,StarwaysP5Thai,Anuphan,sans-serif;font-weight:900;font-style:italic}
-.showcase-heading>p,.express-heading>p,.questions-grid .faq,.closing .lead{font-family:Anuphan,sans-serif;font-style:normal}
-/* Soft red-tinted depth: keep the letter faces bright and readable. */
-.express-heading h2,.milestone-stop h3,.showcase-heading h2,.questions-grid>h2,.closing h2{-webkit-text-stroke:0;text-shadow:0 1px 0 rgba(126,20,38,.4),0 4px 10px rgba(94,7,22,.16)}
-.express-heading h2>span:last-child,.closing h2 .headline-cut{-webkit-text-stroke:0;text-shadow:0 1px 0 rgba(126,20,38,.32),0 4px 10px rgba(94,7,22,.13)}
-.express-course .milestone-en,.express-course .milestone-fraction,.express-course .milestone-date{text-shadow:0 1px 0 rgba(126,20,38,.28),0 3px 7px rgba(94,7,22,.12)}
-/* Focused headline reset: white Thai display type with clean weight and scale. */
-.express-course .express-heading h2{font-family:Barlow,StarwaysThaiDisplay,Anuphan,sans-serif;font-weight:900;font-style:normal;letter-spacing:-.035em;color:#fff;line-height:1.35;text-shadow:none}
-@font-face{font-family:StarwaysThaiDisplay;src:url('assets/NotoSansThai-variable.ttf') format('truetype');font-weight:100 900;font-style:normal;font-display:swap}
-.express-course .express-heading h2{max-width:100%;margin:0}
-.express-course .express-heading h2>span:last-child{display:block;max-width:1080px;font-family:Barlow,StarwaysThaiDisplay,Anuphan,sans-serif;font-size:clamp(36px,4.5vw,64px);font-weight:900;font-style:normal;line-height:1.22;letter-spacing:-.04em;color:#fff;text-shadow:none}
-.express-course .express-heading .display-intro{display:block;color:#fff;font-size:clamp(20px,2vw,28px);font-style:italic;margin-bottom:10px;opacity:.92}
-@media(max-width:760px){.express-course .express-heading h2>span:last-child{font-size:clamp(30px,8vw,40px);line-height:1.3}}
-/* Join hero and milestone on the same red field; fade only the ink edge locally. */
-.hero{background-color:var(--red);background-image:none}
-.hero-ink{-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 calc(100% - 42px),transparent 100%);mask-image:linear-gradient(to bottom,#000 0%,#000 calc(100% - 42px),transparent 100%)}
-.hero .scene-backdrop{-webkit-mask-image:none;mask-image:none}
-.express-course{margin-top:-1px;background-color:var(--red)}
-
-/* Persona-like headline plates use shape and contrast rather than heavy text glow. */
-.express-course .express-heading .display-intro{display:inline-block;width:max-content;max-width:100%;padding:4px 12px 6px;background:#171319;color:#fff;clip-path:polygon(2% 0,100% 5%,97% 100%,0 94%);transform:rotate(-2deg);opacity:1}
-.express-course .express-heading h2>span:last-child{display:block;width:max-content;max-width:100%;padding:.08em .2em .14em;background:#171319;color:#fff;clip-path:polygon(1% 2%,100% 0,98% 100%,0 95%);filter:drop-shadow(6px 7px 0 rgba(133,18,37,.8));}
-.express-course .milestone-stop h3{width:max-content;max-width:100%;padding:7px 11px 10px;background:#171319;color:#fff;clip-path:polygon(1% 1%,100% 0,98% 100%,0 94%);filter:drop-shadow(5px 6px 0 rgba(133,18,37,.72));}
-.express-course .milestone-stop .milestone-en{background:#fff;color:#171319;border-color:#171319;box-shadow:4px 4px 0 #171319}
-
-/* The closing title stays dark on a light panel, with a restrained red lift. */
-.closing h2 .headline-cut{display:inline-block;background:#fff8e8;color:#171319;padding:.08em .28em .13em;clip-path:polygon(1% 2%,100% 0,98% 100%,0 95%);filter:drop-shadow(7px 7px 0 rgba(187,24,42,.82));text-shadow:none}
-@media(max-width:760px){.express-course .express-heading h2>span:last-child{padding:.1em .18em .15em;filter:drop-shadow(4px 5px 0 rgba(133,18,37,.8))}.express-course .milestone-stop h3{padding:6px 8px 8px;filter:drop-shadow(3px 4px 0 rgba(133,18,37,.72))}.closing h2 .headline-cut{filter:drop-shadow(4px 4px 0 rgba(187,24,42,.82))}}
-/* Compact 2D extrusion for the headline faces, with white lettering on their existing plates. */
-.express-course .express-heading .display-intro,.express-course .express-heading h2>span:last-child,.express-course .milestone-stop h3{-webkit-text-stroke:.35px #171319;text-shadow:1px 1px 0 #f34253,2px 2px 0 #c81731,3px 3px 0 #171319;}
-@media(max-width:760px){.express-course .express-heading .display-intro,.express-course .express-heading h2>span:last-child,.express-course .milestone-stop h3{text-shadow:1px 1px 0 #f34253,2px 2px 0 #c81731;}}
-/* A compact course mark replaces the repeated name line and opens up the hero. */
-.hero-course-mark{display:flex;align-items:center;gap:12px;width:max-content;margin:0 0 25px;color:#fff8e8}
-.hero-course-mark svg{width:48px;height:48px;flex:none;filter:drop-shadow(2px 3px 0 #171319)}
-.hero-course-wordmark{display:flex;flex-direction:column;line-height:.9;transform:skewX(-7deg)}
-.hero-course-wordmark strong{font:italic 900 30px/.9 Barlow,Arial,sans-serif;letter-spacing:.035em;text-shadow:2px 2px 0 #171319}
-.hero-course-wordmark small{font:800 10px/1.4 Anuphan,sans-serif;letter-spacing:.22em;margin-top:5px}
-.hero-copy{width:100%;max-width:960px}
-.hero-content{min-height:560px}
-.hero-facts{font-size:14px;letter-spacing:.01em}
-.express-course .milestone-fraction{font-size:40px;top:6px;left:4px;line-height:1}
+/* 3 Milestone Route Cards */
+.express-course .route-progress{
+ top:128px;
+ left:8%;
+ right:8%;
+ height:5px;
+ background:rgba(17,17,21,.45);
+ border-bottom:2px solid rgba(255,248,232,.55);
+}
+.express-course .route-progress>span{
+ background:var(--paper);
+}
+.express-course .milestone-stop{
+ position:relative;
+ padding:18px 20px 24px;
+ background:rgba(17,17,21,.16);
+ border:2px solid rgba(255,248,232,.22);
+ clip-path:polygon(1.5% 0,100% 2%,98.5% 100%,0 98%);
+ transition:transform .3s var(--ease),background .25s,border-color .25s;
+ cursor:pointer;
+}
+.express-course .milestone-stop:hover{
+ background:rgba(17,17,21,.34);
+ border-color:#fff8e8;
+ transform:translateY(-6px);
+}
+.express-course .milestone-fraction{
+ font:italic 900 48px/.95 Barlow,sans-serif!important;
+ top:10px!important;
+ left:12px!important;
+ color:#fff8e8!important;
+ background:#111115;
+ padding:4px 12px 6px;
+ clip-path:polygon(6% 0,100% 5%,94% 100%,0 95%);
+ border-left:4px solid #f9ce52;
+ filter:drop-shadow(4px 5px 0 rgba(17,17,21,.55));
+ text-shadow:none!important;
+ transform:rotate(-5deg);
+}
 .express-course .milestone-fraction small{display:none}
-.express-course .milestone-stop>.milestone-date,.express-course .milestone-open,.express-course .milestone-note{display:none!important}
-@media(max-width:1100px){.hero-copy{width:100%}.hero-content{min-height:500px}}
-@media(max-width:760px){.hero-content{min-height:0;padding:45px 0 58px}.hero-course-mark{margin-bottom:22px}.hero-course-mark svg{width:40px;height:40px}.hero-course-wordmark strong{font-size:26px}.hero-facts{max-width:none}}
-/* Return the character to the first screen. */
-.hero-content{isolation:isolate}
-.hero-art{position:absolute;z-index:2;right:0;top:50%;width:min(48%,680px);height:min(88%,680px);margin:0;transform:translateY(-50%);pointer-events:none}
-.hero-art img{display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(9px 14px 0 rgba(17,17,21,.35));animation:hero-mascot-float 6s ease-in-out infinite}
-@keyframes hero-mascot-float{0%,100%{translate:0 0}50%{translate:0 -8px}}
-@media(max-width:1100px) and (min-width:761px){.hero-copy{width:54%}.hero-art{right:-2%;width:50%}}
-@media(max-width:760px){
- .hero-content{display:flex;flex-direction:column;align-items:stretch;padding-bottom:22px}
- .hero-copy{width:100%;max-width:none}
- .hero-art{position:relative;top:auto;right:auto;align-self:center;width:min(78vw,400px);height:auto;aspect-ratio:1;margin:-6px auto 0;transform:none}
- .hero-art img{height:100%;}
+.express-course .milestone-art{
+ height:220px!important;
+ margin-bottom:8px;
 }
-@media(prefers-reduced-motion:reduce){.hero-art img{animation:none}}
-.hero-art{isolation:isolate}
-.hero-art .hero-map-prop{z-index:0}
-.hero-art .hero-map-prop img{filter:drop-shadow(8px 12px 0 rgba(17,17,21,.28));animation:none}
-.hero-art .chibi-animation{position:absolute;right:12%;bottom:2%;z-index:1;width:min(76%,440px);height:auto;aspect-ratio:1}
-.hero-art .chibi-fallback,.hero-art .hero-action-canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;filter:none}
-.hero-art .hero-action-canvas{opacity:0}.hero-art.action-ready .hero-action-canvas{opacity:1}.hero-art.action-ready .chibi-fallback{opacity:0}
+.express-course .milestone-art img{
+ filter:drop-shadow(9px 13px 0 rgba(17,17,21,.5))!important;
+}
+/* Clean Cream Heading with Crisp Ink-Black Offset (NO Black Rectangle Box!) */
+.express-course .milestone-stop h3{
+ width:auto!important;
+ max-width:380px!important;
+ margin:8px 0 0!important;
+ padding:0!important;
+ background:transparent!important;
+ color:#fff8e8!important;
+ font-size:clamp(24px,2.1vw,32px)!important;
+ line-height:1.32!important;
+ clip-path:none!important;
+ box-shadow:none!important;
+ filter:none!important;
+ -webkit-text-stroke:0!important;
+ text-shadow:3px 4px 0 #111115!important;
+}
+.express-course .milestone-stop .milestone-en{
+ display:inline-block!important;
+ width:fit-content!important;
+ margin-top:12px!important;
+ padding:6px 15px 7px!important;
+ background:#111115!important;
+ color:#fff8e8!important;
+ font:italic 900 clamp(15px,1.4vw,20px)/1.15 Barlow,sans-serif!important;
+ letter-spacing:.04em!important;
+ border:0!important;
+ border-left:4px solid #f9ce52!important;
+ clip-path:polygon(2% 0,100% 5%,98% 100%,0 95%)!important;
+ box-shadow:4px 5px 0 rgba(17,17,21,.45)!important;
+ transform:rotate(-1.5deg)!important;
+ text-shadow:none!important;
+}
 
-.hero-art .chibi-animation.action-ready .hero-action-canvas{opacity:1}.hero-art .chibi-animation.action-ready .chibi-fallback{opacity:0}
-/* Bring the milestone headline back into the same display family as every page. */
-.express-course .express-heading h2{
- max-width:1080px;margin-inline:auto;color:#fff8e8;
- font-family:StarwaysPoster,Anuphan,sans-serif;font-size:clamp(34px,3.6vw,52px);
- font-weight:700;font-style:italic;letter-spacing:-.025em;line-height:1.38;
- text-shadow:none;-webkit-text-stroke:0;filter:none;
+/* Explicit Clickable "กดดูรายละเอียด" Button on Each Milestone Card */
+.express-course .milestone-stop .milestone-cta{
+ display:inline-flex!important;
+ align-items:center;
+ gap:10px;
+ width:fit-content;
+ margin-top:16px;
+ padding:8px 18px 9px;
+ background:var(--paper);
+ color:var(--ink);
+ font:800 14.5px/1.2 Anuphan,sans-serif;
+ border:2px solid var(--ink);
+ clip-path:polygon(3% 0,100% 0,97% 100%,0 100%);
+ filter:drop-shadow(4px 5px 0 var(--ink));
+ transition:background .2s,transform .2s;
 }
-.express-course .express-heading .display-intro{
- display:block;width:auto;max-width:100%;margin:0 0 8px;padding:0;
- background:none;color:#fff8e8;font-family:inherit;font-size:.58em;
- font-weight:700;font-style:italic;letter-spacing:inherit;line-height:1.45;
- clip-path:none;transform:none;opacity:.95;text-shadow:none;-webkit-text-stroke:0;filter:none;
+.express-course .milestone-stop .milestone-cta i{
+ font-style:normal;
+ font-size:17px;
+ line-height:1;
 }
-.express-course .express-heading h2>span:last-child{
- display:block;width:fit-content;max-width:100%;padding:.08em .2em .13em;
- background:#171319;color:#fff8e8;font-family:inherit;font-size:1em;
- font-weight:inherit;font-style:inherit;letter-spacing:inherit;line-height:inherit;
- clip-path:none;filter:none;text-shadow:none;-webkit-text-stroke:0;
+.express-course .milestone-stop:hover .milestone-cta{
+ background:#f9ce52;
+ transform:translate(-2px,-2px) rotate(-1deg);
 }
-/* Both sections share one solid red field; keep the join crisp without a glow. */
-.hero{background:var(--red)!important;background-image:none!important}
-.hero-ink{-webkit-mask-image:none!important;mask-image:none!important;filter:none!important;box-shadow:none!important}
-.hero-ink::after{display:none!important;animation:none!important;filter:none!important;box-shadow:none!important}
-.hero::after{display:none!important;animation:none!important;filter:none!important;box-shadow:none!important}
-@media(max-width:760px){
- .express-course .express-heading h2{font-size:clamp(30px,8vw,40px);line-height:1.35}
- .express-course .express-heading .display-intro{font-size:.58em}
- .express-course .express-heading h2>span:last-child{width:auto;max-width:100%;padding:.08em .16em .13em}
+
+.express-course .milestone-stop>.milestone-date,
+.express-course .milestone-open,
+.express-course .milestone-note,
+.express-course .milestone-stop>p:not(.milestone-date){
+ display:none!important;
 }
-/* Match the user's original Persona-style milestone title reference. */
-.express-course .express-heading h2{
- max-width:none;width:100%;margin:0;color:#fff8e8;
- font-family:StarwaysPoster,Anuphan,sans-serif;font-size:clamp(38px,4.8vw,72px);
- font-weight:900;font-style:italic;letter-spacing:-.04em;line-height:1.3;
- text-shadow:none;-webkit-text-stroke:0;filter:none;
+
+.curriculum-all{
+ margin-top:42px!important;
+ padding:12px 26px!important;
+ background:#111115;
+ color:#fff8e8!important;
+ border:2px solid #fff8e8!important;
+ clip-path:polygon(2% 0,100% 4%,98% 100%,0 96%);
+ filter:drop-shadow(5px 6px 0 #111115);
+ font-weight:700!important;
 }
-.express-course .express-heading .display-intro{
- display:inline-block;width:max-content;max-width:100%;margin:0 0 10px;padding:4px 14px 7px;
- background:#171319;color:#fff8e8;font-family:inherit;font-size:clamp(20px,2.1vw,30px);
- font-weight:900;font-style:italic;letter-spacing:inherit;line-height:1.45;
- clip-path:polygon(2% 0,100% 5%,97% 100%,0 94%);transform:rotate(-2deg);opacity:1;
- -webkit-text-stroke:.25px #171319;text-shadow:1px 1px 0 #f34253,2px 2px 0 #c81731,3px 3px 0 #171319;
+.curriculum-all:hover{
+ background:#f9ce52;
+ color:#111115!important;
+ border-color:#111115!important;
 }
-.express-course .express-heading h2>span:last-child{
- display:block;width:fit-content;max-width:100%;padding:.02em .2em .12em;
- background:#171319;color:#fff8e8;font-family:inherit;font-size:1em;
- font-weight:900;font-style:italic;letter-spacing:inherit;line-height:inherit;
- clip-path:polygon(1% 2%,100% 0,98% 100%,0 95%);filter:drop-shadow(6px 7px 0 rgba(133,18,37,.8));
- -webkit-text-stroke:.35px #171319;text-shadow:1px 1px 0 #f34253,2px 2px 0 #c81731,3px 3px 0 #171319;
+
+/* ==========================================================================
+   4. M.6 PORTFOLIO PANEL (.express-life / #opportunities)
+   ========================================================================== */
+.express-course .express-life{
+ position:relative;
+ z-index:2;
+ margin-top:70px!important;
+ padding:52px 48px 46px!important;
+ background:
+  radial-gradient(#fff8e812 1px,transparent 1px) 0 0/7px 7px,
+  #111115!important;
+ border:2px solid rgba(255,248,232,.2);
+ border-top:5px solid var(--paper)!important;
+ clip-path:polygon(0 1.2%,100% 0,99.4% 98.8%,.6% 100%);
+ filter:drop-shadow(12px 14px 0 rgba(10,8,12,.55));
 }
-@media(max-width:760px){
- .express-course .express-heading h2{font-size:clamp(29px,7.4vw,44px);line-height:1.32}
- .express-course .express-heading .display-intro{font-size:clamp(19px,5vw,25px);margin-bottom:9px}
- .express-course .express-heading h2>span:last-child{width:fit-content;max-width:100%;padding:.04em .16em .12em;filter:drop-shadow(4px 5px 0 rgba(133,18,37,.8));}
+.express-life-heading{
+ align-items:flex-end;
+ gap:40px;
 }
-/* Use the milestone title treatment for its related portfolio heading too. */
 .express-life-heading h2{
- font-family:StarwaysPoster,Anuphan,sans-serif;font-weight:900;font-style:italic;
- letter-spacing:-.04em;line-height:1.3;text-shadow:none;-webkit-text-stroke:0;
+ font-size:clamp(34px,3.5vw,52px)!important;
+ color:#fff8e8!important;
+ text-shadow:none!important;
 }
 .express-life-heading .display-intro{
- display:inline-block;width:max-content;max-width:100%;margin:0 0 10px;padding:4px 14px 7px;
- background:#171319;color:#fff8e8;font-family:inherit;font-size:.58em;font-weight:900;
- font-style:italic;letter-spacing:inherit;line-height:1.45;clip-path:polygon(2% 0,100% 5%,97% 100%,0 94%);
- transform:rotate(-2deg);opacity:1;-webkit-text-stroke:.25px #171319;
- text-shadow:1px 1px 0 #f34253,2px 2px 0 #c81731,3px 3px 0 #171319;
+ display:block!important;
+ width:fit-content!important;
+ margin:0 0 12px!important;
+ padding:4px 16px 6px!important;
+ background:var(--red)!important;
+ color:#fff8e8!important;
+ font-size:clamp(19px,1.8vw,25px)!important;
+ clip-path:polygon(3% 0,100% 6%,97% 100%,0 94%)!important;
+ transform:rotate(-2deg)!important;
+ filter:drop-shadow(4px 5px 0 #fff8e8)!important;
+ text-shadow:none!important;
+ -webkit-text-stroke:0!important;
 }
 .express-life-heading h2>span:last-child{
- display:block;width:fit-content;max-width:100%;padding:.02em .2em .12em;
- background:#171319;color:#fff8e8;font-family:inherit;font-weight:900;font-style:italic;
- letter-spacing:inherit;line-height:inherit;clip-path:polygon(1% 2%,100% 0,98% 100%,0 95%);
- filter:drop-shadow(6px 7px 0 rgba(133,18,37,.8));-webkit-text-stroke:.35px #171319;
- text-shadow:1px 1px 0 #f34253,2px 2px 0 #c81731,3px 3px 0 #171319;
+ display:block!important;
+ width:fit-content!important;
+ padding:0!important;
+ background:transparent!important;
+ color:#fff8e8!important;
+ clip-path:none!important;
+ filter:none!important;
+ -webkit-text-stroke:0!important;
+ text-shadow:3px 4px 0 var(--red)!important;
 }
+.express-life-heading>p{
+ max-width:460px;
+ color:#e7dfd3;
+ font-size:16px;
+}
+.express-feature{
+ position:relative;
+ border-top:2px solid rgba(255,248,232,.25);
+ padding-top:22px;
+}
+.express-feature div>.opportunity-number{
+ display:inline-block;
+ font:italic 900 44px/1 Barlow,sans-serif;
+ color:#fff8e8;
+ background:var(--red);
+ padding:3px 12px 5px;
+ clip-path:polygon(6% 0,100% 6%,94% 100%,0 94%);
+ filter:drop-shadow(4px 4px 0 #fff8e8);
+ margin:0 0 16px;
+}
+.express-feature h3{
+ color:#fff8e8!important;
+ font-size:clamp(24px,2.2vw,32px)!important;
+ text-shadow:2px 3px 0 #000!important;
+}
+.express-feature p{
+ color:#dcd4c8;
+ font-size:15.5px;
+ max-width:360px;
+}
+.express-course .opportunity-note{
+ color:#bdb5aa;
+ margin-top:32px;
+}
+
+/* ==========================================================================
+   5. SHOWCASE SECTION (.showcase)
+   ========================================================================== */
+.showcase{
+ position:relative;
+ background-color:#111115!important;
+ padding-top:70px!important;
+ padding-bottom:80px!important;
+ overflow:hidden!important;
+}
+.showcase .scene-backdrop{
+ background-image:url('assets/edge-v17/showcase-backdrop.webp')!important;
+ background-size:cover!important;
+ background-position:center bottom!important;
+ opacity:.32!important;
+ mix-blend-mode:screen!important;
+ -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 84%,transparent 100%)!important;
+ mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 84%,transparent 100%)!important;
+}
+.showcase>.edge-atmosphere .edge-cutout--steel{width:240px;left:-40px;top:68%;opacity:.7}
+.showcase>.edge-atmosphere .edge-cutout--stone{width:210px;right:-35px;top:18%;opacity:.7}
+
+.showcase-heading h2{
+ font-size:clamp(36px,3.8vw,56px)!important;
+ color:#fff8e8!important;
+ text-shadow:none!important;
+}
+.showcase-heading .display-intro{
+ display:block!important;
+ width:fit-content!important;
+ margin:0 0 12px!important;
+ padding:4px 16px 6px!important;
+ background:var(--red)!important;
+ color:#fff8e8!important;
+ font-size:clamp(19px,1.8vw,25px)!important;
+ clip-path:polygon(3% 0,100% 6%,97% 100%,0 94%)!important;
+ transform:rotate(-2deg)!important;
+ filter:drop-shadow(4px 5px 0 #fff8e8)!important;
+ text-shadow:none!important;
+}
+.showcase-heading h2>span:last-child{
+ display:inline-block;
+ color:#fff8e8!important;
+ text-shadow:4px 4px 0 var(--red)!important;
+}
+
+/* ==========================================================================
+   6. FAQ SECTION (.questions)
+   ========================================================================== */
+.questions{
+ position:relative;
+ background-color:var(--paper)!important;
+ background-image:
+  radial-gradient(#11111514 1px,transparent 1px),
+  radial-gradient(ellipse at 0 100%,#df203214,transparent 55%)!important;
+ background-size:7px 7px,100% 100%!important;
+ color:var(--ink)!important;
+ overflow:hidden;
+}
+.questions .scene-backdrop{
+ background-image:url('assets/edge-v17/creation-backdrop.webp')!important;
+ background-size:cover!important;
+ background-position:center center!important;
+ opacity:.15!important;
+ mix-blend-mode:multiply!important;
+ -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 82%,transparent 100%)!important;
+ mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 82%,transparent 100%)!important;
+}
+.questions-grid{
+ position:relative;
+ z-index:2;
+}
+.questions-grid>h2{
+ display:inline-block!important;
+ width:fit-content!important;
+ height:fit-content!important;
+ padding:8px 28px 12px 22px!important;
+ font:italic 900 clamp(46px,6vw,78px)/.95 Barlow,sans-serif!important;
+ color:var(--paper)!important;
+ background:var(--ink)!important;
+ clip-path:polygon(3% 0,100% 5%,96% 100%,0 95%)!important;
+ filter:drop-shadow(8px 8px 0 var(--red))!important;
+ transform:rotate(-2deg)!important;
+ text-shadow:none!important;
+ -webkit-text-stroke:0!important;
+}
+.faq details{
+ border-bottom:2px solid rgba(17,17,21,.18);
+ font-size:clamp(16px,1.35vw,19px);
+}
+.faq summary{
+ font-weight:700;
+ color:var(--ink);
+}
+.faq details p{
+ font-size:16px;
+ line-height:1.9;
+ color:#3c3734;
+}
+
+/* ==========================================================================
+   7. CLOSING SECTION (.closing / #start) — SEAMLESS FULL-BLEED BACKDROP
+   ========================================================================== */
+.closing{
+ overflow:hidden!important;
+}
+.closing:before{
+ display:none!important;
+}
+/* Full-bleed cover + smooth vertical & horizontal alpha mask so the mountain
+   in closing-backdrop.webp never has an exposed left or bottom cut edge! */
+.closing .scene-backdrop{
+ background-image:url('assets/edge-v17/closing-backdrop.webp')!important;
+ background-size:cover!important;
+ background-position:center center!important;
+ opacity:.34!important;
+ mix-blend-mode:multiply!important;
+ -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 82%,transparent 100%)!important;
+ mask-image:linear-gradient(to bottom,transparent 0%,#000 18%,#000 82%,transparent 100%)!important;
+}
+.closing h2{
+ font-size:clamp(36px,3.8vw,56px)!important;
+ color:#fff8e8!important;
+ text-shadow:none!important;
+}
+.closing h2 .display-intro{
+ display:block!important;
+ color:#fff8e8!important;
+ font-size:.62em!important;
+ margin-bottom:10px!important;
+ text-shadow:3px 4px 0 #111115!important;
+}
+.closing h2 .headline-cut{
+ display:block!important;
+ width:fit-content!important;
+ max-width:100%!important;
+ padding:6px 24px 10px 18px!important;
+ background:var(--paper)!important;
+ color:var(--ink)!important;
+ clip-path:polygon(1.2% 4%,100% 0,98.2% 96%,0 100%)!important;
+ transform:rotate(-1.8deg)!important;
+ filter:drop-shadow(7px 8px 0 #111115)!important;
+ text-shadow:none!important;
+ -webkit-text-stroke:0!important;
+}
+.closing .lead{
+ font-size:clamp(18px,1.7vw,22px);
+ line-height:1.8;
+ color:#fff8e8;
+ text-shadow:0 2px 0 rgba(17,17,21,.45);
+}
+.closing .button{
+ background:var(--paper);
+ color:var(--ink);
+ border:2px solid var(--ink);
+ filter:drop-shadow(6px 6px 0 var(--ink));
+}
+.closing-composition{
+ filter:saturate(1) contrast(1.03)!important;
+ animation:book-hover 6.5s ease-in-out infinite!important;
+}
+.flag-fabric{
+ left:51.4%!important;
+ top:2.6%!important;
+ width:27.5%!important;
+ height:24.5%!important;
+ filter:saturate(.96) brightness(.96) contrast(1.04)!important;
+ transform-origin:0 50%!important;
+}
+.flag-fabric img{
+ transform-origin:0 50%;
+ animation:flag-fallback-flutter 2.2s ease-in-out infinite alternate!important;
+}
+.flag-fabric.is-ready canvas{
+ opacity:1!important;
+}
+.flag-fabric.is-ready img{
+ opacity:0!important;
+ animation:none!important;
+}
+@keyframes flag-fallback-flutter{
+ 0%{transform:rotate(-2deg) skewY(-2deg) scaleX(1)}
+ 50%{transform:rotate(1.5deg) skewY(2.5deg) scaleX(.97)}
+ 100%{transform:rotate(-3.5deg) skewY(-3deg) scaleX(1.02)}
+}
+
+/* ==========================================================================
+   8. RESPONSIVE & REDUCED-MOTION RULES
+   ========================================================================== */
+@media(max-width:1100px) and (min-width:761px){
+ .hero-copy{width:56%}
+ .hero-art{right:-2%;width:50%}
+ .hero h1{font-size:clamp(34px,3.8vw,48px)!important}
+}
+
 @media(max-width:760px){
- .express-life-heading h2{font-size:clamp(29px,7.7vw,39px);line-height:1.35}
- .express-life-heading .display-intro{font-size:.58em;margin-bottom:9px}
- .express-life-heading h2>span:last-child{width:fit-content;max-width:100%;padding:.04em .16em .12em;filter:drop-shadow(4px 5px 0 rgba(133,18,37,.8))}
+ .hero,
+ .express-course,
+ .closing{
+  background-attachment:scroll!important;
+ }
+ .hero-content{
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  min-height:0;
+  padding:38px 0 28px;
+ }
+ .hero-copy{width:100%;max-width:none}
+ .hero-course-mark{margin-bottom:18px}
+ .hero h1{font-size:clamp(29px,7.8vw,42px)!important}
+ .hero h1 .headline-cut{padding:4px 16px 8px 12px!important;filter:drop-shadow(5px 6px 0 #111115)!important}
+ .hero h1 .headline-cut.headline-cut--ink{margin-left:4px!important;padding:5px 18px 8px 14px!important;filter:drop-shadow(5px 6px 0 var(--paper))!important}
+ .hero-art{
+  position:relative;
+  top:auto;
+  right:auto;
+  align-self:center;
+  width:min(86vw,410px);
+  height:auto;
+  aspect-ratio:1;
+  margin:10px auto 0;
+  transform:none;
+ }
+ .hero-art .art-scribble{font-size:20px;right:2%;bottom:3%}
+ .hero-ink:before{clip-path:polygon(100% 42%,100% 100%,0 88%,0 62%)!important}
+ .hero-ink:after{clip-path:polygon(0 61.4%,100% 41.4%,100% 42.2%,0 62.2%)!important}
+ .hero .scene-backdrop{clip-path:polygon(100% 42%,100% 100%,0 88%,0 62%)!important}
+ .express-course{padding-top:55px!important;padding-bottom:60px!important}
+ .express-course .section-edge-layer,.edge-atmosphere{display:none!important}
+ .express-course .express-heading h2{font-size:clamp(28px,7.5vw,38px)!important}
+ .express-course .express-heading .headline-cut--inline{margin-left:0;margin-top:6px}
+ .express-course .milestone-stop{padding:20px 14px;margin-bottom:14px}
+ .express-course .milestone-fraction{font-size:32px!important;top:12px!important;left:8px!important;padding:3px 9px 4px}
+ .express-course .milestone-stop h3{font-size:22px!important}
+ .express-course .milestone-stop .milestone-cta{grid-column:2;margin-top:12px;font-size:13px;padding:7px 14px}
+ .express-course .express-life{padding:32px 22px!important;margin-top:42px!important}
+ .express-life-heading h2{font-size:clamp(28px,7.5vw,38px)!important}
 }
-/* Softer 2D lift: fewer shadow steps and a lighter plate shadow. */
-.express-course .express-heading .display-intro,
-.express-course .express-heading h2>span:last-child,
-.express-life-heading .display-intro,
-.express-life-heading h2>span:last-child{
- -webkit-text-stroke:.18px rgba(23,19,25,.7);
- text-shadow:1px 1px 1px rgba(243,66,83,.72),2px 3px 2px rgba(23,19,25,.42);
+
+@media(prefers-reduced-motion:reduce){
+ .hero-art .hero-map-prop,.edge-cutout{animation:none!important}
 }
-.express-course .express-heading h2>span:last-child,
-.express-life-heading h2>span:last-child{
- filter:drop-shadow(3px 4px 0 rgba(133,18,37,.56));
-}
-@media(max-width:760px){
- .express-course .express-heading h2>span:last-child,
- .express-life-heading h2>span:last-child{filter:drop-shadow(2px 3px 0 rgba(133,18,37,.52))}
+.motion-paused .hero-art .hero-map-prop,
+.motion-paused .edge-cutout{
+ animation-play-state:paused!important;
 }
