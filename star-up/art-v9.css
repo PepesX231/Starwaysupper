@@ -1,0 +1,9 @@
+.core-solid canvas{left:-60px;top:-54px;width:280px;height:252px;max-width:none}
+.course-identity{gap:36px}
+.hero-ink{background:linear-gradient(90deg,#070d19dd 0%,#070d1966 45%,#070d1911),url(assets/hero-world-v9.webp) 75% 50%/cover no-repeat,#070d19}
+.hero-word{opacity:.2}.hero-ink:before{opacity:.15}.hero-atmosphere{opacity:.28}
+.phase-visual{border-radius:0;box-shadow:7px 9px #07162d33}
+.phases{grid-template-columns:repeat(2,minmax(0,1fr));gap:42px 34px}.phase-visual{aspect-ratio:4/3}.phase h3{min-height:0}.phase-action{margin-top:0}.phase .phase-result{max-width:520px}
+@media(max-width:760px){.core-solid canvas{left:-45px;top:-40.5px;width:210px;height:189px}.hero-ink{background-position:center,70% bottom}.hero-atmosphere{opacity:.2}}
+@media(max-width:760px){.phases{grid-template-columns:1fr;gap:32px}}
+@media(max-width:760px){.course-identity{gap:24px}}

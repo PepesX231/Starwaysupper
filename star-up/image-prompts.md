@@ -37,3 +37,14 @@ Four landscape narrative scenes use the original mascot reference (assets/team.w
 4. Present: project presenter, audience, playable game screen and portfolio tiles showing screenshot, sketch and component diagram.
 Prompt set: flat ink manga, original smooth Hamster Hub characters and blue/black wardrobe, dark navy/cobalt/cyan/ivory, primary focus on visible process and resulting game, no words, labels or numbers. Full game devices inside scene. Copy and explanations remain native HTML.
 Logo motion reuses the original game-core-v5.webp unchanged: 32 triangular texture shards charge, burst and rebuild over an 8.4-second loop. Global pause, reduced-motion and offscreen suspension supported. No exported image was pixel edited for the animation.
+
+
+## Graphic art + real 3D emblem v9
+Built-in image_gen, using the supplied black/white urban manga reference for art direction and original team.webp for mascot identity. All prior process-*-v7 images replaced in the page.
+- assets/process-1-v9.webp: command blocks physically feed into a level blueprint; small original mascot with stylus.
+- assets/process-2-v9.webp: completed game diorama handed to another player, cartridge/artifact metaphor.
+- assets/process-3-v9.webp: three distinct design/system/playtest panels converge into a single finished project.
+- assets/process-4-v9.webp: physical portfolio folio with game, level sketch, assets and animation evidence presented to an audience.
+- assets/hero-world-v9.webp: unfinished game-world architecture, angular platforms and suspended solid cubes at the right edge, quiet navy space for copy.
+Prompt set: black/off-white/cobalt screenprint, strong hand-ink contours, coarse halftone and angular composition; no text or fake interface labels, no glossy game-room scenes; smooth original Hamster Hub mascots as supporting actors.
+The logo now uses core-3d.js: 25 beveled solid cubies, 4 portal jambs and one tubular ascending arrow group. It is an actual locally rendered Three.js scene, not a sliced raster or Blender video. Thirty animated curved tethers extend to each physical piece before the reel-in sequence. Original emblem remains the non-WebGL fallback. Three.js MIT license retained in vendor/three/.
