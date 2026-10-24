@@ -1,0 +1,33 @@
+/* Return to the approved graphic layout. Depth comes from coherent moving print layers. */
+.hero{background:radial-gradient(ellipse at 12% 12%,#378bff 0%,transparent 55%),#1768ef}
+.hero-ink,.hero-atmosphere{display:none}.hero-word{z-index:0;opacity:1;color:#d7edff0a;right:1%;top:11%;font-size:clamp(140px,19vw,300px)}
+.hero-backdrop{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden;mask-image:linear-gradient(#000 calc(100% - 140px),transparent);-webkit-mask-image:linear-gradient(#000 calc(100% - 140px),transparent)}
+.hero-backdrop i{position:absolute;display:block;pointer-events:none;will-change:transform;animation-play-state:paused}
+.hero-backdrop .ink-field{inset:0;background:#071324;clip-path:polygon(62% 0,100% 0,100% 100%,44% 100%)}
+.hero-backdrop .paper-a{right:-8%;top:-18%;width:49%;height:115%;background:linear-gradient(135deg,#1d68ef,#0d3c8e);clip-path:polygon(42% 0,100% 0,76% 100%,0 100%);animation:paper-drift-a 12s ease-in-out infinite}
+.hero-backdrop .paper-b{right:-4%;top:16%;width:39%;height:78%;background:#75e6ff;clip-path:polygon(89% 0,100% 7%,16% 100%,0 92%);opacity:.32;animation:paper-drift-b 10s ease-in-out infinite}
+.hero-backdrop .paper-c{right:-12%;bottom:-36%;width:45%;height:80%;background:#04101f;clip-path:polygon(40% 0,100% 12%,72% 100%,0 85%);animation:paper-drift-c 14s ease-in-out infinite}
+.hero-backdrop .print-grain{inset:0;background:radial-gradient(#05112440 .85px,transparent 1px);background-size:6px 6px;opacity:.45}
+.hero-backdrop .light-sweep{right:0;top:0;width:55%;height:100%;background:linear-gradient(125deg,transparent 40%,#c2f5ff0b 50%,transparent 60%);animation:paper-light 11s ease-in-out infinite}
+.hero-motion-live .hero-backdrop i{animation-play-state:running}
+.hero-art{isolation:isolate}.hero-art:before{content:'';position:absolute;inset:14% 7% 8%;background:radial-gradient(ellipse,#1768ef77,transparent 70%);z-index:-1;pointer-events:none}
+.course-identity{gap:16px}.course-identity>img{width:120px;height:120px;object-fit:contain;filter:drop-shadow(0 6px 0 #07101f55)}
+.phases{gap:28px;grid-template-columns:repeat(2,minmax(0,1fr))}.phase{background:#09285c;padding:25px;border-radius:0;box-shadow:8px 9px #0b459333}
+.lesson-visual{width:100%;height:205px;margin-bottom:25px;background:#061b3b;position:relative;overflow:hidden;display:grid;place-items:center;color:#b8efff}
+.lesson-visual svg{width:min(100%,460px);height:100%;display:block}.lesson-visual text{font-family:Anuphan,sans-serif;font-size:16px;fill:#c4e7ff}
+.lesson-visual .diagram-accent{stroke:#75e6ff;fill:none;stroke-width:2}.lesson-visual .diagram-paper{fill:#eaf8ff}.lesson-visual .diagram-blue{fill:#1768ef}
+.lesson-visual .demo-mover{transition:transform .65s cubic-bezier(.2,.7,.2,1)}.lesson-visual.demo-active .demo-mover{transform:translate(105px,-36px)}
+.lesson-control{position:absolute;right:15px;bottom:14px;background:#1768ef;color:white;border:0;min-width:44px;min-height:38px;font-size:14px;font-weight:750;padding:7px 14px;z-index:2}
+.phase h3{box-shadow:none;font-size:29px;margin-bottom:17px}.phase>p.phase-month{color:#a9eaff}.phase .phase-result{color:#d4e6f8;max-width:none}.phase-action{color:#75e6ff;align-self:start}
+.phase-visual{display:none}
+.team-section>.bg-layer{background:radial-gradient(ellipse at 50% 48%,#163e71 0%,#07162d 70%)}
+.arenas>.bg-layer{background:linear-gradient(135deg,transparent 48%,#153c702e 48% 68%,transparent 68%),radial-gradient(ellipse at 12% 60%,#0b2b54,transparent 70%)}
+.team-section>.bg-layer:before,.arenas>.bg-layer:before{display:block;inset:-20%;background:repeating-linear-gradient(138deg,transparent 0 110px,#75e6ff0b 111px 112px,transparent 113px 210px);mask-image:none;animation:section-print-drift 14s ease-in-out infinite;animation-play-state:paused}
+.section-motion-live>.bg-layer:before{animation-play-state:running}
+@keyframes paper-drift-a{0%,100%{transform:translate3d(0,0,0) rotate(-2deg)}50%{transform:translate3d(-22px,12px,0) rotate(1deg)}}
+@keyframes paper-drift-b{0%,100%{transform:translate3d(12px,-14px,0)}50%{transform:translate3d(-17px,19px,0)}}
+@keyframes paper-drift-c{0%,100%{transform:translate3d(0,0,0) rotate(1deg)}50%{transform:translate3d(14px,-18px,0) rotate(-2deg)}}
+@keyframes paper-light{0%,100%{opacity:.2;transform:translateX(25px)}50%{opacity:.9;transform:translateX(-35px)}}
+@keyframes section-print-drift{0%,100%{transform:translate3d(-12px,0,0)}50%{transform:translate3d(12px,-16px,0)}}
+@media(max-width:760px){.course-identity{gap:8px}.course-identity>img{width:94px;height:94px}.hero-backdrop .ink-field{clip-path:polygon(100% 30%,100% 100%,0 100%,0 85%)}.hero-backdrop .paper-a{top:58%;right:-20%;width:95%;height:65%}.hero-backdrop .paper-b{top:64%;right:-10%;width:75%;height:42%}.hero-backdrop .paper-c{bottom:-15%;width:80%;height:42%}.hero-backdrop .light-sweep{top:45%;width:100%;height:55%}.hero-word{top:auto;bottom:100px;font-size:120px}.phases{grid-template-columns:1fr;gap:22px}.phase{display:flex;padding:21px}.phase h3{font-size:26px}.lesson-visual{height:185px;margin-bottom:22px}.lesson-visual text{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.hero-backdrop i{animation:none!important;will-change:auto}.lesson-visual .demo-mover{transition:none}}
