@@ -1,0 +1,3 @@
+.closing-composition .closing-wave-canvas{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:contain;pointer-events:none}
+.closing-composition.closing-wave-ready .closing-art{opacity:0}
+.motion-paused .closing-composition{animation-play-state:paused!important}
