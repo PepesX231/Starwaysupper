@@ -1,0 +1,49 @@
+/* Original blue/ink layout. Decoration occupies gutters, never the reading plane. */
+:root{--decor-rail:clamp(48px,calc((100vw - min(1320px,100vw - 144px))/2 - 24px),190px)}
+.hero{background-image:radial-gradient(#070d1929 .9px,transparent 1px);background-size:6px 6px}
+.hero-ink{background:var(--ink)}
+.hero:before{display:none}
+.roadmap,.team-section,.arenas,.showcase,.questions,.enroll,.sub-hero,.curriculum-body,.parent-content,.credits{position:relative;isolation:isolate}
+.roadmap,.team-section{overflow:visible}
+.bg-layer{position:absolute;inset:0;z-index:0;pointer-events:none;user-select:none;overflow:hidden}
+.bg-layer:before,.bg-layer:after{content:'';position:absolute;pointer-events:none}
+.bg-layer:before{inset:0;background:repeating-linear-gradient(139deg,transparent 0 130px,#75e6ff0a 131px 132px,transparent 133px 220px);transform:translateY(var(--section-drift,0px)) scale(1.08)}
+.bg-layer:after{right:2%;top:10%;width:clamp(180px,32vw,550px);aspect-ratio:1;border:1px solid #75e6ff25;transform:rotate(-19deg) translateY(var(--section-drift,0px));clip-path:polygon(0 0,100% 0,100% 100%,78% 100%,78% 78%,0 78%)}
+.roadmap>.bg-layer{background:linear-gradient(135deg,transparent 0 66%,#07101f12 66% 78%,transparent 78%)}
+.roadmap>.bg-layer:after{width:40%;aspect-ratio:1.8;border:2px solid #edf8ff28;right:-1%;top:auto;bottom:12%;transform:rotate(-14deg)}
+.team-section>.bg-layer{background:radial-gradient(ellipse at 50% 52%,#1768ef15,transparent 64%)}
+.team-section>.bg-layer:before{background:radial-gradient(#1768ef25 .8px,transparent 1px);background-size:9px 9px;mask-image:linear-gradient(90deg,#000,transparent 24%,transparent 76%,#000)}
+.team-section>.bg-layer:after{border-color:#1768ef22;right:5%;top:18%;width:80%;aspect-ratio:2.5;transform:rotate(-10deg)}
+.arenas>.bg-layer{background:linear-gradient(150deg,transparent 68%,#1768ef15 68% 76%,transparent 76%)}
+.arenas>.bg-layer:after{border:1px solid #75e6ff24;border-radius:50%;clip-path:none;right:55%;top:24%;width:700px;box-shadow:0 0 0 60px #75e6ff05,0 0 0 61px #75e6ff12}
+.showcase>.bg-layer{background:radial-gradient(ellipse at 50% 45%,#1768ef24,transparent 65%)}
+.showcase>.bg-layer:before{background:repeating-linear-gradient(155deg,transparent 0 160px,#75e6ff0a 161px 162px,transparent 163px 250px)}
+.showcase>.bg-layer:after{width:80%;aspect-ratio:2.8;right:10%;top:29%;border:1px solid #75e6ff20;clip-path:none;transform:rotate(-8deg)}
+.questions>.bg-layer{background:linear-gradient(125deg,#1768ef0c,transparent 45%)}
+.questions>.bg-layer:after{right:3%;top:18%;width:32%;border:26px solid #75e6ff08;transform:rotate(25deg);clip-path:none}
+.enroll>.bg-layer{background:linear-gradient(135deg,transparent 55%,#07101f12 55% 74%,transparent 74%)}
+.enroll>.bg-layer:after{width:48%;right:0;top:12%;border:1px solid #edf8ff38;box-shadow:0 0 0 35px #edf8ff06;clip-path:none;transform:rotate(-12deg)}
+.sub-hero>.bg-layer{background:linear-gradient(135deg,transparent 55%,#07101f20 55% 72%,transparent 72%)}
+.curriculum-body>.bg-layer,.parent-content>.bg-layer{background:repeating-linear-gradient(138deg,transparent 0 240px,#1768ef07 241px 242px,transparent 243px 430px)}
+.curriculum-body>.bg-layer:after,.parent-content>.bg-layer:after{border-color:#1768ef1c;top:60px}
+.credits>.bg-layer:after{border-color:#75e6ff20;width:35%;right:4%}
+.scene-decor{position:absolute;inset:0;pointer-events:none;z-index:0;user-select:none}
+.scene-decor img{position:absolute;object-fit:contain;width:var(--decor-rail);height:auto;max-height:36%;filter:hue-rotate(190deg) saturate(.85);opacity:.62;transform:translateY(var(--section-drift,0px)) rotate(-5deg);transform-origin:center;will-change:transform}
+.scene-decor img:first-child{left:8px;top:34%}.scene-decor img:last-child{right:8px;bottom:13%;transform:translateY(calc(var(--section-drift,0px)*-1)) rotate(5deg)}
+.team-section .scene-decor img,.parent-content .scene-decor img,.curriculum-body .scene-decor img{opacity:.35}
+.questions .scene-decor img{opacity:.24}.arenas .scene-decor img{opacity:.45}
+.edge-decor{display:none}
+.team-art,.closing-composition{position:relative;isolation:isolate}
+.team-art:before,.team-art:after,.closing-composition:before{content:'';position:absolute;z-index:-1;pointer-events:none;background:center/contain no-repeat;filter:hue-rotate(190deg) saturate(.8);opacity:.5;transform:translateY(var(--section-drift,0px)) rotate(-8deg)}
+.team-art:before{background-image:url(assets/rocks-left.webp);width:22%;height:80%;left:2%;bottom:5%}
+.team-art:after{background-image:url(assets/rocks-right.webp);width:22%;height:80%;right:2%;bottom:5%;transform:translateY(calc(var(--section-drift,0px)*-1)) rotate(8deg)}
+.closing-composition:before{background-image:url(assets/rocks-left.webp);width:30%;height:74%;left:0;bottom:3%;opacity:.6}
+/* A thin diagonal seam connects sections; no banner or blank transition block. */
+.section-seam{position:absolute;top:-7px;left:0;right:0;height:14px;z-index:2;pointer-events:none;background:linear-gradient(175deg,transparent 0 43%,#75e6ff77 44% 48%,transparent 49%);opacity:.65}
+.section-heading,.phase,.outputs article,.arena,.faq details,.curriculum-group,.parent-intro,.parent-facts{transition:translate .7s cubic-bezier(.2,.7,.2,1),opacity .7s;transition-delay:var(--reveal-delay,0ms)}
+.motion-ready .entry-pending{translate:0 22px;opacity:.65}.motion-ready .entry-visible{translate:0 0;opacity:1}
+html.motion-paused .scene-decor img,html.motion-paused .bg-layer:before,html.motion-paused .bg-layer:after{will-change:auto}
+html.motion-paused .entry-pending{translate:none;opacity:1;transition:none}
+@media(max-width:1100px){:root{--decor-rail:24px}.scene-decor img:first-child{left:3px}.scene-decor img:last-child{right:3px}}
+@media(max-width:760px){:root{--decor-rail:12px}.scene-decor img{opacity:.28;max-height:170px}.scene-decor img:first-child{left:1px;top:43%}.scene-decor img:last-child{right:1px;bottom:18%}.bg-layer:after{opacity:.5}.section-seam{height:8px;top:-4px}.motion-ready .entry-pending{translate:0 13px;opacity:.8}}
+@media(prefers-reduced-motion:reduce){.scene-decor img,.bg-layer:before,.bg-layer:after{transform:none!important;will-change:auto}.entry-pending{translate:none!important;opacity:1!important}}
