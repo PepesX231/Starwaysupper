@@ -13,3 +13,17 @@ Use case: stylized-concept. Transparent cutout illustration for STAR UP, a 1-yea
 
 ## closing
 Use case: stylized-concept. Transparent cutout illustration for STAR UP, a 1-year game developer course from Hamster Hub. Exact character identity from references: grey striped round hamster with giant comic round white eyes; peach-orange smiling hamster with closed crescent eyes; white hamster with one orange forehead/ear patch and happy crescent eyes. Smooth round bodies, no fur strokes, no human anatomy, short paws. Sharp cool black cropped jackets, ELECTRIC BLUE and CYAN scarves and light accents, white contours, restrained gold hardware. Bold black manga ink outlines, clean flat cel shading, angular cyan motion accents; charming simple mascots inside a stylish rebellious blue/black manga graphic world. Actual transparent alpha, no background, no shadow halo, no text or letters, no red clothing, no realistic rendering. Complete silhouettes with 10% clear margins. Square triumphant composition: all three stand on one angular black and cyan floating rock platform with finished glowing blue project cube and BLUE flag. Grey left, white/orange center holds flagpole, peach right cheers. CRITICAL layout flag occupies upper 35 percent of image, pole rooted at x35 percent width. Faces below y40 percent so top cloth can animate separately. Entire flag and feet inside frame. Clean flat light/cyan flag in same lighting/ink style as characters, not glowing neon banner. No book.
+
+
+## Visual refresh v5 — built-in image_gen
+
+Course emblem concept: Game Core. A game cube opens into an ivory doorway with an ascending cyan route, linking the original hero cube with the course's year-long development journey.
+
+Saved assets / production prompts:
+- assets/game-core-v5.webp: Original illustrated cube-doorway emblem, ascending cyan arrow wrapping the cube, compact cobalt/navy/ivory ink silhouette, transparent alpha, no words or bounding square.
+- assets/journey-v5.webp: Four complete vignette islands in one horizontal panorama. Original smooth chibi mascots build blocks, finish a playable game, collaborate on a level, and exhibit a project. Consistent black/blue outfits, transparent gaps, no text or numbers. Kept as one panorama so no mascot or scarf is sliced at cell boundaries.
+- assets/team-v5.webp: Three original mascots collaborate around a physical miniature game diorama on a studio workbench. White/orange mascot sketches, grey mascot assembles a block, peach mascot uses controller. Flat ink/cobalt/cyan, no fur, no laptop. Transparent extraction pass retains the original silhouettes and removes backdrop.
+- assets/team-bg-v5.webp: Separate dark navy blueprint studio plate, graphic papers and workbench fragments around outer edges, quiet center and top for illustration and HTML headings. No characters or words.
+- assets/arena-bg-v5.webp: Separate manga showcase arena plate, black/ivory trusses and platforms at outer edges, cobalt accent spotlights, quiet navy center. No text or people.
+
+All five assets were generated with the built-in image_gen tool. The mascot reference was assets/team.webp; character identity and existing hero remain intact. UI copy, links, roadmap hit areas and outcome icons are native accessible HTML/SVG.

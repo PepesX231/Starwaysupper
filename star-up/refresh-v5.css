@@ -1,0 +1,33 @@
+.course-identity{display:flex;align-items:center;gap:12px;margin-bottom:28px;line-height:1}
+.course-identity>img{width:120px;height:120px;object-fit:contain;flex:none;filter:drop-shadow(5px 7px #07101f66)}
+.course-wordmark{font:italic 900 70px/.9 Barlow,sans-serif;letter-spacing:-.05em;color:var(--paper);text-shadow:4px 5px #07101f}
+.course-wordmark strong{color:var(--cyan)}
+.course-identity .course-wordmark{color:var(--paper)}
+/* Remove nonessential dividers and underlines. Keep only the learning route. */
+.read-progress,.section-seam{display:none}.text-link,.scroll-invite,.skill-line,.phase,.outputs article,.arena,.arena:last-child,.faq details,.faq details:last-child,.footer-links{border:0}
+.bg-layer:after{display:none}.team-art:before,.team-art:after{display:none}
+.roadmap{background-color:#1768ef;background-image:radial-gradient(#07101f22 .8px,transparent 1px);background-size:8px 8px;padding-bottom:90px}
+.roadmap>.bg-layer{background:linear-gradient(150deg,transparent 55%,#07101f0b 55% 75%,transparent 75%)}
+.roadmap .section-heading{margin-bottom:10px}.roadmap .section-heading .eyebrow{font:700 20px/1.4 Anuphan,sans-serif;letter-spacing:0;margin-bottom:15px}
+.journey-scroll{overflow-x:auto;overscroll-behavior-inline:contain;scrollbar-color:#a1efff #0a3983;scrollbar-width:thin;padding:12px 0 22px;margin-bottom:25px}
+.journey-inner{position:relative;min-width:920px}.journey-art{position:relative;z-index:1;width:100%;height:auto;filter:drop-shadow(0 12px 0 #07101f25)}
+.journey-art{margin-top:-35px;margin-bottom:-25px}
+.journey-route{position:absolute;left:0;top:4%;width:100%;height:auto;z-index:0;overflow:visible}
+.phases{position:relative;z-index:2;gap:25px;margin:0;grid-template-columns:repeat(4,1fr)}
+.phase{display:flex;align-items:start;flex-direction:column;padding:0 7px 12px}.phase-month{font:650 18px/1.4 Anuphan,sans-serif;margin:0 0 16px;color:#d8f3ff}
+.phase h3{font-size:clamp(24px,2.1vw,33px);line-height:1.45;padding:5px 12px;box-shadow:none;margin:0;transform:rotate(-2deg)}
+.phase-action{font-size:17px;font-weight:700;margin-top:23px;color:white}.phase:hover .phase-action{color:var(--cyan)}
+.team-section{color:var(--paper);background:#07162d;padding-top:100px;padding-bottom:100px}
+.team-section>.bg-layer{background:linear-gradient(#07162d 0%,#07162d11 25%,#07162d22 65%,#07162d 100%),url(assets/team-bg-v5.webp) center/cover no-repeat}
+.team-section>.bg-layer:before{display:none}.team-section>.scene-decor{display:none}
+.team-section .section-heading{margin-bottom:20px}.team-section .section-heading>p{font-size:19px;max-width:380px;color:#c7deee}.team-art{max-width:1100px}
+.team-art img{height:540px;filter:drop-shadow(0 20px 20px #02091688)}
+.outputs{gap:25px;margin-top:30px}.outputs article{padding:25px;background:#0b2449e6;border-radius:12px;box-shadow:0 12px 30px #020b2033;backdrop-filter:blur(8px)}
+.output-icon{display:block;width:52px;height:52px;padding:5px;color:var(--cyan);margin-bottom:20px}.outputs h3{font:italic 900 27px/1.5 Kanit,sans-serif;margin:0 0 14px}.outputs p{font-size:18px;line-height:1.8;color:#c9ddec}
+.arenas{background:#071124}.arenas>.bg-layer{background:linear-gradient(#071124bb,#07112470 48%,#071124d9),url(assets/arena-bg-v5.webp) center/cover no-repeat}
+.arenas>.bg-layer:before,.arenas>.scene-decor{display:none}.arena-list{padding:20px 28px;background:#071428d9;border-radius:16px;backdrop-filter:blur(10px)}
+.arena{margin:0 0 12px}.arena summary{padding:24px 5px}.arena summary:hover strong{color:var(--cyan)}.arena-detail{padding-bottom:30px}.arena-no{font-size:44px;color:#75e6ff99}
+.closing-wave-canvas{inset:-7%;width:114%;height:114%}
+.outputs article,.arena-list{border-radius:0}.arena-no{display:none}.arena-detail{padding-left:5px}
+@media(max-width:1100px){.course-identity>img{width:100px;height:100px}.course-wordmark{font-size:60px}.team-art img{height:470px}.outputs h3{font-size:23px}.outputs article{padding:20px}.arena-list{padding:12px 20px}}
+@media(max-width:760px){.course-identity{margin-bottom:24px;gap:8px}.course-identity>img{width:88px;height:88px}.course-wordmark{font-size:56px}.roadmap{padding-bottom:55px}.roadmap .section-heading .eyebrow{font-size:18px}.journey-scroll{margin-inline:-8px;padding-inline:8px}.journey-inner{min-width:980px}.phase h3{font-size:24px}.phase-month{font-size:16px}.phase-action{font-size:15px;margin-top:18px}.team-section{padding-block:55px}.team-section .section-heading>p{font-size:17px}.team-art img{height:auto;aspect-ratio:1.5;object-fit:contain}.outputs{display:grid;grid-template-columns:1fr;gap:16px;margin-top:25px}.outputs article{padding:23px;display:grid;grid-template-columns:46px 1fr;gap:0 15px}.output-icon{width:44px;height:44px;grid-row:span 2;margin:0}.outputs h3{font-size:23px;margin:0 0 9px}.outputs p{font-size:16px;line-height:1.7}.arena-list{padding:10px 14px;border-radius:12px}.arena summary{gap:15px}.arena summary strong{font-size:23px}.arena-no{font-size:36px}.arena-detail{padding-left:49px}.team-section>.bg-layer{background-position:center}.arenas>.bg-layer{background-position:center}.closing-wave-canvas{inset:-7%;width:114%;height:114%}}
