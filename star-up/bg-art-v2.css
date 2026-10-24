@@ -1,0 +1,36 @@
+/* Blue manga city + notebook grid. Content stays on its own readable plane. */
+.hero{background-color:#1262e3;background-image:linear-gradient(125deg,#75e6ff14,transparent 58%),repeating-linear-gradient(0deg,transparent 0 23px,#75e6ff14 23px 24px),repeating-linear-gradient(90deg,transparent 0 23px,#75e6ff14 23px 24px)}
+.hero-ink{background:linear-gradient(90deg,#070d19 15%,#070d1920 65%),url(assets/city-bg-v2.webp) 72% calc(50% + var(--bg-shift,0px))/cover no-repeat,#070d19}
+.hero-ink:before{background:linear-gradient(155deg,transparent 68%,#75e6ff16 68% 69%,transparent 69%),repeating-linear-gradient(140deg,transparent 0 110px,#75e6ff12 111px 112px,transparent 113px 210px)}
+.hero-word{color:#edf8ff10}
+.roadmap{background-color:#c7e8ff;color:var(--ink);background-image:linear-gradient(135deg,transparent 70%,#2066de0d 70% 81%,transparent 81%),linear-gradient(#3264a51a 1px,transparent 1px),linear-gradient(90deg,#3264a51a 1px,transparent 1px);background-size:auto,24px 24px,24px 24px}
+.roadmap .section-heading .cut.paper{background:var(--blue);color:var(--paper);box-shadow:6px 7px 0 #07101f}
+.roadmap .phase{border-top-color:#173e7d55}
+.roadmap .phase h3{color:var(--paper)}
+.roadmap .phase .eyebrow{color:#1a4c9c}
+.roadmap .phase>p:not(.eyebrow),.roadmap .schedule-note{color:#244568}
+.roadmap .edge-decor{opacity:.65}
+.team-section{background-color:#091a34;color:var(--paper);background-image:linear-gradient(165deg,transparent 72%,#1768ef18 72% 82%,transparent 82%),repeating-linear-gradient(0deg,transparent 0 31px,#75e6ff07 31px 32px),repeating-linear-gradient(90deg,transparent 0 31px,#75e6ff07 31px 32px)}
+.team-section .skill-line{border-color:#75e6ff45;color:#b9eaff}
+.team-section .outputs article{border-color:#75e6ff45}
+.team-section .outputs article>span{color:var(--cyan)}
+.team-section .outputs p{color:#c7d8ec}
+.team-art img{filter:drop-shadow(0 18px 20px #02071255)}
+.arenas,.showcase,.enroll{isolation:isolate;position:relative}
+.arenas:before,.showcase:before,.enroll:before{content:'';position:absolute;inset:0;z-index:0;pointer-events:none;background:url(assets/city-bg-v2.webp) center bottom/cover no-repeat}
+.arenas{background-color:#0b2855}
+.arenas:before{opacity:.23;mask-image:linear-gradient(transparent,#000 75%)}
+.showcase:before{opacity:.28;mask-image:linear-gradient(transparent 5%,#000 70%)}
+.enroll{background-color:#1463df;background-image:repeating-linear-gradient(135deg,transparent 0 80px,#75e6ff12 81px 82px,transparent 83px 160px)}
+.enroll:before{opacity:.34;mask-image:linear-gradient(90deg,transparent 30%,#000 80%);mix-blend-mode:multiply}
+.questions{background-color:#0d2241;background-image:linear-gradient(135deg,transparent 70%,#1768ef0d 70% 90%,transparent 90%),radial-gradient(#75e6ff16 1px,transparent 1px);background-size:auto,8px 8px}
+.sub-hero{background-color:#0d3f91;background-image:linear-gradient(90deg,#104fc5f5 0%,#103c86d9 53%,#07101f30 100%),url(assets/city-bg-v2.webp);background-size:cover;background-position:center,center 60%}
+.curriculum-body,.parent-content{background-color:#eaf6ff;background-image:linear-gradient(#3264a50a 1px,transparent 1px),linear-gradient(90deg,#3264a50a 1px,transparent 1px);background-size:24px 24px}
+@media(max-width:760px){
+ .hero-ink{background-position:center,70% bottom}
+ .hero-word{color:#edf8ff0b}
+ .roadmap{background-size:auto,20px 20px,20px 20px}
+ .arenas:before,.showcase:before{opacity:.16;background-size:auto 75%}
+ .enroll:before{opacity:.22;mask-image:linear-gradient(transparent 40%,#000)}
+ .sub-hero{background-position:center,75% bottom}
+}

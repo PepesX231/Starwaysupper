@@ -1,5 +1,8 @@
 # Star Up artwork
 
+## Blue manga background v2
+Use case: stylized-concept. Original wide 3:2 background artwork for a blue/black rebellious manga styled game-development course website. Input image 1 reference role: cool light blue and cobalt illustrated urban architecture and clean graphic energy; input image 2 reference role: dramatic black ink city silhouettes, screen-print halftones, angular manga composition. DO NOT copy any character, UI, logo, text, menu or specific screenshot composition. NO characters at all. Build an original dense futuristic urban skyline along the BOTTOM 45% and RIGHT edge, ink-drawn skyscrapers, antennae, bridges, angular perspective architecture, white/cyan window hatching, cut-paper silhouettes, dynamic diagonal perspective. Top left 65% intentionally quiet open deep midnight navy sky for page text. Palette strictly midnight #070d19, deep cobalt #123da8, electric blue #1768ef, ice cyan #75e6ff, small white ink highlights. Flat printed 2D artwork, crisp detailed hand-drawn architectural contours, halftone grain, bold contrast, restrained. Bottom buildings extend naturally beyond frame, sky has no hard painted rectangle or vignette. No red, no people, no hamster, no lettering, no speech balloons, no decorative UI widgets. This is a full-bleed opaque landscape background image.
+
 Generated using built-in image_gen from the three supplied Hamster Hub mascot references. Transparent alpha retained. Hero animation is a three-pose sheet. New standalone blue/cyan/black wardrobe and project props.
 
 ## hero
