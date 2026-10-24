@@ -1,0 +1,170 @@
+{
+  "course": "Star Up",
+  "duration_months": 12,
+  "price_thb": 21890,
+  "curriculum_status": "provisional",
+  "months": [
+    {
+      "month": 1,
+      "title": "เริ่มต้นสร้างเกม",
+      "subtitle": "GET STARTED",
+      "description": "รู้จัก Unity และกระบวนการสร้างเกม",
+      "topics": [
+        "ทำความคุ้นเคยกับ Unity Editor",
+        "จัดฉากและวัตถุในเกม",
+        "ตั้งเป้าหมายโปรเจกต์ของตัวเอง"
+      ],
+      "output": "ฉากเกมพื้นฐานและโจทย์โปรเจกต์",
+      "proposed": true
+    },
+    {
+      "month": 2,
+      "title": "เขียนโค้ดให้เกมขยับ",
+      "subtitle": "CODE YOUR FIRST GAME",
+      "description": "C# พื้นฐานและระบบเกมขนาดเล็ก",
+      "topics": [
+        "ตัวแปร เงื่อนไข และการทำซ้ำ",
+        "ควบคุมตัวละครและการโต้ตอบ",
+        "ประกอบระบบเกมพื้นฐาน"
+      ],
+      "output": "ต้นแบบเกมขนาดเล็กที่ควบคุมได้",
+      "proposed": true
+    },
+    {
+      "month": 3,
+      "title": "วางพื้นฐานให้ครบเครื่อง",
+      "subtitle": "FOUNDATION",
+      "description": "เชื่อมโค้ด ภาพ เสียง และประสบการณ์เล่น",
+      "topics": [
+        "Algorithm · ฝึกคิดเป็นขั้นตอน",
+        "Advanced Tools in Unity",
+        "3D Modeling & Animation",
+        "Sprites & Sound",
+        "UX & UI"
+      ],
+      "output": "ชิ้นงานฝึกระบบ ภาพ เสียง และหน้าจอเกม",
+      "proposed": false
+    },
+    {
+      "month": 4,
+      "title": "เลือกไอเดียที่ทำจบได้",
+      "subtitle": "MINI PROJECT",
+      "description": "เปลี่ยนไอเดียให้เป็นแผนสร้างเกม",
+      "topics": [
+        "Simplify your idea · กำหนดขอบเขตให้ชัด",
+        "Project Design · ออกแบบวิธีเล่น",
+        "เริ่มลงมือสร้าง Mini Project"
+      ],
+      "output": "แบบเกมและต้นแบบ Mini Project",
+      "proposed": false
+    },
+    {
+      "month": 5,
+      "title": "ปล่อยเกมแรกให้คนเล่น",
+      "subtitle": "FIRST RELEASE",
+      "description": "พัฒนา นำเสนอ และเผยแพร่งาน",
+      "topics": [
+        "Mini Project Development",
+        "Presentation · ฝึกเล่าผลงาน",
+        "Publish to web or store"
+      ],
+      "output": "เกมแรกที่เผยแพร่ได้ พร้อมการนำเสนอ",
+      "proposed": false
+    },
+    {
+      "month": 6,
+      "title": "ตั้งทีม สร้างเกมที่ใหญ่ขึ้น",
+      "subtitle": "TEAMWORK",
+      "description": "ทำให้หลายคนเดินไปสู่เกมเดียวกัน",
+      "topics": [
+        "Setup Team · แบ่งบทบาทในทีม",
+        "Storyboard & Design",
+        "Project Management"
+      ],
+      "output": "แผนงานทีม บทบาท และแบบโปรเจกต์",
+      "proposed": false
+    },
+    {
+      "month": 7,
+      "title": "สร้างระบบให้เกมไปได้ไกล",
+      "subtitle": "PROJECT DEVELOPMENT",
+      "description": "พัฒนาโค้ดและออกแบบด่านขั้นต่อไป",
+      "topics": [
+        "Intermediate C#",
+        "Class & Object",
+        "Advanced Level Design"
+      ],
+      "output": "ระบบเกมและด่านที่พัฒนาร่วมกัน",
+      "proposed": false
+    },
+    {
+      "month": 8,
+      "title": "ให้เกมดูดีและเล่นลื่น",
+      "subtitle": "MAKE IT COOL",
+      "description": "เติมภาพ แสง และเอฟเฟกต์อย่างมีเหตุผล",
+      "topics": [
+        "Visual Programming",
+        "Shader Graph",
+        "Lighting & VFX",
+        "Optimization"
+      ],
+      "output": "เกมที่ปรับภาพ เอฟเฟกต์ และประสิทธิภาพ",
+      "proposed": false
+    },
+    {
+      "month": 9,
+      "title": "ขัดงานภาพให้มีเอกลักษณ์",
+      "subtitle": "ADVANCED GRAPHICS",
+      "description": "ยกระดับบรรยากาศของเกม",
+      "topics": [
+        "Advanced Graphics",
+        "Advanced Lighting & Shader",
+        "Advanced Visual Effects",
+        "Post Processing"
+      ],
+      "output": "ฉากเกมที่มีทิศทางภาพชัดเจน",
+      "proposed": false
+    },
+    {
+      "month": 10,
+      "title": "คิดต่อให้เป็นผลิตภัณฑ์",
+      "subtitle": "STARTUP PRODUCT",
+      "description": "มองผลงานผ่านคนใช้และช่องทางขาย",
+      "topics": [
+        "How to sell your project",
+        "Distribution Channel",
+        "Special: Object-Oriented Design"
+      ],
+      "output": "แนวทางนำผลงานไปสู่คนใช้และตลาด",
+      "proposed": false
+    },
+    {
+      "month": 11,
+      "title": "เปิดตัว เรียนรู้จากตลาด",
+      "subtitle": "MAKE MONEY",
+      "description": "ทำความเข้าใจรายได้และพัฒนาคุณภาพ",
+      "topics": [
+        "Make 1st Dollar · ศึกษาการสร้างรายได้แรก",
+        "How to get Feedback",
+        "Improve Product Quality",
+        "Social Marketing",
+        "Make Your Own Brand"
+      ],
+      "output": "แนวทางเปิดตัว สื่อสารแบรนด์ และเก็บ Feedback",
+      "proposed": false
+    },
+    {
+      "month": 12,
+      "title": "รวมผลงาน พร้อมก้าวต่อ",
+      "subtitle": "PORTFOLIO & NEXT STEP",
+      "description": "สรุปเกมและเรื่องราวที่คุณลงมือทำ",
+      "topics": [
+        "จัดระเบียบผลงานและบทบาทที่รับผิดชอบ",
+        "เตรียมเดโมและการนำเสนอ",
+        "วางแผนพอร์ตหรือการส่งเวทีที่เหมาะสม"
+      ],
+      "output": "ชุดผลงานและแผนพัฒนาขั้นต่อไป",
+      "proposed": true
+    }
+  ]
+}
