@@ -5,17 +5,19 @@
  const canvas=holder.querySelector('canvas'),image=holder.querySelector('img'),ctx=canvas?.getContext('2d');if(!ctx)return;
  const reduced=matchMedia('(prefers-reduced-motion: reduce)'),root=document.documentElement;
  let visible=false,raf=0,last=0,phase=0,draws=0;
- const engines=[[.22,.516,2.65],[.454,.616,2.45]];
+ const engines=[[.2266,.5281,2.65],[.4625,.6266,2.45]];
  function draw(){
   ctx.clearRect(0,0,400,280);ctx.save();ctx.scale(2,2);ctx.globalCompositeOperation='screen';
+  const scale=Math.min(image.clientWidth/image.naturalWidth,image.clientHeight/image.naturalHeight),w=image.naturalWidth*scale,h=image.naturalHeight*scale;
+  const ox=image.offsetLeft+(image.clientWidth-w)/2-canvas.offsetLeft,oy=image.offsetTop+(image.clientHeight-h)/2-canvas.offsetTop;
   for(let i=0;i<engines.length;i++){
-   const [u,v,angle]=engines[i],x=65+100*u,y=20+100*v,dx=Math.cos(angle),dy=Math.sin(angle),nx=-dy,ny=dx;
+   const [u,v,angle]=engines[i],x=ox+w*u,y=oy+h*v,dx=Math.cos(angle),dy=Math.sin(angle),nx=-dy,ny=dx;
    const length=34+3*Math.sin(phase*6+i);
-   const glow=ctx.createRadialGradient(x,y,0,x,y,19);glow.addColorStop(0,'rgba(255,255,230,.95)');glow.addColorStop(.25,'rgba(255,206,87,.68)');glow.addColorStop(1,'rgba(255,53,30,0)');ctx.fillStyle=glow;ctx.fillRect(x-20,y-20,40,40);
-   for(const [width,reach,alpha] of [[6,1,.75],[3.5,.87,.95],[1.5,.65,1]]){
+   const glow=ctx.createRadialGradient(x,y,0,x,y,9);glow.addColorStop(0,'rgba(255,255,230,.95)');glow.addColorStop(.25,'rgba(255,206,87,.68)');glow.addColorStop(1,'rgba(255,53,30,0)');ctx.fillStyle=glow;ctx.fillRect(x-10,y-10,20,20);
+   for(const [width,reach,alpha] of [[4.5,1,.65],[2.6,.87,.95],[1,.65,1]]){
     const tx=x+dx*length*reach,ty=y+dy*length*reach;
     const g=ctx.createLinearGradient(x,y,tx,ty);g.addColorStop(0,`rgba(255,255,240,${alpha})`);g.addColorStop(.22,`rgba(255,227,143,${alpha})`);g.addColorStop(.67,`rgba(255,85,35,${alpha*.6})`);g.addColorStop(1,'rgba(255,30,25,0)');
-    ctx.fillStyle=g;ctx.shadowColor='#ff8c32';ctx.shadowBlur=width===6?8:2;
+    ctx.fillStyle=g;ctx.shadowColor='#ff8c32';ctx.shadowBlur=width===4.5?6:2;
     ctx.beginPath();ctx.moveTo(x+nx*width,y+ny*width);ctx.bezierCurveTo(x+dx*length*.4+nx*width,y+dy*length*.4+ny*width,tx+nx*width*.15,ty+ny*width*.15,tx,ty);ctx.bezierCurveTo(tx-nx*width*.15,ty-ny*width*.15,x+dx*length*.4-nx*width,y+dy*length*.4-ny*width,x-nx*width,y-ny*width);ctx.closePath();ctx.fill();
    }
    ctx.shadowBlur=3;ctx.lineCap='round';
@@ -30,5 +32,5 @@
  function tick(now){raf=0;if(!allowed()){last=0;return;}if(!last||now-last>=32){phase+=last?Math.min(now-last,64)/1000:0;last=now;draw();}raf=requestAnimationFrame(tick);}
  function sync(){if(!allowed()){cancelAnimationFrame(raf);raf=0;last=0;if(image.complete&&image.naturalWidth)draw();}else if(!raf){last=0;raf=requestAnimationFrame(tick);}}
  if('IntersectionObserver' in window)new IntersectionObserver(es=>{visible=es.some(e=>e.isIntersecting);sync();},{threshold:.1}).observe(holder);else visible=true;
- image.addEventListener('load',sync);document.addEventListener('visibilitychange',sync);document.addEventListener('starways:motion-change',sync);reduced.addEventListener('change',sync);sync();
+ addEventListener('resize',sync,{passive:true});image.addEventListener('load',sync);document.addEventListener('visibilitychange',sync);document.addEventListener('starways:motion-change',sync);reduced.addEventListener('change',sync);sync();
 })();

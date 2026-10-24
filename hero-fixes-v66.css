@@ -1,0 +1,6 @@
+.hero-art:before{display:none!important}
+.hero-art .dark-chibi{animation:none!important}
+.hero-art .dark-chibi.hero-loop-ready>img{opacity:0!important}
+.hero-art .hero-frame-canvas{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;pointer-events:none}
+/* The light core sits on the outlet, rather than disappearing behind the car. */
+.jet-car canvas{z-index:3}
