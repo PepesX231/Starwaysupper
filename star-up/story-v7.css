@@ -1,0 +1,21 @@
+.core-motion{position:relative;flex:none;display:block;width:160px;height:144px;padding:0;isolation:isolate}
+.core-motion>img{position:absolute;left:20px;top:12px;width:120px;height:120px;object-fit:contain}
+.core-motion canvas{position:absolute;left:-40px;top:-36px;width:240px;height:216px;max-width:none;opacity:0;pointer-events:none}
+.core-ready canvas{opacity:1}.core-ready>img{opacity:0}
+/* Each scene now pairs a visible process with the resulting playable game. */
+.journey-scroll{padding-top:10px;overflow:visible}.journey-inner{min-width:0}.journey-art,.journey-route{display:none}
+.phases{gap:22px;align-items:stretch;margin-top:35px}
+.phase{padding:0;display:flex;gap:0;min-width:0;transition:translate .3s}
+.phase-visual{display:block;width:100%;height:auto;aspect-ratio:1.5;object-fit:contain;background:#08182e;border-radius:8px;margin-bottom:21px}
+.phase-month{font-size:17px;margin:0 0 12px}.phase h3{font-size:clamp(22px,1.9vw,30px);margin:0 0 17px;min-height:2.9em}
+.phase-result{font:500 18px/1.65 Anuphan,sans-serif;margin:0 0 18px;color:#f2f9ff;max-width:300px}
+.phase .phase-result{margin-top:0;font-size:18px;line-height:1.65}
+.phase>p.phase-result{font-size:18px;line-height:1.65;margin:0 0 18px}.phase>p.phase-month{font:650 17px/1.4 Anuphan,sans-serif;margin:0 0 12px}
+.phase-action{margin-top:auto;font-size:16px;padding-top:12px}
+.team-art{position:relative}.team-roles{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:0 auto 22px;max-width:900px}
+.team-roles p{padding:14px 12px;background:#081b36;text-align:center;color:#c9e7f4;font-size:18px;line-height:1.6}
+.team-roles strong{display:block;font-size:21px;color:var(--cyan)}
+.team-bridge{font-size:22px;text-align:center;color:white;margin:25px auto 30px;max-width:800px;text-wrap:balance}
+@media(max-width:1100px){.phases{gap:18px}.phase h3{font-size:25px}.phase .phase-result{font-size:16px}.phase-month{font-size:16px}}
+@media(max-width:760px){.core-motion{width:120px;height:108px}.core-motion>img{width:90px;height:90px;left:15px;top:9px}.course-identity{gap:4px}.course-wordmark{font-size:52px}.journey-scroll{margin-inline:0;padding-inline:0}.phases{grid-template-columns:1fr;gap:30px;margin-top:25px}.phase{display:grid;grid-template-columns:1fr;align-items:start}.phase-visual{margin-bottom:15px;border-radius:8px}.phase h3{min-height:0;font-size:27px;justify-self:start;line-height:1.4;margin-bottom:15px}.phase h3 br{display:none}.phase-month{font-size:16px;margin-bottom:12px}.phase .phase-result{font-size:18px;max-width:none;margin-bottom:5px}.phase-action{font-size:16px;margin:0;padding-top:10px}.team-roles{gap:10px;grid-template-columns:1fr;margin:15px 0}.team-roles p{font-size:17px;text-align:left;padding:14px 17px}.team-roles strong{font-size:20px;display:inline;margin-right:10px}.team-bridge{font-size:19px;line-height:1.7;margin:24px 0}}
+@media(max-width:760px){.core-motion canvas{left:-30px;top:-27px;width:180px;height:162px}}

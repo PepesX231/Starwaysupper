@@ -27,3 +27,13 @@ Saved assets / production prompts:
 - assets/arena-bg-v5.webp: Separate manga showcase arena plate, black/ivory trusses and platforms at outer edges, cobalt accent spotlights, quiet navy center. No text or people.
 
 All five assets were generated with the built-in image_gen tool. The mascot reference was assets/team.webp; character identity and existing hero remain intact. UI copy, links, roadmap hit areas and outcome icons are native accessible HTML/SVG.
+
+
+## Process illustrations v7 — built-in image_gen
+Four landscape narrative scenes use the original mascot reference (assets/team.webp). Saved as assets/process-1-v7.webp through process-4-v7.webp.
+1. Build: command blocks for movement/jump connect to the same hero in a game-editor viewport. White/orange instructor supports the workflow.
+2. Release: completed browser game, play/download icons, controller and a second person watching/playing.
+3. Team: different workstations show level drawing, component/code editing and controller/checklist testing, connected to one shared game.
+4. Present: project presenter, audience, playable game screen and portfolio tiles showing screenshot, sketch and component diagram.
+Prompt set: flat ink manga, original smooth Hamster Hub characters and blue/black wardrobe, dark navy/cobalt/cyan/ivory, primary focus on visible process and resulting game, no words, labels or numbers. Full game devices inside scene. Copy and explanations remain native HTML.
+Logo motion reuses the original game-core-v5.webp unchanged: 32 triangular texture shards charge, burst and rebuild over an 8.4-second loop. Global pause, reduced-motion and offscreen suspension supported. No exported image was pixel edited for the animation.
