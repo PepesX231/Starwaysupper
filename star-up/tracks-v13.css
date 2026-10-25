@@ -1,0 +1,41 @@
+/* Original Super Express ink scenery, adapted to the blue Star Up palette. */
+.tracks-section{position:relative;isolation:isolate;background:#071426;padding:110px 0 150px;color:#edf8ff}
+.tracks-section>.wrap{position:relative;z-index:2}
+.track-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px;position:relative;z-index:1}
+.track-card{min-width:0;scroll-margin-top:125px;display:flex;flex-direction:column;align-items:flex-start}
+.track-card figure{margin:0 0 20px;width:100%;height:280px;position:relative}
+.track-card figure:before{content:'';position:absolute;inset:20% 5% 0;background:radial-gradient(ellipse,#1768ef33,transparent 67%);z-index:-1}
+.track-card img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 12px 12px #02091440)}
+.track-name{font:900 italic clamp(32px,3.4vw,51px)/1.1 Barlow,Anuphan,sans-serif!important;color:#75e6ff!important;margin:8px 0 16px!important;letter-spacing:-1px}
+.track-card h3,.track-card h2{font-family:Kanit,Anuphan,sans-serif;font-size:clamp(23px,2vw,30px);line-height:1.45;margin:0 0 14px;color:#fff;letter-spacing:0}
+.track-card>p:not(.track-name){font-size:19px;line-height:1.8;color:#d6e8f5;max-width:350px;margin:0 0 20px}
+.track-card .text-link{margin-top:auto;color:#75e6ff;min-height:44px;display:inline-flex;align-items:center}
+.hero:after{content:'';position:absolute;left:0;right:0;z-index:1;background:linear-gradient(transparent,#071426)!important;height:145px!important;bottom:-1px!important;pointer-events:none}
+.tracks-section:after{content:'';position:absolute;bottom:-1px;left:0;right:0;height:100px;background:linear-gradient(transparent,#1768ef);pointer-events:none}
+.superx-scene{position:absolute;inset:-22px 0;pointer-events:none;background:center/cover no-repeat;filter:hue-rotate(190deg) saturate(1.12);opacity:.3;mask-image:linear-gradient(transparent,#000 18%,#000 78%,transparent);-webkit-mask-image:linear-gradient(transparent,#000 18%,#000 78%,transparent);transform:translateY(var(--section-drift,0px)) scale(1.025);transform-origin:center;z-index:0}
+.hero-backdrop .paper-a,.hero-backdrop .paper-b,.hero-backdrop .paper-c{display:none}
+.hero-backdrop .superx-scene{background-image:url(assets/superx-scenes/hero.webp);opacity:.62;inset:-12px 0 -22px;z-index:1;animation:superx-breathe 18s ease-in-out infinite;animation-play-state:paused}
+.hero-motion-live .hero-backdrop .superx-scene{animation-play-state:running}
+.hero-art:before{opacity:.3}.hero-word{opacity:.5}
+.tracks-section>.superx-scene{background-image:url(assets/superx-scenes/showcase.webp);opacity:.24}
+.roadmap>.bg-layer>.superx-scene{background-image:url(assets/superx-scenes/journey.webp);opacity:.19}
+.team-section>.bg-layer>.superx-scene,.parent-content>.bg-layer>.superx-scene{background-image:url(assets/superx-scenes/creation.webp);opacity:.26}
+.arenas>.bg-layer>.superx-scene,.showcase>.bg-layer>.superx-scene{background-image:url(assets/superx-scenes/showcase.webp);opacity:.23}
+.questions>.bg-layer>.superx-scene,.curriculum-body>.bg-layer>.superx-scene{background-image:url(assets/superx-scenes/journey.webp);opacity:.13}
+.enroll>.bg-layer>.superx-scene{background-image:url(assets/superx-scenes/closing.webp);opacity:.23}
+.sub-hero>.bg-layer>.superx-scene{background-image:url(assets/superx-scenes/hero.webp);opacity:.23}
+.bg-layer:after{display:none!important}.team-section>.bg-layer:before,.arenas>.bg-layer:before{opacity:.2}
+.scene-decor img{opacity:.4;max-height:260px}.section-seam{display:none!important}
+.common-journey{position:relative;z-index:1;max-width:900px;margin:90px auto 65px}
+.common-journey>h2{font-size:clamp(28px,4vw,46px)}
+.common-journey article{padding:22px 0;margin:0;scroll-margin-top:125px}.common-journey h3{font-size:26px;margin:0 0 10px;color:#75e6ff}.common-journey p{font-size:20px;line-height:1.8}
+.game-outline{position:relative;z-index:1;background:#d9eefa;color:#071426;border:2px solid #1768ef;padding:25px;max-width:1020px;margin:auto}
+.game-outline>summary{font-size:23px;font-weight:750;cursor:pointer;line-height:1.5;min-height:44px}.game-outline>summary span{float:right}.game-outline>.wrap{width:100%;padding:0}
+.curriculum-body .track-grid{margin:20px 0}.curriculum-body .track-card h2{font-size:26px}
+.curriculum-body .track-name{color:#0755c9!important}.curriculum-body .track-card h2{color:#071426}.curriculum-body .track-card>p:not(.track-name){color:#244365}.common-journey h3{color:#0755c9}
+.hero-grid,.scroll-invite{position:relative;z-index:2}.hero .hero-desc{max-width:690px}
+@keyframes superx-breathe{0%,100%{transform:translate3d(0,0,0) scale(1.025)}50%{transform:translate3d(-8px,-10px,0) scale(1.045)}}
+html.motion-paused .superx-scene{animation-play-state:paused!important;transform:none!important}
+@media(max-width:1100px){.track-grid{gap:22px}.track-card figure{height:230px}.track-card>p:not(.track-name){font-size:18px}.site-header nav{gap:20px}.site-header nav>a{font-size:15px}}
+@media(max-width:760px){.tracks-section{padding:75px 0 110px}.track-grid{grid-template-columns:1fr;gap:50px}.track-card{align-items:center;text-align:center}.track-card figure{height:260px;margin-bottom:10px}.track-card h3,.track-card h2{font-size:27px}.track-name{font-size:40px!important}.track-card>p:not(.track-name){max-width:340px}.superx-scene{background-size:auto 100%;opacity:.13!important}.hero-backdrop .superx-scene{background-position:70% center;opacity:.4!important}.common-journey{margin-top:60px}.common-journey h3{font-size:23px}.common-journey p{font-size:18px}.game-outline{padding:18px}.game-outline>summary{font-size:20px}.hero .hero-desc{font-size:20px}}
+@media(prefers-reduced-motion:reduce){.superx-scene{animation:none!important;transform:none!important}}

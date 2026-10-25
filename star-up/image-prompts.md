@@ -57,3 +57,7 @@ The supplied existing team.webp was the direct reference for every new image. Pr
 - assets/mascot-step-3-v11.webp: three mascots assemble level tiles, connect components and use controller at one shared table. Supports “อัปเลเวล ไปกับทีม”.
 - assets/mascot-step-4-v11.webp: grey mascot presents open portfolio showing game, level sketch and components, beside a small plinth/controller. Supports “ให้ผลงาน มีทางไปต่อ”.
 Layout, copy and backgrounds retained from v10. Logo uses its original raster emblem, animated intact with a gentle charge/lift/settle and a path of light following the upward route. No 3D model or sliced raster fragments.
+
+
+## v13 — three project tracks
+New transparent illustrations based on the original three Hamster Hub mascots, smooth chibi shapes, black/cyan jackets and electric blue scarves. Game: controller and playable platform diorama. Web/App: browser and mobile UI with connected data. IoT: microcontroller, sensor and smart-home prototype. Thick black outlines, flat blue cel shading, complete silhouettes, no text or scenery. Assets: track-game-v13.webp, track-webapp-v13.webp, track-iot-v13.webp. Backgrounds reuse the original Super Express edge-v17 plates with CSS blue hue treatment; original assets are preserved.
