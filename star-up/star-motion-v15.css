@@ -1,0 +1,30 @@
+.course-wordmark{white-space:nowrap;letter-spacing:-.045em;font-size:clamp(55px,5vw,76px)}
+.course-wordmark strong{font-size:.95em;margin-left:4px}
+.tracks-section{overflow:clip}
+.course-identity .logo-animated{width:136px;height:136px}
+.course-identity .logo-animated>img{filter:drop-shadow(5px 7px 0 #07142666);animation:star-rise 8s cubic-bezier(.4,0,.2,1) infinite;animation-play-state:paused}
+.logo-animated>svg{display:none}
+.hero-motion-live .course-identity .logo-animated>img{animation-play-state:running}
+.roadmap{background-color:#1768ef;background-image:radial-gradient(ellipse at 50% 48%,#398dff70,transparent 60%),radial-gradient(#07142633 .8px,transparent 1px);background-size:100% 100%,8px 8px}
+.roadmap>.bg-layer:before{inset:0;transform:none;background:linear-gradient(128deg,transparent 0 47%,#07142609 47% 58%,transparent 58% 77%,#75e6ff0b 77% 81%,transparent 81%);mask-image:linear-gradient(transparent,#000 25%,#000 75%,transparent)}
+.roadmap .section-heading{margin-bottom:25px}
+.roadmap .section-heading .eyebrow{color:#d3f8ff;letter-spacing:.08em;font:900 italic 22px/1.4 Barlow,Anuphan,sans-serif}
+.phase-month{display:inline-block;padding:2px 12px;background:#073f99;box-shadow:3px 3px #75e6ff55;transform:skew(-8deg);margin-bottom:17px!important}
+.phase h3{box-shadow:5px 6px #0a337055;transform:rotate(-2deg);transition:box-shadow .3s}
+.phase:hover h3,.phase:focus-within h3{box-shadow:5px 6px #75e6ff}
+.phase .mascot-lesson img{animation:route-actor 7s ease-in-out infinite;animation-delay:var(--actor-delay,0s);animation-play-state:paused;transform-origin:50% 85%}
+.phase:nth-of-type(2){--actor-delay:-1.8s}.phase:nth-of-type(3){--actor-delay:-3.4s}.phase:nth-of-type(4){--actor-delay:-5s}
+.roadmap-motion-live .mascot-lesson img{animation-play-state:running}
+.route-bed{stroke:#082c63;stroke-width:12}.route-line{stroke:#75e6ff;stroke-width:2;opacity:.7}
+.route-flow{stroke:#edfcff;stroke-width:3;fill:none;stroke-linecap:round;stroke-dasharray:8 92;stroke-dashoffset:100;filter:drop-shadow(0 0 4px #75e6ff);animation:route-current 4.8s linear infinite;animation-delay:var(--flow-delay,0s);animation-play-state:paused}
+.roadmap-motion-live .route-flow{animation-play-state:running}
+.route-stop:after{content:'';position:absolute;inset:-11px;border:1px solid #b8f4ff;border-radius:50%;opacity:0;animation:route-ring 4.8s ease-out infinite;animation-play-state:paused;animation-delay:var(--actor-delay,0s)}
+.roadmap-motion-live .route-stop:after{animation-play-state:running}
+html.motion-paused .route-flow,html.motion-paused .route-stop:after,html.motion-paused .mascot-lesson img,html.motion-paused .logo-animated>img{animation-play-state:paused!important}
+@keyframes route-current{to{stroke-dashoffset:0}}
+@keyframes route-ring{0%{transform:scale(.55);opacity:0}10%{opacity:.7}55%,100%{transform:scale(1.4);opacity:0}}
+@keyframes route-actor{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(-6px) rotate(.7deg)}}
+@keyframes star-rise{0%,25%,100%{transform:rotate(-5deg) scale(1)}38%{transform:translateY(-4px) rotate(7deg) scale(1.08)}53%{transform:translateY(-6px) rotate(-7deg) scale(1.04)}68%{transform:rotate(-5deg) scale(1)}}
+@media(max-width:760px){.course-identity .logo-animated{width:104px;height:104px}.course-wordmark{font-size:54px}.roadmap .section-heading{margin-bottom:15px}.roadmap .section-heading .eyebrow{font-size:19px}.route-bed{stroke-width:9}.route-flow{stroke-width:2.5}.phase .mascot-lesson img{animation-name:route-actor-mobile}}
+@keyframes route-actor-mobile{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@media(prefers-reduced-motion:reduce){.route-flow,.route-stop:after{display:none}.phase .mascot-lesson img,.course-identity .logo-animated>img{animation:none!important;transform:none!important}}
