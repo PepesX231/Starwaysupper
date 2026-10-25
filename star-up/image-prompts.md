@@ -61,3 +61,6 @@ Layout, copy and backgrounds retained from v10. Logo uses its original raster em
 
 ## v13 — three project tracks
 New transparent illustrations based on the original three Hamster Hub mascots, smooth chibi shapes, black/cyan jackets and electric blue scarves. Game: controller and playable platform diorama. Web/App: browser and mobile UI with connected data. IoT: microcontroller, sensor and smart-home prototype. Thick black outlines, flat blue cel shading, complete silhouettes, no text or scenery. Assets: track-game-v13.webp, track-webapp-v13.webp, track-iot-v13.webp. Backgrounds reuse the original Super Express edge-v17 plates with CSS blue hue treatment; original assets are preserved.
+
+## v21 — result card icon set
+Three individually generated transparent UI illustrations: completed product (browser, phone, checked cube); personal contribution (pencil, blueprint, highlighted interlocking piece); portfolio opportunity (project sheets in a folder and upward arrow). Angular inked comic cut-paper style, precise heavy black outline, cyan/cobalt blocks, ivory highlights, flat cel shading, legible at 110px, no text or background. Saved as assets/result-real-product-v21.webp, result-own-role-v21.webp, result-next-step-v21.webp.
