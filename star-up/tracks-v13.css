@@ -39,3 +39,18 @@ html.motion-paused .superx-scene{animation-play-state:paused!important;transform
 @media(max-width:1100px){.track-grid{gap:22px}.track-card figure{height:230px}.track-card>p:not(.track-name){font-size:18px}.site-header nav{gap:20px}.site-header nav>a{font-size:15px}}
 @media(max-width:760px){.tracks-section{padding:75px 0 110px}.track-grid{grid-template-columns:1fr;gap:50px}.track-card{align-items:center;text-align:center}.track-card figure{height:260px;margin-bottom:10px}.track-card h3,.track-card h2{font-size:27px}.track-name{font-size:40px!important}.track-card>p:not(.track-name){max-width:340px}.superx-scene{background-size:auto 100%;opacity:.13!important}.hero-backdrop .superx-scene{background-position:70% center;opacity:.4!important}.common-journey{margin-top:60px}.common-journey h3{font-size:23px}.common-journey p{font-size:18px}.game-outline{padding:18px}.game-outline>summary{font-size:20px}.hero .hero-desc{font-size:20px}}
 @media(prefers-reduced-motion:reduce){.superx-scene{animation:none!important;transform:none!important}}
+/* Subpage introductions use one quiet light canvas and explicit dark type.
+   A full-height gradient must never inherit the 6px halftone tile size. */
+.sub-hero{background:#edf8ff;color:#071426;padding:48px 0 65px}
+.sub-hero>.wrap{z-index:2}
+.sub-hero .back{color:#244365;font-size:15px;margin-bottom:27px}
+.sub-hero .eyebrow{color:#0755c9;font-size:22px;margin-bottom:16px}
+.sub-hero h1{font-size:clamp(36px,4vw,60px);line-height:1.42;max-width:1000px;color:#071426}
+.sub-hero .cut.paper{background:#0755c9;color:#fff;box-shadow:5px 6px 0 #75e6ff;padding:.03em .2em .09em}
+.sub-hero .lead{font-size:22px;color:#244365;margin-top:24px;max-width:760px}
+.sub-hero .draft-note{color:#38516b;font-size:16px;line-height:1.8;margin-top:15px;max-width:760px}
+.sub-hero>.bg-layer{background:none;mask-image:none;-webkit-mask-image:none}
+.sub-hero>.bg-layer:before,.sub-hero>.bg-layer:after{display:none!important}
+.sub-hero>.bg-layer>.superx-scene{left:43%;opacity:.17;mask-image:linear-gradient(90deg,transparent,#000 55%);-webkit-mask-image:linear-gradient(90deg,transparent,#000 55%)}
+.sub-hero:after{content:'';position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(transparent,#edf8ff);pointer-events:none;z-index:1}
+@media(max-width:760px){.sub-hero{padding:28px 0 38px}.sub-hero .back{font-size:14px;margin-bottom:25px}.sub-hero .eyebrow{font-size:19px}.sub-hero h1{font-size:clamp(28px,7.7vw,40px)}.sub-hero .lead{font-size:19px;margin-top:22px}.sub-hero .draft-note{font-size:15px}.sub-hero>.bg-layer>.superx-scene{left:20%;opacity:.07!important}}
