@@ -1,7 +1,7 @@
 {
   "course": "Star_ up",
   "duration_months": 12,
-  "price_thb": 21890,
+  "price_thb": 24990,
   "curriculum_status": "user_provided_outline",
   "months": [
     {
@@ -261,5 +261,6 @@
       "status": "overview"
     }
   ],
-  "outline_note": "หัวข้อทั้ง 12 เดือนจากข้อมูลที่ทีมส่งมา หัวข้อเฉพาะทางปรับตามสายและบทบาท ตารางเรียนและเครื่องมือยืนยันก่อนสมัคร"
+  "outline_note": "หัวข้อทั้ง 12 เดือนจากข้อมูลที่ทีมส่งมา หัวข้อเฉพาะทางปรับตามสายและบทบาท ตารางเรียนและเครื่องมือยืนยันก่อนสมัคร",
+  "enrollment": "individual_only"
 }
