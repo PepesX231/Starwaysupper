@@ -1,0 +1,12 @@
+.mascot-lesson{margin:0 0 24px;width:100%;height:300px;display:block}
+.mascot-lesson img{display:block;width:100%;height:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 12px 12px #020c2433)}
+.logo-animated{position:relative;display:block;flex:none;width:120px;height:120px;padding:0;background:none;border:0;isolation:isolate}
+.logo-animated>img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;animation:logo-gesture 6.8s ease-in-out infinite;animation-play-state:paused;transform-origin:50% 66%}
+.logo-animated>svg{position:absolute;left:-10px;top:-10px;width:140px;height:140px;pointer-events:none;overflow:visible}
+.logo-animated .logo-trace{fill:none;stroke:#b6f6ff;stroke-width:1.8;stroke-linecap:round;stroke-dasharray:13 87;animation:logo-route 6.8s ease-in-out infinite;animation-play-state:paused;opacity:0}
+.hero-motion-live .logo-animated>img,.hero-motion-live .logo-trace{animation-play-state:running}
+.logo-reset>img,.logo-reset .logo-trace{animation-name:none!important}
+@keyframes logo-gesture{0%,25%,100%{transform:translateY(0) rotate(0) scale(1);filter:drop-shadow(0 5px 0 #07101f44)}43%{transform:translateY(-3px) rotate(-3deg) scale(1.035);filter:drop-shadow(0 0 9px #75e6ff66)}57%{transform:translateY(-5px) rotate(1deg) scale(1.025);filter:drop-shadow(0 0 7px #75e6ff55)}74%{transform:translateY(1px) rotate(0) scale(.995);filter:drop-shadow(0 5px 0 #07101f44)}}
+@keyframes logo-route{0%,27%{opacity:0;stroke-dashoffset:105}36%{opacity:.7}61%{opacity:.9;stroke-dashoffset:0}73%,100%{opacity:0;stroke-dashoffset:-16}}
+@media(max-width:760px){.mascot-lesson{height:245px;margin-bottom:20px}.logo-animated{width:94px;height:94px}.logo-animated>svg{left:-8px;top:-8px;width:110px;height:110px}}
+@media(prefers-reduced-motion:reduce){.logo-animated>img,.logo-trace{animation:none!important;transform:none!important}.logo-trace{display:none}}

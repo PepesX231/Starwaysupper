@@ -48,3 +48,12 @@ Built-in image_gen, using the supplied black/white urban manga reference for art
 - assets/hero-world-v9.webp: unfinished game-world architecture, angular platforms and suspended solid cubes at the right edge, quiet navy space for copy.
 Prompt set: black/off-white/cobalt screenprint, strong hand-ink contours, coarse halftone and angular composition; no text or fake interface labels, no glossy game-room scenes; smooth original Hamster Hub mascots as supporting actors.
 The logo now uses core-3d.js: 25 beveled solid cubies, 4 portal jambs and one tubular ascending arrow group. It is an actual locally rendered Three.js scene, not a sliced raster or Blender video. Thirty animated curved tethers extend to each physical piece before the reel-in sequence. Original emblem remains the non-WebGL fallback. Three.js MIT license retained in vendor/three/.
+
+
+## Mascot-only learning images v11 — built-in image_gen
+The supplied existing team.webp was the direct reference for every new image. Preserve original smooth chibi faces, black/cyan jackets and blue scarves; no fur, people, grunge collage or large room backdrops. Full silhouettes, few readable props, genuine transparent alpha.
+- assets/mascot-step-1-v11.webp: white/orange mascot actively builds three platforms and a player path with a stylus. Supports “เขียนเป็น สร้างได้”.
+- assets/mascot-step-2-v11.webp: peach mascot hands completed game to grey mascot holding a controller. Supports “เกมแรก ต้องได้เผยแพร่”.
+- assets/mascot-step-3-v11.webp: three mascots assemble level tiles, connect components and use controller at one shared table. Supports “อัปเลเวล ไปกับทีม”.
+- assets/mascot-step-4-v11.webp: grey mascot presents open portfolio showing game, level sketch and components, beside a small plinth/controller. Supports “ให้ผลงาน มีทางไปต่อ”.
+Layout, copy and backgrounds retained from v10. Logo uses its original raster emblem, animated intact with a gentle charge/lift/settle and a path of light following the upward route. No 3D model or sliced raster fragments.
