@@ -1,0 +1,5 @@
+/* Clear wordmark: upright letterforms, normal spacing, visible underscore. */
+.course-identity .course-wordmark{font-family:Anuphan,Arial,sans-serif;font-style:normal;font-weight:800;font-size:clamp(48px,4.4vw,68px);line-height:1.25;letter-spacing:0;text-shadow:0 2px 0 #07142655;white-space:nowrap}
+.course-identity .course-wordmark strong{font:inherit;color:#75e6ff;margin-left:0}
+.footer-brand{font-family:Anuphan,Arial,sans-serif;font-style:normal;font-weight:800;letter-spacing:0;line-height:1.3}
+@media(max-width:760px){.course-identity .course-wordmark{font-size:44px}.footer-brand{font-size:52px}}
