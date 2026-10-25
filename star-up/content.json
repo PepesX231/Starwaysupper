@@ -2,193 +2,264 @@
   "course": "Star_ up",
   "duration_months": 12,
   "price_thb": 21890,
-  "curriculum_status": "provisional",
+  "curriculum_status": "user_provided_outline",
   "months": [
     {
       "month": 1,
-      "title": "เริ่มต้นสร้างเกม",
-      "subtitle": "GET STARTED",
-      "description": "รู้จัก Unity และกระบวนการสร้างเกม",
+      "title": "World of Startup-s",
+      "thai_title": "เข้าใจโลกสตาร์ทอัพ",
+      "description": "ดูทั้งความสำเร็จและความผิดพลาด ก่อนเริ่ม MVP ของเกมหรือเว็บ",
       "topics": [
-        "ทำความคุ้นเคยกับ Unity Editor",
-        "จัดฉากและวัตถุในเกม",
-        "ตั้งเป้าหมายโปรเจกต์ของตัวเอง"
+        "Startup Fail & Success",
+        "Fail Case Analysis",
+        "How to make 1st Dollar",
+        "MVP of Game or Web"
       ],
-      "output": "ฉากเกมพื้นฐานและโจทย์โปรเจกต์",
-      "proposed": true
+      "output": "วิเคราะห์เคสธุรกิจ และเริ่มต้น MVP ของเกมหรือเว็บ",
+      "branches": {},
+      "proposed": false
     },
     {
       "month": 2,
-      "title": "เขียนโค้ดให้เกมขยับ",
-      "subtitle": "CODE YOUR FIRST GAME",
-      "description": "C# พื้นฐานและระบบเกมขนาดเล็ก",
+      "title": "Business Model",
+      "thai_title": "ออกแบบธุรกิจของผลงาน",
+      "description": "รู้ว่าใครจะใช้ และผลงานของคุณสร้างคุณค่าอย่างไร",
       "topics": [
-        "ตัวแปร เงื่อนไข และการทำซ้ำ",
-        "ควบคุมตัวละครและการโต้ตอบ",
-        "ประกอบระบบเกมพื้นฐาน"
+        "Real Case Study",
+        "Business Model Canvas",
+        "SWOT",
+        "Make the Funniest Game! or most useful Web"
       ],
-      "output": "ต้นแบบเกมขนาดเล็กที่ควบคุมได้",
-      "proposed": true
+      "output": "Business Model Canvas, SWOT และแนวคิดเกมที่สนุกหรือเว็บที่มีประโยชน์",
+      "branches": {},
+      "proposed": false
     },
     {
       "month": 3,
-      "title": "วางพื้นฐานให้ครบเครื่อง",
-      "subtitle": "FOUNDATION",
-      "description": "เชื่อมโค้ด ภาพ เสียง และประสบการณ์เล่น",
+      "title": "Ideation & Design Concept",
+      "thai_title": "คิดไอเดียให้ต่าง ออกแบบให้มีเหตุผล",
+      "description": "สำรวจไอเดีย เข้าใจคนใช้ และพิสูจน์ความเป็นไปได้",
       "topics": [
-        "Algorithm · ฝึกคิดเป็นขั้นตอน",
-        "Advanced Tools in Unity",
-        "3D Modeling & Animation",
-        "Sprites & Sound",
-        "UX & UI"
+        "Out of this world",
+        "On top of Everest",
+        "Story Telling",
+        "AI Simulation",
+        "User Empathy",
+        "Proof of Concept"
       ],
-      "output": "ชิ้นงานฝึกระบบ ภาพ เสียง และหน้าจอเกม",
+      "output": "แนวคิดการออกแบบ เรื่องราว ผู้ใช้เป้าหมาย และ Proof of Concept",
+      "branches": {},
       "proposed": false
     },
     {
       "month": 4,
-      "title": "เลือกไอเดียที่ทำจบได้",
-      "subtitle": "MINI PROJECT",
-      "description": "เปลี่ยนไอเดียให้เป็นแผนสร้างเกม",
+      "title": "Prototype Game, Web/App or IoT System",
+      "thai_title": "สร้างต้นแบบให้ทำงานได้",
+      "description": "พัฒนาโปรเจกต์ตามสายที่เลือก พร้อมพื้นฐานการออกแบบและเขียนโปรแกรม",
       "topics": [
-        "Simplify your idea · กำหนดขอบเขตให้ชัด",
-        "Project Design · ออกแบบวิธีเล่น",
-        "เริ่มลงมือสร้าง Mini Project"
+        "Gameplay & Mechanic Design (Game)",
+        "Animation",
+        "Game Physics",
+        "Collider & Collision",
+        "Basic UI & UX",
+        "Basic Programming with C#"
       ],
-      "output": "แบบเกมและต้นแบบ Mini Project",
+      "output": "ต้นแบบ Game, Web/App หรือระบบ IoT ตามสายที่เลือก",
+      "branches": {},
       "proposed": false
     },
     {
       "month": 5,
-      "title": "ปล่อยเกมแรกให้คนเล่น",
-      "subtitle": "FIRST RELEASE",
-      "description": "พัฒนา นำเสนอ และเผยแพร่งาน",
+      "title": "Alpha Testing & Advanced Features",
+      "thai_title": "นำเสนอ ทดสอบ และแบ่งหน้าที่พัฒนา",
+      "description": "นำเสนอผลิตภัณฑ์ แล้วพัฒนาตามบทบาท Art, Code และ Management",
       "topics": [
-        "Mini Project Development",
-        "Presentation · ฝึกเล่าผลงาน",
-        "Publish to web or store"
+        "Product Presentation",
+        "Development Branches for each member"
       ],
-      "output": "เกมแรกที่เผยแพร่ได้ พร้อมการนำเสนอ",
+      "output": "การนำเสนอผลิตภัณฑ์ งานทดสอบ Alpha และชิ้นงานตามบทบาท",
+      "branches": {
+        "Art": [
+          "Basic Modeling with Blender",
+          "Rig & Animation",
+          "Material",
+          "Shader",
+          "Post Processing"
+        ],
+        "Code": [
+          "Intermediate C# Programming",
+          "Conditions & switch",
+          "Nested Loops",
+          "Arrays",
+          "Constructors",
+          "Access Modifiers & Properties"
+        ],
+        "Management": [
+          "Initiation",
+          "Planning",
+          "Execution",
+          "Monitoring & Controlling",
+          "Closure"
+        ]
+      },
       "proposed": false
     },
     {
       "month": 6,
-      "title": "ตั้งทีม สร้างเกมที่ใหญ่ขึ้น",
-      "subtitle": "TEAMWORK",
-      "description": "ทำให้หลายคนเดินไปสู่เกมเดียวกัน",
+      "title": "Product Development",
+      "thai_title": "พัฒนาผลิตภัณฑ์ไปด้วยกัน",
+      "description": "แต่ละบทบาทยกระดับงานของตัวเองและเชื่อมให้เป็นผลิตภัณฑ์เดียว",
       "topics": [
-        "Setup Team · แบ่งบทบาทในทีม",
-        "Storyboard & Design",
-        "Project Management"
+        "Development Branches for each member"
       ],
-      "output": "แผนงานทีม บทบาท และแบบโปรเจกต์",
+      "output": "ผลิตภัณฑ์ที่พัฒนาร่วมกัน พร้อมแผนธุรกิจและการดำเนินงาน",
+      "branches": {
+        "Art": [
+          "Advanced Level Design",
+          "Shader Graph & Block-base Programming",
+          "Advanced Visual Effect",
+          "Advanced Terrain",
+          "Cube Map (Reflex & Mirror)",
+          "Lighting & Shadow"
+        ],
+        "Code": [
+          "Classes",
+          "OOP (Object-Oriented Programming)",
+          "Inheritance",
+          "Polymorphism and Overriding Methods",
+          "Abstract Classes and Methods",
+          "Enums"
+        ],
+        "Management": [
+          "Team Description",
+          "Business Plan",
+          "Operations Plan",
+          "Marketing",
+          "Executive Summary"
+        ]
+      },
       "proposed": false
     },
     {
       "month": 7,
-      "title": "สร้างระบบให้เกมไปได้ไกล",
-      "subtitle": "PROJECT DEVELOPMENT",
-      "description": "พัฒนาโค้ดและออกแบบด่านขั้นต่อไป",
+      "title": "User Acceptance Test",
+      "thai_title": "ทดสอบกับการใช้งานจริง",
+      "description": "วางแผนสถานการณ์ ทดสอบ และเก็บข้อมูลจากผู้ใช้",
       "topics": [
-        "Intermediate C#",
-        "Class & Object",
-        "Advanced Level Design"
+        "Scenarios",
+        "Test Cases",
+        "Test Plan",
+        "User Journey",
+        "Beta Testing",
+        "Sample Data Collection"
       ],
-      "output": "ระบบเกมและด่านที่พัฒนาร่วมกัน",
+      "output": "Test Plan, Test Cases, User Journey และข้อมูลการทดสอบ Beta",
+      "branches": {},
       "proposed": false
     },
     {
       "month": 8,
-      "title": "ให้เกมดูดีและเล่นลื่น",
-      "subtitle": "MAKE IT COOL",
-      "description": "เติมภาพ แสง และเอฟเฟกต์อย่างมีเหตุผล",
+      "title": "Product Launch",
+      "thai_title": "เตรียมผลิตภัณฑ์ให้พร้อมเปิดตัว",
+      "description": "แก้จาก Feedback ตรวจคุณภาพ และเตรียมแผนเปิดตัว",
       "topics": [
-        "Visual Programming",
-        "Shader Graph",
-        "Lighting & VFX",
-        "Optimization"
+        "Feedback Adjustment",
+        "Optimizer",
+        "Look & Feel",
+        "Quality Assurance",
+        "Launch Plan"
       ],
-      "output": "เกมที่ปรับภาพ เอฟเฟกต์ และประสิทธิภาพ",
+      "output": "ผลิตภัณฑ์ที่ปรับจาก Feedback และแผนเปิดตัว",
+      "branches": {},
       "proposed": false
     },
     {
       "month": 9,
-      "title": "ขัดงานภาพให้มีเอกลักษณ์",
-      "subtitle": "ADVANCED GRAPHICS",
-      "description": "ยกระดับบรรยากาศของเกม",
+      "title": "Social Marketing",
+      "thai_title": "สื่อสารให้ถึงคนที่ใช่",
+      "description": "รู้จักกลุ่มเป้าหมาย ออกแบบเนื้อหา และวางเป้าหมายการสื่อสาร",
       "topics": [
-        "Advanced Graphics",
-        "Advanced Lighting & Shader",
-        "Advanced Visual Effects",
-        "Post Processing"
+        "Target & Segmentation",
+        "Social Research",
+        "Goal",
+        "Interactive Hook",
+        "Engagement",
+        "Call to Action",
+        "Promotion"
       ],
-      "output": "ฉากเกมที่มีทิศทางภาพชัดเจน",
+      "output": "แผนสื่อสาร กลุ่มเป้าหมาย และเนื้อหาที่มีเป้าหมายชัดเจน",
+      "branches": {},
       "proposed": false
     },
     {
       "month": 10,
-      "title": "คิดต่อให้เป็นผลิตภัณฑ์",
-      "subtitle": "STARTUP PRODUCT",
-      "description": "มองผลงานผ่านคนใช้และช่องทางขาย",
+      "title": "Social Activities",
+      "thai_title": "ให้คนได้รู้จักและมีส่วนร่วม",
+      "description": "สร้างกิจกรรมและปฏิสัมพันธ์รอบผลิตภัณฑ์",
       "topics": [
-        "How to sell your project",
-        "Distribution Channel",
-        "Special: Object-Oriented Design"
+        "Teaser Campaign",
+        "Influencers",
+        "Social Proof & Testimonials",
+        "Direct Engagement"
       ],
-      "output": "แนวทางนำผลงานไปสู่คนใช้และตลาด",
+      "output": "แนวทางแคมเปญ Teaser และกิจกรรมเชื่อมต่อกับผู้ใช้",
+      "branches": {},
       "proposed": false
     },
     {
       "month": 11,
-      "title": "เปิดตัว เรียนรู้จากตลาด",
-      "subtitle": "MAKE MONEY",
-      "description": "ทำความเข้าใจรายได้และพัฒนาคุณภาพ",
+      "title": "Product Launch",
+      "thai_title": "เปิดตัวให้เห็นคุณค่าของผลงาน",
+      "description": "เล่าจุดเด่น ตั้งเป้าหมาย และเก็บ Feedback กลับมาพัฒนา",
       "topics": [
-        "Make 1st Dollar · ศึกษาการสร้างรายได้แรก",
-        "How to get Feedback",
-        "Improve Product Quality",
-        "Social Marketing",
-        "Make Your Own Brand"
+        "Unique Value Proposition",
+        "The Story & Image",
+        "Product Promotion",
+        "SMART Goal",
+        "Getting Feedback"
       ],
-      "output": "แนวทางเปิดตัว สื่อสารแบรนด์ และเก็บ Feedback",
+      "output": "จุดเด่นของผลิตภัณฑ์ เรื่องราว แผนโปรโมต และ SMART Goal",
+      "branches": {},
       "proposed": false
     },
     {
       "month": 12,
-      "title": "รวมผลงาน พร้อมก้าวต่อ",
-      "subtitle": "PORTFOLIO & NEXT STEP",
-      "description": "สรุปเกมและเรื่องราวที่คุณลงมือทำ",
+      "title": "Fund Raising",
+      "thai_title": "นำเสนอเพื่อหาแรงสนับสนุน",
+      "description": "กำหนดสิ่งที่ต้องการ และเตรียมเล่าให้ผู้สนับสนุนเห็นโอกาส",
       "topics": [
-        "จัดระเบียบผลงานและบทบาทที่รับผิดชอบ",
-        "เตรียมเดโมและการนำเสนอ",
-        "วางแผนพอร์ตหรือการส่งเวทีที่เหมาะสม"
+        "What do we want?",
+        "Fund & Support",
+        "How to make investors happy",
+        "Pitching & Hackathon"
       ],
-      "output": "ชุดผลงานและแผนพัฒนาขั้นต่อไป",
-      "proposed": true
+      "output": "เรื่องราวและการ Pitch เพื่อมองหาทุนหรือการสนับสนุน",
+      "branches": {},
+      "proposed": false
     }
   ],
-  "month_outline_track": "game",
   "tracks": [
     {
       "id": "game",
       "name": "Game",
       "output": "เกมที่ควบคุมและเล่นได้",
       "outline": "Unity และ C# · ตัวละครและด่าน · ภาพ เสียง และระบบเกม",
-      "status": "provisional"
+      "status": "overview"
     },
     {
       "id": "webapp",
       "name": "Web / App",
       "output": "เว็บไซต์หรือแอปที่ใช้งานได้",
-      "outline": "แนวทางเบื้องต้น: หน้าจอและการโต้ตอบ · การจัดการข้อมูล · ทดสอบการใช้งาน",
-      "status": "provisional"
+      "outline": "หน้าจอและการโต้ตอบ · การจัดการข้อมูล · ทดสอบการใช้งาน",
+      "status": "overview"
     },
     {
       "id": "iot",
       "name": "IoT",
       "output": "อุปกรณ์ต้นแบบที่รับรู้และตอบสนองได้",
-      "outline": "แนวทางเบื้องต้น: เซนเซอร์และบอร์ดควบคุม · การเขียนคำสั่ง · การเชื่อมต่ออุปกรณ์",
-      "status": "provisional"
+      "outline": "เซนเซอร์และบอร์ดควบคุม · การเขียนคำสั่ง · การเชื่อมต่ออุปกรณ์",
+      "status": "overview"
     }
-  ]
+  ],
+  "outline_note": "หัวข้อทั้ง 12 เดือนจากข้อมูลที่ทีมส่งมา หัวข้อเฉพาะทางปรับตามสายและบทบาท ตารางเรียนและเครื่องมือยืนยันก่อนสมัคร"
 }

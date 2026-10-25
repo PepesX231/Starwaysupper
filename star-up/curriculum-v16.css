@@ -1,0 +1,44 @@
+.year-curriculum{position:relative;z-index:1;max-width:1060px;margin:85px auto 0;color:#071426}
+.curriculum-intro h2{font-size:clamp(29px,3.3vw,44px);margin-bottom:20px}
+.curriculum-intro>.eyebrow{color:#0755c9;font-size:20px}
+.curriculum-intro>p:not(.eyebrow){font-size:21px;line-height:1.8;max-width:880px}
+.curriculum-intro .curriculum-scope{font-size:17px!important;margin-top:20px;color:#38516b}
+.year-nav{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0 15px}
+.year-nav a{background:#0755c9;color:#fff;padding:10px 20px;font-size:17px;font-weight:750;min-height:44px;clip-path:polygon(4% 0,100% 0,96% 100%,0 100%)}
+.year-nav a:hover{background:#071426}
+.year-curriculum .curriculum-group{padding:55px 0 22px}
+.year-curriculum .curriculum-group h2{font-size:clamp(27px,3vw,38px)}
+.year-curriculum .month{border-top:1px solid #0755c944;scroll-margin-top:115px}
+.year-curriculum .month summary{min-height:110px}
+.year-curriculum .month small{font-size:18px;line-height:1.5;color:#0755c9;text-transform:none}
+.year-curriculum .month summary strong{font-size:27px;color:#071426}
+.year-curriculum .month-content{padding:0 0 35px 90px}
+.year-curriculum .month-content>.lead{font-size:21px;color:#244365}
+.month-topics{margin:18px 0 24px}
+.year-curriculum .month-content h3{font-size:19px;color:#0755c9;margin-bottom:10px}
+.year-curriculum .month-content ul{font-size:18px;line-height:1.9;padding-left:23px;overflow-wrap:anywhere}
+.year-curriculum .role-branches{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin:20px 0 25px}
+.role-branches>section{background:#dcedfb;padding:20px 18px;min-width:0;border-top:4px solid #1768ef}
+.year-curriculum .role-branches h3{font:900 italic 27px/1.3 Barlow,Anuphan,sans-serif;color:#071426}
+.year-curriculum .role-branches ul{font-size:16px;padding-left:17px;line-height:1.9}
+.year-curriculum .deliverable{margin-top:24px;background:#dcecff;padding:20px 24px}
+.year-curriculum .deliverable p{font-size:19px;color:#244365}
+.curriculum-footnote{font-size:16px;line-height:1.9;color:#38516b;margin-top:40px;margin-bottom:30px}
+/* A single eight-second charge / release / recall gesture; rest between bursts. */
+.course-identity .logo-animated>img{animation:star-power-cycle 8s cubic-bezier(.4,0,.2,1) infinite;animation-play-state:paused}
+.logo-animated>svg.star-energy{display:block;position:absolute;inset:-12%;width:124%;height:124%;overflow:visible;pointer-events:none}
+.star-energy *{animation-duration:8s;animation-iteration-count:infinite;animation-timing-function:cubic-bezier(.4,0,.2,1);animation-play-state:paused;transform-origin:90px 90px}
+.energy-orbit{fill:none;stroke:#c4f7ff;stroke-width:1.6;stroke-dasharray:12 7;opacity:0;animation-name:star-orbit}
+.energy-rays{fill:none;stroke:#edfaff;stroke-width:2.2;stroke-linecap:round;opacity:0;animation-name:star-rays}
+.energy-shard{fill:#75e6ff;stroke:#071426;stroke-width:1;opacity:0;animation-name:star-shards;transform-box:view-box}
+.energy-recall{fill:none;stroke:#75e6ff;stroke-width:1.5;stroke-dasharray:18 12;opacity:0;animation-name:star-recall}
+.hero-motion-live .star-energy *,.hero-motion-live .course-identity .logo-animated>img{animation-play-state:running}
+.logo-reset .star-energy *{animation-name:none!important}
+html.motion-paused .star-energy *{animation-play-state:paused!important}
+@keyframes star-power-cycle{0%,17%{transform:rotate(-5deg) scale(1);filter:drop-shadow(4px 6px #07142666)}25%{transform:rotate(-13deg) scale(.87);filter:drop-shadow(0 0 8px #b9f7ff)}32%{transform:rotate(13deg) scale(1.13);filter:drop-shadow(0 0 12px #75e6ff)}40%{transform:rotate(135deg) scale(.96)}49%{transform:rotate(285deg) scale(.86)}58%{transform:rotate(361deg) scale(1.055);filter:drop-shadow(0 0 8px #75e6ff)}68%,100%{transform:rotate(355deg) scale(1);filter:drop-shadow(4px 6px #07142666)}}
+@keyframes star-orbit{0%,17%,67%,100%{opacity:0;transform:rotate(-30deg) scale(.7)}25%{opacity:.9;transform:rotate(0) scale(.72)}33%{opacity:.55;transform:rotate(30deg) scale(1.14)}50%{opacity:.1;transform:rotate(70deg) scale(1.2)}58%{opacity:.8;transform:rotate(90deg) scale(.76)}}
+@keyframes star-rays{0%,28%,46%,100%{opacity:0;transform:scale(.5)}32%{opacity:.95;transform:scale(.75)}41%{opacity:0;transform:scale(1.15)}}
+@keyframes star-shards{0%,28%,65%,100%{opacity:0;transform:scale(.65) rotate(0)}33%{opacity:1;transform:scale(.85) rotate(5deg)}44%{opacity:.8;transform:scale(1.15) rotate(16deg)}53%{opacity:.9;transform:scale(1.06) rotate(23deg)}61%{opacity:0;transform:scale(.6) rotate(30deg)}}
+@keyframes star-recall{0%,44%,66%,100%{opacity:0;stroke-dashoffset:40;transform:scale(1.15)}50%{opacity:.7;stroke-dashoffset:25;transform:scale(1.1)}59%{opacity:.9;stroke-dashoffset:0;transform:scale(.72)}64%{opacity:0;transform:scale(.45)}}
+@media(max-width:760px){.year-curriculum{margin-top:55px}.curriculum-intro>p:not(.eyebrow){font-size:19px}.curriculum-intro .curriculum-scope{font-size:16px!important}.year-nav{gap:9px}.year-nav a{font-size:16px;padding:9px 15px}.year-curriculum .curriculum-group{padding-top:38px}.year-curriculum .month summary{gap:16px;min-height:105px}.year-curriculum .month small{font-size:15px}.year-curriculum .month summary strong{font-size:22px}.year-curriculum .month-number{font-size:37px}.year-curriculum .month-content{padding-left:0}.year-curriculum .month-content>.lead{font-size:19px}.year-curriculum .month-content ul{font-size:17px}.year-curriculum .role-branches{grid-template-columns:1fr;gap:15px}.year-curriculum .role-branches ul{font-size:17px}.curriculum-footnote{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.logo-animated>svg.star-energy{display:none}.course-identity .logo-animated>img{animation:none!important;transform:none!important}}
